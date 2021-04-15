@@ -4,4 +4,4 @@
 Walthzer\Shark
 
 # CONTRIBUTORS
-Felix
+Ferris
