@@ -1,0 +1,7 @@
+# WFAR CONTRIBUTOR LIST
+
+# CORE TEAM
+Walthzer\Shark
+
+# CONTRIBUTORS
+Felix
