@@ -18,64 +18,64 @@ class CfgUnitInsignia
     class Dagger
     {
         displayName="Dagger Squad";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\dagger.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\dagger.paa";
         textureVehicle="";
     };
     class Legion
     {
         displayName="Legion Squad";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\legion.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\legion.paa";
         textureVehicle="";
     };
     class Titan
     {
         displayName="Titan Squad";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\titan.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\titan.paa";
         textureVehicle="";
     };
     class Chase_Furry
     {
         displayName="Chase";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\chase.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\chase.paa";
         textureVehicle="";
     };
     class Rubble_Furry
     {
         displayName="Rubble";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\rubble.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\rubble.paa";
         textureVehicle="";
     };
     class Zuma_Furry
     {
         displayName="Zuma";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\zuma.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\zuma.paa";
         textureVehicle="";
     };
     class Marshall_Furry
     {
         displayName="Marshall";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\marshall.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\marshall.paa";
         textureVehicle="";
     };
     class Rocky_Furry
     {
         displayName="Rocky";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\rocky.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\rocky.paa";
         textureVehicle="";
     };
     class Skyle_Furry
     {
         displayName="Skyle";
-        author="WFAR:SHARK";
-        texture="\WASHM\wfar\addons\insignia\Tex\Squad\PAA\skyle.paa";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\skyle.paa";
         textureVehicle="";
     };
 };
