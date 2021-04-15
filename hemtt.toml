@@ -7,7 +7,7 @@ files = [
     "README.md",
     "AUTHORS.txt",
     "LICENSE",
-    "logo_rid_ca.paa",
+    "logo_wfar_ca.paa",
     "meta.cpp"
 ]
 
@@ -15,7 +15,7 @@ key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "@zip rid_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+    "@zip wfar_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]
 
 [header_exts]
