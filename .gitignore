@@ -1,0 +1,11 @@
+release/*
+releases/*
+keys/*
+.hemtt/local
+*.cache
+*.pbo
+texHeaders.bin
+*.swp
+*.swo
+*.biprivatekey
+Thumbs.db
