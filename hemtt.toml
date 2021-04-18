@@ -10,6 +10,12 @@ files = [
     "logo_wfar_ca.paa",
     "meta.cpp"
 ]
+exclude = [
+    "*.psd",
+    "*.png",
+    "*.tga",
+    "*.xcf"
+]
 
 key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
