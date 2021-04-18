@@ -36,6 +36,13 @@ class CfgUnitInsignia
         texture="\z\wfar\addons\insignia\data\titan.paa";
         textureVehicle="";
     };
+    class Patrol_Furry
+    {
+        displayName="I wish I never heard of it Patrol";
+        author="Walthzer/Shark";
+        texture="\z\wfar\addons\insignia\data\patrol.paa";
+        textureVehicle="";
+    };
     class Chase_Furry
     {
         displayName="Chase";
