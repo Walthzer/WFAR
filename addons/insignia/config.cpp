@@ -18,22 +18,29 @@ class CfgUnitInsignia
     class Dagger
     {
         displayName="Dagger Squad";
-        author="Walthzer/Shark";
+        author="Velez?";
         texture="\z\wfar\addons\insignia\data\dagger.paa";
         textureVehicle="";
     };
     class Legion
     {
         displayName="Legion Squad";
-        author="Walthzer/Shark";
+        author="Velez";
         texture="\z\wfar\addons\insignia\data\legion.paa";
         textureVehicle="";
     };
     class Titan
     {
         displayName="Titan Squad";
-        author="Walthzer/Shark";
+        author="Velez";
         texture="\z\wfar\addons\insignia\data\titan.paa";
+        textureVehicle="";
+    };
+    class TitanCharlie
+    {
+        displayName="Titan-Charlie Team";
+        author="Ferris";
+        texture="\z\wfar\addons\insignia\data\titancharlie.paa";
         textureVehicle="";
     };
     class Patrol_Furry
