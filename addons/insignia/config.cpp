@@ -18,7 +18,7 @@ class CfgUnitInsignia
     class Dagger
     {
         displayName="Dagger Squad";
-        author="Velez?";
+        author="Velez";
         texture="\z\wfar\addons\insignia\data\dagger.paa";
         textureVehicle="";
     };
