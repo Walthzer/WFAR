@@ -43,6 +43,13 @@ class CfgUnitInsignia
         texture="\z\wfar\addons\insignia\data\titancharlie.paa";
         textureVehicle="";
     };
+    class WierdWolf
+    {
+        displayName="Alpha 1-1";
+        author="Barker";
+        texture="\z\wfar\addons\insignia\data\wierdwolf.paa";
+        textureVehicle="";
+    };
     class Patrol_Furry
     {
         displayName="I wish I never heard of it Patrol";
