@@ -13,7 +13,7 @@ files = [
 exclude = [
     "*.psd",
     "*.png",
-    "*.tga",
+    "*.paa",
     "*.xcf"
 ]
 
