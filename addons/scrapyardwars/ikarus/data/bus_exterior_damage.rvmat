@@ -1,0 +1,78 @@
+ambient[]={1.000000,1.000000,1.000000,1.000000};
+diffuse[]={1.000000,1.000000,1.000000,1.000000};
+forcedDiffuse[]={0.000000,0.000000,0.000000,1.000000};
+emmisive[]={0.000000,0.000000,0.000000,1.000000};
+specular[]={1.000000,1.000000,1.000000,1.000000};
+specularPower=100.000000;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="z\wfar\addons\scrapyardwars\ikarus\data\bus_exterior_nohq.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage2
+{
+	texture="a3\structures_f\wrecks\data\damage_metal_basicarmor_dt.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={2.000000,0.000000,0.000000};
+		up[]={0.000000,2.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage3
+{
+	texture="a3\structures_f\wrecks\data\damage_metal_basicarmor_mc.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={2.000000,0.000000,0.000000};
+		up[]={0.000000,2.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage4
+{
+	texture="z\wfar\addons\scrapyardwars\ikarus\data\bus_exterior_as.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage5
+{
+	texture="z\wfar\addons\scrapyardwars\ikarus\data\bus_exterior_smdi.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(2.0,0.1)";
+	uvSource="none";
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_co.paa";
+	uvSource="none";
+};
