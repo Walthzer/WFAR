@@ -215,6 +215,105 @@ class CfgVehicles
 				hitpoint 		= "P svetlo";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
 				selection 		= "P svetlo";				/// selection for artificial glow around the bulb, not much used any more
 			};
+<<<<<<< Updated upstream
+=======
+
+			/* class interior_light
+			{
+				color[] 		= {1000, 1000, 1000};		/// approximate colour of standard lights
+				ambient[]		= {4, 4, 4};				/// nearly a white one
+				position 		= "interior_light";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir";			/// memory point for the light direction
+				hitpoint 		= "interior_light";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+				selection 		= "interior_light";				/// selection for artificial glow around the bulb, not much used any more
+				size 			= 1;						/// size of the light point seen from distance
+				innerAngle 		= 180;						/// angle of full light
+				outerAngle 		= 179;						/// angle of some light
+				coneFadeCoef 	= 0;						/// attenuation of light between the above angles
+				intensity 		= 0.5;						/// strength of the light
+				useFlare 		= false;						/// does the light use flare?
+				dayLight 		= false;					/// switching light off during day saves CPU a lot
+				flareSize 		= 0.0;						/// how big is the flare
+
+				class Attenuation
+				{
+					start 			= 10.0;
+					constant 		= 5;
+					linear 			= 0;
+					quadratic 		= 0.25;
+					hardLimitStart 	= 5;		/// it is good to have some limit otherwise the light would shine to infinite distance
+					hardLimitEnd 	= 6;		/// this allows adding more lights into scene
+				};
+			};
+
+			class interior_light0: interior_light
+			{
+				position 		= "interior_light0";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir0";			/// memory point for the light direction
+				hitpoint 		= "interior_light0";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light1: interior_light
+			{
+				position 		= "interior_light1";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir1";			/// memory point for the light direction
+				hitpoint 		= "interior_light1";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light2: interior_light
+			{
+				position 		= "interior_light2";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir2";			/// memory point for the light direction
+				hitpoint 		= "interior_light2";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light3: interior_light
+			{
+				position 		= "interior_light3";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir3";			/// memory point for the light direction
+				hitpoint 		= "interior_light3";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light4: interior_light
+			{
+				position 		= "interior_light4";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir4";			/// memory point for the light direction
+				hitpoint 		= "interior_light4";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light5: interior_light
+			{
+				position 		= "interior_light5";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir5";			/// memory point for the light direction
+				hitpoint 		= "interior_light5";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light6: interior_light
+			{
+				position 		= "interior_light6";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir6";			/// memory point for the light direction
+				hitpoint 		= "interior_light6";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+
+			};
+			class interior_light7: interior_light
+			{
+				position 		= "interior_light7";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir7";			/// memory point for the light direction
+				hitpoint 		= "interior_light7";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+			};
+			class interior_light8: interior_light
+			{
+				position 		= "interior_light8";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir8";			/// memory point for the light direction
+				hitpoint 		= "interior_light8";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+			};
+			class interior_light9: interior_light
+			{
+				position 		= "interior_light9";				/// memory point for start of the light and flare
+				direction 		= "interior_light_dir9";			/// memory point for the light direction
+				hitpoint 		= "interior_light9";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
+			}; */
+>>>>>>> Stashed changes
 		};
 
 		aggregateReflectors[] = {{"LightCarHeadR01"}, {"LightCarHeadL01"}};
