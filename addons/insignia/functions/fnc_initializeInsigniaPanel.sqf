@@ -23,29 +23,29 @@ if (_allowedInsignia isEqualTo []) exitWith {};
 
 //Add allowed insignia to the leftPanel
 {
-	_x params ["_isMissionConfig", "_class"];
+    _x params ["_isMissionConfig", "_class"];
 
-	if (_isMissionConfig == 0) then {
-		[QGVAR(restrictedInsignia), _class, _ctrlPanel, "texture"] call ace_arsenal_fnc_addListBoxItem;
-	} else {
-		private _displayName = getText (missionConfigFile >> QGVAR(restrictedInsignia) >> _class >> "displayName");
-		private _className = _class;
-		private _lbAdd = _ctrlPanel lbAdd _displayName;
+    if (_isMissionConfig == 0) then {
+        [QGVAR(restrictedInsignia), _class, _ctrlPanel, "texture"] call ace_arsenal_fnc_addListBoxItem;
+    } else {
+        private _displayName = getText (missionConfigFile >> QGVAR(restrictedInsignia) >> _class >> "displayName");
+        private _className = _class;
+        private _lbAdd = _ctrlPanel lbAdd _displayName;
 
-		_ctrlPanel lbSetData [_lbAdd, _className];
-		_ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
-		_ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
-	};
+        _ctrlPanel lbSetData [_lbAdd, _className];
+        _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
+        _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+    };
 
 } forEach _allowedInsignia;
 
 //If a restrictedInsignia is currently equipped, update selection
 if (GVAR(currentInsignia) isNotEqualTo "") then {
-	for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
-		private _currentData = _ctrlPanel lbData _lbIndex;
+    for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
+        private _currentData = _ctrlPanel lbData _lbIndex;
 
-		if ((_currentData isNotEqualTo "") && {tolower _currentData == GVAR(currentInsignia)}) exitWith {
-			_ctrlPanel lbSetCurSel _lbIndex;
-		};
-	};
+        if ((_currentData isNotEqualTo "") && {tolower _currentData == GVAR(currentInsignia)}) exitWith {
+            _ctrlPanel lbSetCurSel _lbIndex;
+        };
+    };
 };

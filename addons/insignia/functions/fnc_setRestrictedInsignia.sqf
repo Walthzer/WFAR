@@ -17,10 +17,10 @@ params ["_config", ["_unit", player]];
 TRACE_2("setRestrictedInsignia",_config,_unit);
 
 {
-	if (_x == "insignia") exitWith 
-	{ 	
-			_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil, true];			
-			_unit setObjectMaterialGlobal [_forEachIndex, getText (_config >> "material")];
-			_unit setObjectTextureGlobal [_forEachIndex, getText (_config >> "texture")];
-	};
+    if (_x == "insignia") exitWith 
+    {     
+            _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil, true];            
+            _unit setObjectMaterialGlobal [_forEachIndex, getText (_config >> "material")];
+            _unit setObjectTextureGlobal [_forEachIndex, getText (_config >> "texture")];
+    };
 } forEach getArray (configFile >> "CfgVehicles" >> getText (configFile >> "CfgWeapons" >> uniform _unit >> "ItemInfo" >> "uniformClass") >> "hiddenSelections");
