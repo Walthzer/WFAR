@@ -8,8 +8,24 @@ class G_Mask
 
 class T_Becraft
 {
-    displayName="Sully";
+    displayName="Becraft";
     author="PFC T. Becraft";
     texture="\z\wfar\addons\insignia\players\t_becraft.paa";
+    textureVehicle="";
+};
+
+class T_Robertson
+{
+    displayName="Robertson";
+    author="LCPL T. Robertson";
+    texture="\z\wfar\addons\insignia\players\t_robertson.paa";
+    textureVehicle="";
+};
+
+class S_Antella
+{
+    displayName="Antella";
+    author="PFC S. Antella";
+    texture="\z\wfar\addons\insignia\players\s_antella.paa";
     textureVehicle="";
 };
