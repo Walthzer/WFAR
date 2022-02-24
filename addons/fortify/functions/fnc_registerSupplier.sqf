@@ -29,7 +29,6 @@ private _index = GVAR(suppliers) pushBackUnique _object;
 [typeOf _object, "initPost", {
     params["_object"];
     private _isSupplier = (_object getVariable[QGVAR(supplyRange), -1]) > -1;
-    systemChat str [_object, _isSupplier];
     if (_isSupplier) then {
 
         GVAR(suppliers) pushBackUnique _object;
