@@ -26,7 +26,7 @@ private _raiseHeight = linearConversion [
         true
     ];
 
-debugArray pushBack [diag_frameNo, _raiseHeight];
+//debugArray pushBack [diag_frameNo, _raiseHeight];
 
 {
     private _sunkenPosition = _x getVariable [QGVAR(sunkenPostion), []];
