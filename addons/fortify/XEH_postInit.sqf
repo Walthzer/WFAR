@@ -102,17 +102,18 @@ if (!hasInterface) exitWith {};
 [{
     params ["_unit", "_object"];
     if ([_unit] call ace_common_fnc_isEngineer) then {
-        private _inSupply = GVAR(suppliers) findIf {
+        private _supplierIndex = GVAR(suppliers) findIf {
                 if (alive _x) then {
                     private _range = _x getVariable[QGVAR(supplyRange), 0];
                     if (_range == 0) then {_range = GVAR(globalSupplyRange)};
+                    
                     (_range == -1 || {(_object distance _x) <= _range});
                 } else {
                     false
                 };
-            } > -1;
+            };
 
-        if (_inSupply) then {
+        if (_supplierIndex > -1) then {
             true
         } else {
             WFAR_NOTIFY_1(WFAR_WARNING, "Too Far From Supplies!");
@@ -123,4 +124,3 @@ if (!hasInterface) exitWith {};
         false
     }
 }] call ACE_fortify_fnc_addDeployHandler;
-
