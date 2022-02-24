@@ -1,8 +1,23 @@
 #include "script_component.hpp"
+/* [QGVAR(modifySuppliers), {
+    params ["_object", ["_remove", false]];
+    TRACE_2("modifySuppliers",_object,_remove);
+
+    if(_remove) then {
+        [{GVAR(suppliers) = GVAR(suppliers) select {!isNull _x}}] call CBA_fnc_execNextFrame;
+    } else {
+        GVAR(suppliers) pushBackUnique _object;
+    };
+
+}] call CBA_fnc_addEventHandler; */
 
 if (isServer) then {
 
-    debugArray = [];
+    //Broadcast variables
+    publicVariable QGVAR(suppliers);
+    publicVariable QGVAR(globalSupplyRange);
+
+    //debugArray = [];
 
     //Modify the number of movement ticks for scaffolds
     GVAR(scaffoldTickModifier) = 20;
@@ -39,6 +54,8 @@ if (isServer) then {
 
     }] call CBA_fnc_addEventHandler;
 };
+
+
 
 if (!hasInterface) exitWith {};
 
@@ -79,3 +96,31 @@ if (!hasInterface) exitWith {};
     _decal setObjectScale _decalScale; */
 
 }] call CBA_fnc_addEventHandler;
+
+
+//Limit fortify to in range of supplies
+[{
+    params ["_unit", "_object"];
+    if ([_unit] call ace_common_fnc_isEngineer) then {
+        private _supplierIndex = GVAR(suppliers) findIf {
+                if (alive _x) then {
+                    private _range = _x getVariable[QGVAR(supplyRange), 0];
+                    if (_range == 0) then {_range = GVAR(globalSupplyRange)};
+                    
+                    (_range == -1 || {(_object distance _x) <= _range});
+                } else {
+                    false
+                };
+            };
+
+        if (_supplierIndex > -1) then {
+            true
+        } else {
+            WFAR_NOTIFY_1(WFAR_WARNING, "Too Far From Supplies!");
+            false
+        };
+    } else {
+        WFAR_NOTIFY_2(WFAR_ERROR, "You are not worthy", "to wield the power of Thor!");
+        false
+    }
+}] call ACE_fortify_fnc_addDeployHandler;

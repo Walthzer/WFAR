@@ -9,7 +9,7 @@
  * 2: Object to ignore <Object>
  *
  * Return Value:
- * 0: Height of the found surface in ASL <NUMBER>
+ * 0: Height of the found surface in ASL <SCALAR>
  * 1: Intersection Position in ASL <ARRAY>
  * 2: Intersection Surface Normal <ARRAY>
  *

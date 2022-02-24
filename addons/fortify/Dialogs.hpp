@@ -2,10 +2,137 @@
 #include "\a3\ui_f\hpp\definecommoncolors.inc"
 
 class RscText;
+class RscEdit;
 class RscObject;
 class RscToolbox;
 class RscPicture;
+class RscCombo;
+class RscCheckBox;
+class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 
+class RscDisplayAttributes {
+    class Controls {
+        class Background;
+        class Title;
+        class Content: RscControlsGroup {
+            class Controls;
+        };
+        class ButtonOK;
+        class ButtonCancel;
+    };
+};
+
+class GVAR(RscToggleSupplies): RscDisplayAttributes {
+
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
+
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class supplies: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(call FUNC(ui_toggleSupplies));
+                    idc = 300000;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(2.3);
+                    class controls {
+                        class hasSuppliesLabel: RscText {
+                            idc = -1;
+                            text = "Has Supplies:";
+                            align = "right";
+                            toolTip = "Does this unit actively provide supply?";
+                            x = 0;
+                            y = H_PART(0.1);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class hasSupplies: RscCheckBox {
+                            idc = 300001;
+                            x = W_PART(10.1);
+                            y = H_PART(0.1);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class supplyRangeLabel: hasSuppliesLabel {
+                            idc = -1;
+                            text = "Supply Range:";
+                            toolTip = "Range for the supply, 0 for global range.";
+                            y = H_PART(1.3);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class supplyRange: RscEdit {
+                            text = "0";
+                            idc = 300002;
+                            x = W_PART(10.1);
+                            y = H_PART(1.3);
+                            w = W_PART(15.9);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                            autocomplete = "";
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscGlobalSupplyRange): RscDisplayAttributes {
+
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
+
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class globalSupplyRange: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(call FUNC(ui_globalSupplyRange));
+                    idc = 300000;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(1.1);
+                    class controls {
+                        class Label: RscText {
+                            idc = -1;
+                            align = "right";
+                            text = "Supply Range:";
+                            toolTip = "Global default range for supply, used when object has range 0";
+                            x = 0;
+                            y = H_PART(0.1);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class Range: RscEdit {
+                            text = "0";
+                            idc = 300002;
+                            x = W_PART(10.1);
+                            y = H_PART(0.1);
+                            w = W_PART(15.9);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                            autocomplete = "";
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
 class GVAR(buildersWaiting_dialog) {
     idd = WAITING_DIALOG_IDD;
     access = 0;
