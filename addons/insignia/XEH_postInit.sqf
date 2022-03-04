@@ -47,7 +47,7 @@ if ((count _allowedRestrictedInsignia) > 0) then {
         params ["_arsenalDisplay"];
         TRACE_1("ace_arsenal_displayOpened",_arsenalDisplay);
 
-            //systemChat str ((_arsenalDisplay displayCtrl IDC_leftTabContent) ctrlAddEventHandler ["LBSelChanged", QUOTE(_this call FUNC(onSelChangedLeft))]); //)]
+    (_arsenalDisplay displayCtrl IDC_leftTabContent) ctrlAddEventHandler ["LBSelChanged", QUOTE(_this call FUNC(onSelChangedLeft))];
 
     }] call CBA_fnc_addEventHandler; [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]];
 
