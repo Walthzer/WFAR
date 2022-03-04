@@ -29,3 +29,11 @@ class S_Antella
     texture="\z\wfar\addons\insignia\players\s_antella.paa";
     textureVehicle="";
 };
+
+class K_Still
+{
+    displayName="Still";
+    author="LCPL K. Still";
+    texture="\z\wfar\addons\insignia\players\k_still.paa";
+    textureVehicle="";
+};
