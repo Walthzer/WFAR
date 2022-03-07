@@ -215,8 +215,6 @@ class CfgVehicles
 				hitpoint 		= "P svetlo";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
 				selection 		= "P svetlo";				/// selection for artificial glow around the bulb, not much used any more
 			};
-<<<<<<< Updated upstream
-=======
 
 			/* class interior_light
 			{
@@ -313,7 +311,6 @@ class CfgVehicles
 				direction 		= "interior_light_dir9";			/// memory point for the light direction
 				hitpoint 		= "interior_light9";				/// point(s) in hitpoint lod for the light (hitPoints are created by engine)
 			}; */
->>>>>>> Stashed changes
 		};
 
 		aggregateReflectors[] = {{"LightCarHeadR01"}, {"LightCarHeadL01"}};
