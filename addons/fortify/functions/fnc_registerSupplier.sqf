@@ -31,10 +31,16 @@ private _index = GVAR(suppliers) pushBackUnique _object;
     private _isSupplier = (_object getVariable[QGVAR(supplyRange), -1]) > -1;
     if (_isSupplier) then {
 
-        GVAR(suppliers) pushBackUnique _object;
-        [{GVAR(suppliers) = GVAR(suppliers) select {!isNull _x}}] call CBA_fnc_execNextFrame;
+        [
+            {
+                params ["_object"];
+                GVAR(suppliers) pushBackUnique _object;
+                GVAR(suppliers) = GVAR(suppliers) select {!isNull _x};
+                publicVariable QGVAR(suppliers);
+            },
+            [_object]
+        ] call CBA_fnc_execNextFrame;
         
-        publicVariable QGVAR(suppliers);
     };
 }, false] call CBA_fnc_addClassEventHandler;
 
