@@ -8,7 +8,7 @@ class CfgPatches
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
         requiredVersion=1.6;
-        requiredaddons[]={ "A3_Data_F" };
+        requiredaddons[]={ "A3_Data_F_Enoch_Loadorder" };
         units[]={};
         weapons[]={};
     };

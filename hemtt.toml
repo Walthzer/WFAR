@@ -13,8 +13,14 @@ files = [
 exclude = [
     "*.psd",
     "*.png",
-    "*.tga",
-    "*.xcf"
+    "*.xcf",
+    "*.ssa",
+    "*.blend1",
+    "*.obj",
+    "*.blend",
+    "*.mtl",
+    "*.svg",
+    "*.txt"
 ]
 
 key_name = "{{prefix}}_{{version}}"
