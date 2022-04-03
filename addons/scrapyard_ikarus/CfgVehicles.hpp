@@ -24,10 +24,8 @@ class CfgVehicles
                class HitGlass5;
                class HitGlass6;
           };
-          class Turrets
-          {
-               class MainTurret: NewTurret {};
-          };
+          class Turrets;
+          class CargoTurret;
           class EventHandlers;
      };
 
@@ -49,10 +47,23 @@ class CfgVehicles
           //crew = Citizen1;
           //typicalCargo[]={Profiteer2};
 
+          //ACE configs
+          //Ace cookoff
+          ace_cookoff_probability = 0.0;
+
+          //ACE vehicle damage
+          ace_vehicle_damage_hullDetonationProb = 0.0;
+          ace_vehicle_damage_turretDetonationProb = 0.0;
+          ace_vehicle_damage_engineDetonationProb = 0.0;
+          ace_vehicle_damage_hullFireProb = 0.0;
+          ace_vehicle_damage_turretFireProb = 0.0;
+          ace_vehicle_damage_engineFireProb = 0.0;
+          ace_vehicle_damage_detonationDuringFireProb = 0.0;
+
           driverAction = Ikarus_Driver; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
           cargoAction[] =
           {
-               Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,
+               Truck_Cargo01,Truck_Cargo01,
                Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,
                Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,
                Truck_Cargo03,Truck_Cargo03,
@@ -63,7 +74,7 @@ class CfgVehicles
           getOutAction           = GetOutLow;           /// and out
           cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
-          transportSoldier = 23;
+          transportSoldier = 21;
 
           //steerAheadSimul=1;
           //steerAheadPlan=1.8;
@@ -175,11 +186,11 @@ class CfgVehicles
                }; 
           };
 
+          hasGunner = 0;
           #include "ikarus\Sounds.hpp"
-          #include "ikarus\Turrets.hpp"
           #include "ikarus\Physx.hpp"
 
-          selectionBrakeLights = "brzdove svetlo";
+          selectionBrakeLights = "brakeLight";
 
           class Reflectors     /// only front lights are considered to be reflectors to save CPU
           {
@@ -246,16 +257,6 @@ class CfgVehicles
           memoryPointTrackFRR = "stopa PPP";
           memoryPointTrackBRL = "stopa ZPL";
           memoryPointTrackBRR = "stopa ZPP";
-
-           //memoryPointTrackFLL = "TrackFLL";
-          //memoryPointTrackFLR = "TrackFLR";
-          //memoryPointTrackBLL = "TrackBLL";
-          //memoryPointTrackBLR = "TrackBLR";
-          //memoryPointTrackFRL = "TrackFRL";
-          //memoryPointTrackFRR = "TrackFRR";
-          //memoryPointTrackBRL = "TrackBRL";
-          //memoryPointTrackBRR = "TrackBRR";
-
           class Damage
           {
                tex[]={};
@@ -283,7 +284,7 @@ class CfgVehicles
 
           class Exhausts /// specific exhaust effects for the car
           {
-               class Exhaust /// the car has two exhausts - each on one side
+               class Exhaust
                {
                     position      = "vyfuk start";            /// name of initial memory point
                     direction      = "vyfuk konec";     /// name of memory point for exhaust direction
@@ -302,8 +303,6 @@ class CfgVehicles
           rarityUrban=0.9;
      };
 
-	class debugChild: WFAR_Ikarus_base {};
-
 	class WFAR_Ikarus: WFAR_Ikarus_base
 	{
 		side = 1;
@@ -311,7 +310,7 @@ class CfgVehicles
 		model="\z\wfar\addons\scrapyard_ikarus\ikarus\WFAR_Ikarus.p3d";
 		displayName="Ikarus";
 		class Library {libTextDesc = "WFAR Public Transport";};
-
+          class Turrets {};
 		class HitPoints: HitPoints
 		{
 			class HitGlass1: HitGlass1 {armor=0.25;}; /// it is pretty easy to puncture the glass but not so easy to remove it
@@ -323,7 +322,7 @@ class CfgVehicles
 		};
 	};
 
-		class WFAR_Ikarus_Armoured: WFAR_Ikarus_base {
+	class WFAR_Ikarus_Armoured: WFAR_Ikarus_base {
 		side = 1;
 		scope = 2;
 		model="\z\wfar\addons\scrapyard_ikarus\ikarus\WFAR_Ikarus_Armoured.p3d";
@@ -333,17 +332,20 @@ class CfgVehicles
 		fireResistance      = 7;      /// lesser protection against fire than tanks
 		damageResistance = 0.03;
 		armor                = 160;      /// just some protection against missiles, collisions and explosions 
-		cost = 150000; /// how likely is the enemy going to target this vehicle
+		cost = 15000; /// how likely is the enemy going to target this vehicle
 
+          unloadInCombat = 0; //Prevent AI from getting out in combat
+
+          class Turrets {};
 		class PlateInfos
 		{
 			// name of section where plate number should generated
 			name = "spz";
 			// color used for plate number in (r,g,b,a) format
-			color[] = {0.00,0.30,0.30,0.6};
+			color[] = {1,1,1,0.8};
 			plateFont          = "RobotoCondensed";
 			// "#" represent number & "$" represents letter
-			plateFormat          = "BATTLE BUS #$";
+			plateFormat          = "ALLAH AKBUAR";
 			// Required even if you don't use any letters in plateFormat
 			plateLetters     = "ABCDEFHIKLMOPRSTVXYZ";
 		};
@@ -359,7 +361,6 @@ class CfgVehicles
 		//      material: unneeded, leave at -1
 
 		// The values are sample. Every vehicle needs to be finetuned separately.
-
 		class HitPoints: HitPoints {
 			class HitFuel: HitFuel /// correct points for fuel tank, some of the damage is aFRLied to the whole
 			{
@@ -389,6 +390,63 @@ class CfgVehicles
 				minimalHit = 1.5;
 				explosionShielding = 5;
 			}; 
+		};
+	};
+
+     class WFAR_Ikarus_Battle: WFAR_Ikarus_Armoured {
+		side = 1;
+		scope = 2;
+		model="\z\wfar\addons\scrapyard_ikarus\ikarus\WFAR_Ikarus_Battle.p3d";
+		displayName="Battle Bus";
+		class Library {libTextDesc = "ISIS APC";};
+
+          //ACE configs
+          //Ace cookoff
+          ace_cookoff_probability = 0.0;
+
+          //ACE vehicle damage
+          ace_vehicle_damage_hullDetonationProb = 0.0;
+          ace_vehicle_damage_turretDetonationProb = 0.2;
+          ace_vehicle_damage_engineDetonationProb = 0.0;
+          ace_vehicle_damage_hullFireProb = 0.0;
+          ace_vehicle_damage_turretFireProb = 0.2;
+          ace_vehicle_damage_engineFireProb = 0.0;
+          ace_vehicle_damage_detonationDuringFireProb = 0.0;
+
+
+          class Turrets: Turrets										/// just a copilot seat as a turret to enable taking the controls
+		{
+			class CargoTurret_01: CargoTurret 			/// position for Firing from Vehicles
+			{
+                    gunnerInAction                = "passenger_inside_4";
+				gunnerAction 				= "passenger_inside_4";	/// generic animation for sitting inside with rifle ready
+				gunnerCompartments 			= "Compartment1";		/// gunner is not able to switch seats
+				memoryPointsGetInGunner 	     = "pos cargo";		/// specific memory points to allow choice of position
+				memoryPointsGetInGunnerDir 	= "pos cargo dir";	/// direction of get in action
+				gunnerName 				= "Front Right Gunner";	/// name of the position in the Action menu
+                    proxyType = "CPGunner";
+				proxyIndex 				= 14;					/// what cargo proxy is used according to index in the model
+				maxElev 					= 30;					/// what is the highest possible elevation of the turret
+				minElev 					= -20;					/// what is the lowest possible elevation of the turret
+				maxTurn 					= 35;					/// what is the left-most possible turn of the turret
+				minTurn 					= -35;					/// what is the right-most possible turn of the turret
+				isPersonTurret 			= 1;					/// enables firing from vehicle functionality
+				ejectDeadGunner 			= 0;					/// seatbelts included
+				enabledByAnimationSource 	= "";				/// doesn't work unless the said animation source is 1
+			};
+		};
+
+		class PlateInfos
+		{
+			// name of section where plate number should generated
+			name = "spz";
+			// color used for plate number in (r,g,b,a) format
+			color[] = {1,1,10.8};
+			plateFont          = "RobotoCondensed";
+			// "#" represent number & "$" represents letter
+			plateFormat          = "BATTLE BUS #$";
+			// Required even if you don't use any letters in plateFormat
+			plateLetters     = "ABCDEFHIKLMOPRSTVXYZ";
 		};
 	};
 
