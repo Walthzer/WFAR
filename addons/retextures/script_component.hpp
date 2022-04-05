@@ -16,3 +16,4 @@
 #endif
 
 #include "\z\wfar\addons\main\script_macros.hpp"
+#include "\z\ace\addons\arsenal\defines.hpp"

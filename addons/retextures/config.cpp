@@ -11,25 +11,14 @@ class CfgPatches
         requiredaddons[]={"WASHM_wfar_data", "rhsusf_c_troops"};
         units[]={};
         weapons[]={
-            #define FINAL
             #include "data\rhsusf\mich_covered\jews\weapons.hpp"
+            #define FINAL
+            #include "data\rhsusf\mich_covered\shark\weapons.hpp"
+            #undef FINAL
         };
     };
 };
 
-class cfgWeapons {
-    class rhsusf_mich_helmet_marpatwd;
-    class rhsusf_mich_helmet_marpatwd_headset;
-
-    class rhsusf_mich_helmet_marpatwd_alt;
-    class rhsusf_mich_helmet_marpatwd_alt_headset;
-
-
-    class rhsusf_mich_helmet_marpatwd_norotos;
-    class rhsusf_mich_helmet_marpatwd_norotos_headset;
-
-    class rhsusf_mich_helmet_marpatwd_norotos_arc;
-    class rhsusf_mich_helmet_marpatwd_norotos_arc_headset;
-
-    #include "data\rhsusf\mich_covered\jews\cfgWeapons.hpp"
-};
+#include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgWFARArsenalAccess.hpp"

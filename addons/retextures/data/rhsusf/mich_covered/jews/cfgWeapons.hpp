@@ -2,6 +2,7 @@ class wfar_jews_mich_helmet_marpatwd: rhsusf_mich_helmet_marpatwd
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatwd_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-WD Jewsbury);
     hiddenSelectionsTextures[]=
@@ -14,6 +15,7 @@ class wfar_jews_mich_helmet_marpatwd_headset: rhsusf_mich_helmet_marpatwd_headse
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
     //picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatwd_headset_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-WD (Headset) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -26,6 +28,7 @@ class wfar_jews_mich_helmet_marpatwd_alt: rhsusf_mich_helmet_marpatwd_alt
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
     //picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatwd_alt_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-WD (Alt) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -38,6 +41,7 @@ class wfar_jews_mich_helmet_marpatwd_alt_headset: rhsusf_mich_helmet_marpatwd_al
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
     //picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatwd_alt_headset_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-WD (Alt/Headset) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -48,6 +52,7 @@ class wfar_jews_mich_helmet_marpatwd_alt_headset: rhsusf_mich_helmet_marpatwd_al
 };
 class wfar_jews_mich_helmet_marpatd: wfar_jews_mich_helmet_marpatwd
 {
+    scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-D Jewsbury);
     hiddenSelectionsTextures[]=
@@ -58,6 +63,7 @@ class wfar_jews_mich_helmet_marpatd: wfar_jews_mich_helmet_marpatwd
 };
 class wfar_jews_mich_helmet_marpatd_headset: wfar_jews_mich_helmet_marpatwd_headset
 {
+    scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_headset_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-D (Headset) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -68,6 +74,7 @@ class wfar_jews_mich_helmet_marpatd_headset: wfar_jews_mich_helmet_marpatwd_head
 };
 class wfar_jews_mich_helmet_marpatd_alt: wfar_jews_mich_helmet_marpatwd_alt
 {
+    scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_alt_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-D (Alt) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -78,6 +85,7 @@ class wfar_jews_mich_helmet_marpatd_alt: wfar_jews_mich_helmet_marpatwd_alt
 };
 class wfar_jews_mich_helmet_marpatd_alt_headset: wfar_jews_mich_helmet_marpatwd_alt_headset
 {
+    scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_alt_headset_ca.paa";
     displayName=QUOTE(MICH 2000 MARPAT-D (Alt/Headset) Jewsbury);
     hiddenSelectionsTextures[]=
@@ -91,6 +99,7 @@ class wfar_jews_mich_helmet_marpatwd_norotos: rhsusf_mich_helmet_marpatwd_noroto
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
 	displayName=QUOTE(MICH 2000 MARPAT-WD (Norotos) Jewsbury);
 	hiddenSelectionsTextures[]=
 	{
@@ -102,6 +111,7 @@ class wfar_jews_mich_helmet_marpatwd_norotos_headset: rhsusf_mich_helmet_marpatw
 {
 	author="Walthzer/Shark";
     dlc="";
+    scopeArsenal=0;
 	displayName=QUOTE(MICH 2000 MARPAT-WD (Norotos/Headset) Jewsbury);
 	hiddenSelectionsTextures[]=
 	{
@@ -112,6 +122,7 @@ class wfar_jews_mich_helmet_marpatwd_norotos_headset: rhsusf_mich_helmet_marpatw
 
 class wfar_jews_mich_helmet_marpatwd_norotos_arc: rhsusf_mich_helmet_marpatwd_norotos_arc
 {
+    scopeArsenal=0;
 	displayName=QUOTE(MICH 2000 MARPAT-WD (Norotos/ARC) Jewsbury);
 	hiddenSelectionsTextures[]=
 	{
@@ -122,6 +133,7 @@ class wfar_jews_mich_helmet_marpatwd_norotos_arc: rhsusf_mich_helmet_marpatwd_no
 
 class wfar_jews_mich_helmet_marpatwd_norotos_arc_headset: rhsusf_mich_helmet_marpatwd_norotos_arc_headset
 {
+    scopeArsenal=0;
 	displayName=QUOTE(MICH 2000 MARPAT-WD (Norotos/ARC/Headet) Jewsbury);
 	hiddenSelectionsTextures[]=
 	{
@@ -132,6 +144,7 @@ class wfar_jews_mich_helmet_marpatwd_norotos_arc_headset: rhsusf_mich_helmet_mar
 
 class wfar_jews_mich_helmet_marpatd_norotos: wfar_jews_mich_helmet_marpatwd_norotos
 {
+    scopeArsenal=0;
 	picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_norotos_ca.paa";
 	displayName=QUOTE(MICH 2000 MARPAT-D (Norotos) Jewsbury);
 	hiddenSelectionsTextures[]=
@@ -142,6 +155,7 @@ class wfar_jews_mich_helmet_marpatd_norotos: wfar_jews_mich_helmet_marpatwd_noro
 };
 class wfar_jews_mich_helmet_marpatd_norotos_headset: wfar_jews_mich_helmet_marpatwd_norotos_headset
 {
+    scopeArsenal=0;
 	picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_norotos_headset_ca.paa";
 	displayName=QUOTE(MICH 2000 MARPAT-D (Norotos/Headset) Jewsbury);
 	hiddenSelectionsTextures[]=
@@ -152,6 +166,7 @@ class wfar_jews_mich_helmet_marpatd_norotos_headset: wfar_jews_mich_helmet_marpa
 };
 class wfar_jews_mich_helmet_marpatd_norotos_arc: wfar_jews_mich_helmet_marpatwd_norotos_arc
 {
+    scopeArsenal=0;
 	picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_norotos_arc_ca.paa";
 	displayName=QUOTE(MICH 2000 MARPAT-D (Norotos/ARC) Jewsbury);
 	hiddenSelectionsTextures[]=
@@ -162,6 +177,7 @@ class wfar_jews_mich_helmet_marpatd_norotos_arc: wfar_jews_mich_helmet_marpatwd_
 };
 class wfar_jews_mich_helmet_marpatd_norotos_arc_headset: wfar_jews_mich_helmet_marpatwd_norotos_arc_headset
 {
+    scopeArsenal=0;
 	picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_mich_helmet_marpatd_norotos_arc_headset_ca.paa";
 	displayName=QUOTE(MICH 2000 MARPAT-D (Norotos/ARC) Jewsbury);
 	hiddenSelectionsTextures[]=
