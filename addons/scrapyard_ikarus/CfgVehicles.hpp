@@ -1,3 +1,10 @@
+#define ADDTURRET(baseClass, inc, name, proxy)\
+    class baseClass##inc: baseClass##01\
+    {\
+        gunnerName 				= name;\
+        proxyIndex 				= proxy;\
+    };\
+
 class CfgVehicles
 {
 
@@ -303,7 +310,7 @@ class CfgVehicles
           rarityUrban=0.9;
      };
 
-	class WFAR_Ikarus: WFAR_Ikarus_base
+/* 	class WFAR_Ikarus: WFAR_Ikarus_base
 	{
 		side = 1;
 		scope = 2;
@@ -320,7 +327,7 @@ class CfgVehicles
 			class HitGlass5: HitGlass5 {armor=0.25;};
 			class HitGlass6: HitGlass6 {armor=0.25;};
 		};
-	};
+	}; */
 
 	class WFAR_Ikarus_Armoured: WFAR_Ikarus_base {
 		side = 1;
@@ -400,40 +407,71 @@ class CfgVehicles
 		displayName="Battle Bus";
 		class Library {libTextDesc = "ISIS APC";};
 
-          //ACE configs
-          //Ace cookoff
-          ace_cookoff_probability = 0.0;
+        //ACE configs
+        //Ace cookoff
+        ace_cookoff_probability = 0.0;
 
-          //ACE vehicle damage
-          ace_vehicle_damage_hullDetonationProb = 0.0;
-          ace_vehicle_damage_turretDetonationProb = 0.2;
-          ace_vehicle_damage_engineDetonationProb = 0.0;
-          ace_vehicle_damage_hullFireProb = 0.0;
-          ace_vehicle_damage_turretFireProb = 0.2;
-          ace_vehicle_damage_engineFireProb = 0.0;
-          ace_vehicle_damage_detonationDuringFireProb = 0.0;
+        //ACE vehicle damage
+        ace_vehicle_damage_hullDetonationProb = 0.0;
+        ace_vehicle_damage_turretDetonationProb = 0.2;
+        ace_vehicle_damage_engineDetonationProb = 0.0;
+        ace_vehicle_damage_hullFireProb = 0.0;
+        ace_vehicle_damage_turretFireProb = 0.2;
+        ace_vehicle_damage_engineFireProb = 0.0;
+        ace_vehicle_damage_detonationDuringFireProb = 0.0;
 
+        cargoAction[] = {};
+        transportSoldier = 0;
+    
+        //"passenger_flatground_4_vehicle_passenger_stand_1" -OUT
+        //"vehicle_passenger_stand_1_passenger_flatground_4" -IN
 
-          class Turrets: Turrets										/// just a copilot seat as a turret to enable taking the controls
+        //Kneeling turrets 101 - 106
+        //Standing Turrets 201 - 207
+        class Turrets: Turrets										/// just a copilot seat as a turret to enable taking the controls
 		{
-			class CargoTurret_01: CargoTurret 			/// position for Firing from Vehicles
+			class KneelingTurret_01: CargoTurret 			/// position for Firing from Vehicles
 			{
-                    gunnerInAction                = "passenger_inside_4";
+                gunnerInAction              = "passenger_inside_4";
 				gunnerAction 				= "passenger_inside_4";	/// generic animation for sitting inside with rifle ready
 				gunnerCompartments 			= "Compartment1";		/// gunner is not able to switch seats
-				memoryPointsGetInGunner 	     = "pos cargo";		/// specific memory points to allow choice of position
+				memoryPointsGetInGunner 	= "pos cargo";		/// specific memory points to allow choice of position
 				memoryPointsGetInGunnerDir 	= "pos cargo dir";	/// direction of get in action
-				gunnerName 				= "Front Right Gunner";	/// name of the position in the Action menu
-                    proxyType = "CPGunner";
-				proxyIndex 				= 14;					/// what cargo proxy is used according to index in the model
+				gunnerName 				    = "Right First Gunner";	/// name of the position in the Action menu
+                proxyType                   = "CPGunner";
+				proxyIndex 				    = 101;					/// what cargo proxy is used according to index in the model
 				maxElev 					= 30;					/// what is the highest possible elevation of the turret
 				minElev 					= -20;					/// what is the lowest possible elevation of the turret
-				maxTurn 					= 35;					/// what is the left-most possible turn of the turret
-				minTurn 					= -35;					/// what is the right-most possible turn of the turret
-				isPersonTurret 			= 1;					/// enables firing from vehicle functionality
+				maxTurn 					= 25;					/// what is the left-most possible turn of the turret
+				minTurn 					= -25;					/// what is the right-most possible turn of the turret
+				isPersonTurret 			    = 1;					/// enables firing from vehicle functionality
 				ejectDeadGunner 			= 0;					/// seatbelts included
 				enabledByAnimationSource 	= "";				/// doesn't work unless the said animation source is 1
 			};
+            ADDTURRET(KneelingTurret_, 02, "Right Second Gunner", 102)
+            ADDTURRET(KneelingTurret_, 03, "Right Third Gunner", 103)
+            ADDTURRET(KneelingTurret_, 04, "Right Fourth Gunner", 104)
+            ADDTURRET(KneelingTurret_, 05, "Right Fifth Gunner", 105)
+            ADDTURRET(KneelingTurret_, 06, "Right Fifth Gunner", 106)
+
+			class StandingTurret_01: KneelingTurret_01 			/// position for Firing from Vehicles
+			{
+                gunnerInAction              = "vehicle_passenger_stand_1_passenger_flatground_4";
+				gunnerAction 				= "passenger_flatground_4_vehicle_passenger_stand_1";	/// generic animation for sitting inside with rifle ready
+				gunnerName 				    = "Left First Gunner";	/// name of the position in the Action menu
+				proxyIndex 				    = 207;					/// what cargo proxy is used according to index in the model
+				maxElev 				    = 30;					/// what is the highest possible elevation of the turret
+				minElev 				    = -25;					/// what is the lowest possible elevation of the turret
+				maxTurn 				    = 25;					/// what is the left-most possible turn of the turret
+				minTurn 				    = -25;					/// what is the right-most possible turn of the turret
+				enabledByAnimationSource    = "";				/// doesn't work unless the said animation source is 1
+			};
+            ADDTURRET(StandingTurret_, 02, "Left Second Gunner", 206)
+            ADDTURRET(StandingTurret_, 03, "Left Third Gunner", 205)
+            ADDTURRET(StandingTurret_, 04, "Left Fourth Gunner", 204)
+            ADDTURRET(StandingTurret_, 05, "Left Fifth Gunner", 203)
+            ADDTURRET(StandingTurret_, 06, "Left Sixth Gunner", 202)
+            ADDTURRET(StandingTurret_, 07, "Rear Gunner", 201)
 		};
 
 		class PlateInfos
