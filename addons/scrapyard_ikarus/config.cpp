@@ -8,10 +8,18 @@ class CfgPatches {
         url="https://whitefoxassaultreg.wixsite.com/wfar";
         requiredVersion=REQUIRED_VERSION;
         requiredaddons[]={"WASHM_wfar_data", "WASHM_wfar_scrapyard_people"};
-        units[]={};
+        units[]={
+                "WFAR_Ikarus_Armoured_OPFOR",
+                "WFAR_Ikarus_Battle_OPFOR"
+            };
         weapons[]={};
     };
 };
 
 #include "CfgVehicles.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgFactionClasses.hpp"
+
+
+
+
