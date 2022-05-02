@@ -83,18 +83,18 @@ class CfgVehicles
           driverAction = Ikarus_Driver; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
           cargoAction[] =
           {
-               Truck_Cargo01,Truck_Cargo01,
+               Truck_Cargo01,Truck_Cargo01,Truck_Cargo02,Truck_Cargo02,
                Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,
                Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,
-               Truck_Cargo03,Truck_Cargo03,
-               Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,
+               Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,
+               Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,
                Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo
           };
           getInAction           = GetInLow;           /// how does driver look while getting in
           getOutAction           = GetOutLow;           /// and out
           cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
-          transportSoldier = 21;
+          transportSoldier = 23;
 
           //steerAheadSimul=1;
           //steerAheadPlan=1.8;
