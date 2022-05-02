@@ -1,6 +1,8 @@
 release/*
 releases/*
 keys/*
+z/*
+a3/*
 .hemtt/local
 *.cache
 *.pbo
