@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-     texture="a3\structures_f\data\metal\metal_red_dirty_smdi.paa";
+     texture="a3\structures_f\data\metal\metal_red_dirty_SMDI.paa";
      uvSource="tex";
      class uvTransform
      {

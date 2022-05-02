@@ -4,7 +4,7 @@ class CfgFactionClasses
     {
         //access = "ReadAndCreate"; 
         displayName = "@White Fox Assault Regiment";
-        icon = "wfar\logo_wfar_ca.paa";
+        icon = "z\wfar\addons\main\data\wfarIcon.paa";
         author = "Walthzer/Shark";
         priority = 10;
         side = 0;
@@ -13,7 +13,7 @@ class CfgFactionClasses
     {
         //access = "ReadAndCreate"; 
         displayName = "@White Fox Assault Regiment";
-        icon = "wfar\logo_wfar_ca.paa";
+        icon = "z\wfar\addons\main\data\wfarIcon.paa";
         author = "Walthzer/Shark";
         priority = 10;
         side = 1;
@@ -22,7 +22,7 @@ class CfgFactionClasses
     {
         //access = "ReadAndCreate"; 
         displayName = "@White Fox Assault Regiment";
-        icon = "wfar\logo_wfar_ca.paa";
+        icon = "z\wfar\addons\main\data\wfarIcon.paa";
         author = "Walthzer/Shark";
         priority = 10;
         side = 2;

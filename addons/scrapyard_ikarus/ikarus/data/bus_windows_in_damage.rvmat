@@ -20,7 +20,7 @@ class Stage1
 };
 class Stage2
 {
-     texture="z\wfar\addons\scrapyard_ikarus\data\metal_rough_half_dt.paa";
+     texture="z\wfar\addons\scrapyard_ikarus\data\metal_rough_half_DT.paa";
      uvSource="tex";
      class uvTransform
      {
@@ -32,7 +32,7 @@ class Stage2
 };
 class Stage3
 {
-     texture="a3\data_f\destruct\destr_glass_armour2_full_ca.paa";
+     texture="a3\data_f\destruct\destr_glass_armour2_full_CA.paa";
      uvSource="tex";
      class uvTransform
      {
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-     texture="z\wfar\addons\scrapyard_ikarus\ikarus\data\bus_windows_smdi.paa";
+     texture="z\wfar\addons\scrapyard_ikarus\ikarus\data\bus_windows_SMDI.paa";
      uvSource="tex";
      class uvTransform
      {

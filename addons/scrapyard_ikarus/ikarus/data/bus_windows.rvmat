@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-     texture="z\wfar\addons\scrapyard_ikarus\ikarus\data\bus_windows_nohq.paa";
+     texture="#(argb,8,8,3)color(0.5,0.5,1,1,NOHQ)";
      uvSource="tex";
      class uvTransform
      {
@@ -20,7 +20,7 @@ class Stage1
 };
 class Stage2
 {
-     texture="z\wfar\addons\scrapyard_ikarus\data\metal_rough_half_dt.paa";
+     texture="z\wfar\addons\scrapyard_ikarus\data\metal_rough_half_DT.paa";
      uvSource="tex";
      class uvTransform
      {
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-     texture="z\wfar\addons\scrapyard_ikarus\ikarus\data\bus_windows_smdi.paa";
+     texture="z\wfar\addons\scrapyard_ikarus\ikarus\data\bus_windows_SMDI.paa";
      uvSource="tex";
      class uvTransform
      {
