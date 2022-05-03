@@ -14,4 +14,9 @@ class cfgWeapons {
 
     #include "data\rhsusf\mich_covered\jews\CfgWeapons.hpp"
     #include "data\rhsusf\mich_covered\shark\CfgWeapons.hpp"
+
+    class rhsusf_cvc_alt_helmet;
+    class rhsusf_cvc_ess;
+
+    #include "data\rhsusf\cvc\gecko\CfgWeapons.hpp"
 };
