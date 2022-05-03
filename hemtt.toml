@@ -1,6 +1,9 @@
 name = "WFAR"
 prefix = "wfar"
 author = "Walthzer/Shark"
+check = [
+    "!binarizer_link"
+]
 files = [
     "*.so",
     "mod.cpp",
@@ -32,3 +35,11 @@ releasebuild = [
 
 [header_exts]
 version= "{{git \"id 8\"}}"
+
+# Binarizer file search compatibility
+[scripts.binarizer_link]
+steps_windows = [
+    "if not exist z\\wfar mkdir z\\wfar",
+    "if not exist z\\wfar\\addons mklink /j z\\wfar\\addons addons",
+    "if not exist a3 mklink /j a3 N:\\Arma3Pdrive\\a3"
+]
