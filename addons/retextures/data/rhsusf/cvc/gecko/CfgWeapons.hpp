@@ -1,6 +1,6 @@
 class wfar_gecko_cvc_alt: rhsusf_cvc_alt_helmet
 {
-	author="Walthzer/Shark";
+    author="Walthzer/Shark";
     dlc="";
     scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_cvc_alt_helmet_ca.paa";
@@ -12,7 +12,7 @@ class wfar_gecko_cvc_alt: rhsusf_cvc_alt_helmet
 };
 class wfar_gecko_cvc_green_alt: wfar_gecko_cvc_alt
 {
-	author="Walthzer/Shark";
+    author="Walthzer/Shark";
     dlc="";
     scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_cvc_green_helmet_ca.paa";
@@ -24,7 +24,7 @@ class wfar_gecko_cvc_green_alt: wfar_gecko_cvc_alt
 };
 class wfar_gecko_cvc_ess: rhsusf_cvc_ess
 {
-	author="Walthzer/Shark";
+    author="Walthzer/Shark";
     dlc="";
     scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_cvc_ess_ca.paa";
@@ -36,7 +36,7 @@ class wfar_gecko_cvc_ess: rhsusf_cvc_ess
 };
 class wfar_gecko_cvc_green_ess: wfar_gecko_cvc_ess
 {
-	author="Walthzer/Shark";
+    author="Walthzer/Shark";
     dlc="";
     scopeArsenal=0;
     picture="\rhsusf\addons\rhsusf_inventoryicons\data\headgear\rhsusf_cvc_ess_ca.paa";
