@@ -11,10 +11,10 @@ class CfgPatches
         requiredaddons[]={"WASHM_wfar_data", "rhsusf_c_troops"};
         units[]={};
         weapons[]={
-            #include "z\wfar\addons\retextures\data\rhsusf\cvc\gecko\weapons.hpp"
-            #include "z\wfar\addons\retextures\data\rhsusf\mich_covered\jews\weapons.hpp"
+            #include "\z\wfar\addons\retextures\data\rhsusf\cvc\gecko\weapons.hpp"
+            #include "\z\wfar\addons\retextures\data\rhsusf\mich_covered\jews\weapons.hpp"
             #define FINAL
-            #include "z\wfar\addons\retextures\data\rhsusf\mich_covered\shark\weapons.hpp"
+            #include "\z\wfar\addons\retextures\data\rhsusf\mich_covered\shark\weapons.hpp"
             #undef FINAL
         };
     };
