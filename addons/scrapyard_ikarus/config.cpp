@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "basicDefines_A3.hpp"
 
 class CfgPatches {
     class WASHM_wfar_scrapyard_ikarus {

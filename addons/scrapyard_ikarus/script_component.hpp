@@ -16,4 +16,3 @@
 #endif
 
 #include "\z\wfar\addons\main\script_macros.hpp"
-#include "\z\wfar\addons\scrapyard_ikarus\basicDefines_A3.hpp"
