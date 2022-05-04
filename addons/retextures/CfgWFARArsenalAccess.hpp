@@ -5,7 +5,7 @@ class cfgWFARArsenalAccess
          //Jews
         76561198042318568[]={
             #define FINAL
-            //#include "data\rhsusf\mich_covered\jews\weapons.hpp"
+            #include "data\rhsusf\mich_covered\jews\weapons.hpp"
             #undef FINAL
         };
         //Shark
