@@ -12,7 +12,7 @@ class CfgPatches
         units[]={};
         weapons[]={
             #include "data\rhsusf\cvc\gecko\weapons.hpp"
-            //#include "data\rhsusf\mich_covered\jews\weapons.hpp"
+            #include "data\rhsusf\mich_covered\jews\weapons.hpp"
             #define FINAL
             #include "data\rhsusf\mich_covered\shark\weapons.hpp"
             #undef FINAL
