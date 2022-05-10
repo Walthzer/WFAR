@@ -1,4 +1,4 @@
-#include "script_component.hpp";
+#include "script_component.hpp"
 
 //ACE Arsenal item cache format
 private _cargo = [
