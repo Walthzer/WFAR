@@ -32,7 +32,7 @@ private _fnc_getSaveListsConfigs = {
     private _saveFunction = getText (_x >> "load");
     private _listSaveData = _saveData get _listName;
 
-	if (_listSaveData isEqualType []) then {
-    	[_listSaveData] call (missionNamespace getVariable[_saveFunction, {WARNING_1("No Load function for saveList: ",_listName)}]);
-	};
+    if (_listSaveData isEqualType []) then {
+        [_listSaveData] call (missionNamespace getVariable[_saveFunction, {WARNING_1("No Load function for saveList: ",_listName)}]);
+    };
 } forEach (call _fnc_getSaveListsConfigs);

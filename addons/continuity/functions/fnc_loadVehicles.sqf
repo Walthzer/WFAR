@@ -33,12 +33,12 @@ private _loadedVehicles = [];
     _vehicle setPosASL _posASL;
     _vehicle setVectorDirAndUp _vectorDirAndUp;
      
-	if (_hitpointdamage isEqualType true && {_hitpointdamage == true}) then {
-		//Vehicle was wreck, make it a wreck and go to next vehicle:
-		_vehicle setVariable ["ace_cookoff_enable", false];
-		_vehicle setDamage [1, false];
-		continue;
-	};
+    if (_hitpointdamage isEqualType true && {_hitpointdamage == true}) then {
+        //Vehicle was wreck, make it a wreck and go to next vehicle:
+        _vehicle setVariable ["ace_cookoff_enable", false];
+        _vehicle setDamage [1, false];
+        continue;
+    };
 
     {
         //_hitpointDamage = [ ["HITPOINTS"], [DAMAGE VALUE] ];
