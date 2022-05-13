@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"wfar_main"};
+        requiredAddons[] = {"WASHM_wfar_data"};
         author = "";
         authors[] = {"Walthzer/Shark"};
         VERSION_CONFIG;
@@ -14,3 +14,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgEden.hpp"
+#include "CfgWFARContinuity.hpp"

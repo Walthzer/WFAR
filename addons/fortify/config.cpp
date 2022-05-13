@@ -9,7 +9,7 @@ class CfgPatches {
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"WASHM_wfar_data", "ace_zeus"};
+        requiredAddons[] = {"WASHM_wfar_data", "wfar_continuity", "ace_zeus"};
         author = "";
         authors[] = {"Walthzer/Shark"};
         VERSION_CONFIG;
@@ -21,3 +21,4 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "Dialogs.hpp"
 #include "ACEX_Fortify_Presets.hpp"
+#include "CfgWFARContinuity.hpp"

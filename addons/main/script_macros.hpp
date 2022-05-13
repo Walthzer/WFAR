@@ -1,5 +1,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define TRACE_0(MESSAGE) TRACE_1(MESSAGE,"")
+
 #define WFAR_WARNING ([1, 1, 0, 1])
 #define WFAR_ERROR ([1, 0, 0, 1])
 

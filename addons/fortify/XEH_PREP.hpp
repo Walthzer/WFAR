@@ -10,3 +10,4 @@ PREP(playerHandelRemoving);
 PREP(getSurfaceHeightASL);
 PREP(ui_toggleSupplies);
 PREP(ui_globalSupplyRange);
+PREP(loadFortifyObject); //Continuity integration
