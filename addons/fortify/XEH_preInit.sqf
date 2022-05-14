@@ -7,7 +7,11 @@ ADDON = false;
 ADDON = true;
 
 if (isServer) then {
+
+    GVAR(fortifyObjects) = [];
+
     //Init foritfy limit variables
     GVAR(suppliers) = [];
     GVAR(globalSupplyRange) = 50;
+    
 };

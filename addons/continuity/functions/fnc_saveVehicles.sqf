@@ -44,11 +44,10 @@ private _vehicleSaveList = [];
     if !(alive _x) then {
         //Vehicle is wreck no need to save any other data
         _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], true];
-        continue;
+        continue
     };
-    //Store hitpoitDamage information, discarding the selectionList to save space.
-    private _hitpointDamage = getAllHitPointsDamage _x;
-    _hitpointDamage deleteAt 1;
+
+    private _damageData = [_x] call FUNC(getDamageData);
 
     //Save ammo discarding magazine ID and creator to save data
     private _turretAmmo = [];
@@ -64,7 +63,7 @@ private _vehicleSaveList = [];
     //ACE Cargo
     //private _cargo = _x getVariable ["ace_cargo_loaded", []];
 
-    _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], _hitpointDamage, _turretAmmo, _fuelArray, [isLightOn _x, isEngineOn _x, locked _x], _inventoryData, [], getForcedFlagTexture _x];
-} foreach vehicles;
+    _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _turretAmmo, _fuelArray, [isLightOn _x, isEngineOn _x, locked _x], _inventoryData, [], getForcedFlagTexture _x];
+} foreach entities [["AllVehicles"], ["ParachuteBase", "Man", "StaticWeapon"]];
 
 _vehicleSaveList

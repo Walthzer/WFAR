@@ -6,6 +6,12 @@ if (isServer) then {
     GVAR(missionKey) = format ["wfar_continuity_%1.%2", missionName, worldName];
 
     if (GVAR(enable)) then {
+
+        //Dummy unit 
+        GVAR(unitDummy) = createAgent ["B_Soldier_F", DUMMY_POSITION, [], 0, "NONE"];
+        hideObjectGlobal GVAR(unitDummy);
+        GVAR(unitDummy) enableSimulationGlobal false;
+
         GVAR(missionSaves) = (profileNamespace getVariable [GVAR(missionKey), createHashMap]);
 
         //Has continuity ever saved this mission?
@@ -13,7 +19,9 @@ if (isServer) then {
 
             if (GVAR(scenarioSaveDateUTC) in GVAR(missionSaves)) then {
                 //We have save data for this specific scenario -> load it
+                private _startTime = diag_tickTime;
                 [GVAR(missionSaves) get GVAR(scenarioSaveDateUTC)] call FUNC(loadMissionFromSaveData);
+                GVAR(loadTime) = diag_tickTime - _startTime;
             } else {
                 //We have save data for a different version of this scenario -> Ask Zeus what to Do
                 call FUNC(handleLoadMissionConflict);

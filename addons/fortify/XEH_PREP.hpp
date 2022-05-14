@@ -1,4 +1,5 @@
 PREP(registerSupplier);
+PREP(doBuildSiteCheck);
 PREP(convertToBuildSite);
 PREP(cutGrass);
 PREP(getObjectBounding2D);
@@ -10,4 +11,7 @@ PREP(playerHandelRemoving);
 PREP(getSurfaceHeightASL);
 PREP(ui_toggleSupplies);
 PREP(ui_globalSupplyRange);
-PREP(loadFortifyObject); //Continuity integration
+
+//Continuity integration
+PREP(saveFortify);
+PREP(loadFortify); 

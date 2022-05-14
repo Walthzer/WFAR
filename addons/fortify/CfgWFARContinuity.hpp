@@ -1,7 +1,9 @@
 class CfgWFARContinuity {
     class saveLists {
         class Fortify {
-            load=QUOTE(FUNC(loadFortifyObject));
+            debug=1;
+            load=QUOTE(FUNC(loadFortify));
+            save=QUOTE(FUNC(saveFortify));
         };
     }
 };

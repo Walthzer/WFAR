@@ -19,7 +19,7 @@ TRACE_1("loadVehicles",_listSaveData);
 
 private _loadedVehicles = [];
 {
-    _x params ["_vehicleKey", "_posASL", "_vectorDirAndUp", "_hitpointDamage", "_turretAmmo", "_fuelArray", "_vehicleSatus", "_inventoryData", "_aceCargo", "_flagTexture"];
+    _x params ["_vehicleKey", "_posASL", "_vectorDirAndUp", "_damageData", "_turretAmmo", "_fuelArray", "_vehicleSatus", "_inventoryData", "_aceCargo", "_flagTexture"];
     private _vehicle = if (_vehicleKey isEqualType 0) then {
         //Is Eden vehicle:
         [_vehicleKey] call FUNC(getObjectByID);
@@ -33,17 +33,14 @@ private _loadedVehicles = [];
     _vehicle setPosASL _posASL;
     _vehicle setVectorDirAndUp _vectorDirAndUp;
      
-    if (_hitpointdamage isEqualType true && {_hitpointdamage == true}) then {
+    if (_damageData isEqualType true && {_damageData == true}) then {
         //Vehicle was wreck, make it a wreck and go to next vehicle:
         _vehicle setVariable ["ace_cookoff_enable", false];
         _vehicle setDamage [1, false];
-        continue;
+        continue
     };
 
-    {
-        //_hitpointDamage = [ ["HITPOINTS"], [DAMAGE VALUE] ];
-        _vehicle setHitPointDamage [_x, (_hitpointDamage select 1) select _forEachIndex];
-    } foreach (_hitpointDamage select 0);
+    [_vehicle, _damageData] call FUNC(loadDamageData);
 
     //Remove ammo in vehicle turrets:
     {
@@ -80,7 +77,7 @@ private _loadedVehicles = [];
 
 } forEach _vehiclesData;
 
-//Give arma a little time before allow enabeling of simulation
+//Give arma a little time before allowing simulation
 [{
     {
         _x enableDynamicSimulation true;
