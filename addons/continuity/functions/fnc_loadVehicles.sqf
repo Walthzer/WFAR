@@ -19,7 +19,7 @@ TRACE_1("loadVehicles",_listSaveData);
 
 private _loadedVehicles = [];
 {
-    _x params ["_vehicleKey", "_posASL", "_vectorDirAndUp", "_damageData", "_turretAmmo", "_fuelArray", "_vehicleSatus", "_inventoryData", "_aceCargo", "_flagTexture"];
+    _x params ["_vehicleKey", "_posASL", "_vectorDirAndUp", "_damageData", "_turretAmmo", "_fuelArray", "_vehicleSatus", "_inventoryData", "_aceCargo", "_flagTexture", "_aceCargoData"];
     private _vehicle = if (_vehicleKey isEqualType 0) then {
         //Is Eden vehicle:
         [_vehicleKey] call FUNC(getObjectByID);
@@ -61,12 +61,6 @@ private _loadedVehicles = [];
     _vehicle setPilotLight _lights;
     _vehicle lock _lock;
 
-    //Clear vehicle cargo
-    clearItemCargoGlobal _vehicle;
-    clearMagazineCargoGlobal _vehicle; 
-    clearWeaponCargoGlobal _vehicle;
-    clearBackpackCargoGlobal _vehicle;
-
     [_vehicle, _inventoryData] call FUNC(loadObjectInventory);
 
     //TODO: Load _aceCargo
@@ -74,6 +68,8 @@ private _loadedVehicles = [];
     if ((_flagTexture isEqualType "") && {_flagTexture isNotEqualTo ""}) then {
         _vehicle forceFlagTexture _flagTexture;
     };
+
+    [_vehicle, _aceCargoData] call FUNC(loadCargoAce);
 
 } forEach _vehiclesData;
 

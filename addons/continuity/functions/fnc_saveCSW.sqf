@@ -16,17 +16,23 @@
  */
 TRACE_0("saveCSW");
 
-if (true) exitWith {};
-
 private _cswSaveList = [];
 {
-    private _damageData = [_x] call FUNC(getDamageData);
-    private _progress = -1;
-    if (_x getVariable [QGVAR(requiredBuilders), 0] > 0) then {
-        _progress = _x getVariable [QGVAR(progress), 0];
+    if !(isNull attachedTo _x) then {continue}; //Skips ACE cargo csw's
+    private _cswEdenID = _x getVariable [QGVAR(objectID), -1];
+    private _cswKey = if (_cswEdenID > -1) then {_cswEdenID} else {typeOf _x};
+    private _damageData = if (alive _x) then {
+        [_x] call FUNC(getDamageData);
+    } else {
+        true
     };
 
-    _cswSaveList pushBack [typeOf _x, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _ammo];
-} foreach (entities [["StaticWeapon"], [], false, true]);
+    private _ammo = [];
+    {
+        _ammo pushBack (_x select [0, 3]);
+    } forEach magazinesAllTurrets _x;
+
+    _cswSaveList pushBack [_cswKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _ammo];
+} foreach (entities "StaticWeapon");
 
 _cswSaveList

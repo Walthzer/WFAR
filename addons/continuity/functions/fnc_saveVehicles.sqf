@@ -37,6 +37,7 @@ _savedVehicle = [
 
 private _vehicleSaveList = [];
 {
+    if (!isNull attachedTo _x || !isNull isVehicleCargo _x) then {continue}; //Vehicles in cargo
     //Save vehicle under it edenID or classname:
     private _vehicleEdenID = _x getVariable [QGVAR(objectID), -1];
     private _vehicleKey = if (_vehicleEdenID > -1) then {_vehicleEdenID} else {typeOf _x};
@@ -61,9 +62,9 @@ private _vehicleSaveList = [];
     private _inventoryData = [_x] call FUNC(getObjectInventory);
 
     //ACE Cargo
-    //private _cargo = _x getVariable ["ace_cargo_loaded", []];
+    private _aceCargoData = [_x] call FUNC(getCargoACE);
 
-    _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _turretAmmo, _fuelArray, [isLightOn _x, isEngineOn _x, locked _x], _inventoryData, [], getForcedFlagTexture _x];
+    _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _turretAmmo, _fuelArray, [isLightOn _x, isEngineOn _x, locked _x], _inventoryData, [], getForcedFlagTexture _x, _aceCargoData];
 } foreach entities [["AllVehicles"], ["ParachuteBase", "Man", "StaticWeapon"]];
 
 _vehicleSaveList

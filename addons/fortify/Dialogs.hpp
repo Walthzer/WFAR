@@ -1,5 +1,5 @@
-#include "\a3\ui_f\hpp\definecommongrids.inc"
-#include "\a3\ui_f\hpp\definecommoncolors.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 
 class RscText;
 class RscEdit;

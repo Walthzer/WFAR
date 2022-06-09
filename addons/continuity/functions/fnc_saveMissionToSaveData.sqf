@@ -16,6 +16,7 @@
  * Public: [No]
  */
 TRACE_0("FunctionStart");
+params [["_savedBy", "Nil"]];
 
 private _fnc_getSaveListsConfigs = {
         private _condition = "true";
@@ -26,6 +27,13 @@ private _fnc_getSaveListsConfigs = {
 };
 
 private _saveData = createHashMap;
+
+_saveData set ["missionNameAndWorld", format ["%1.%2", missionName, worldName]];
+_saveData set ["timeUTC", systemTimeUTC];
+
+_saveData set ["savedBy", _savedBy];
+
+
 {
     private _listName = configName _x;
     private _saveFunction = getText (_x >> "save");

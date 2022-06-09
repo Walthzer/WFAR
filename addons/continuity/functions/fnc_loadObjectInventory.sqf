@@ -18,6 +18,12 @@
 params["_object", "_inventoryData"];
 TRACE_2("FunctionStart",_object,_inventoryData);
 
+//Clear object Inventory
+clearItemCargoGlobal _object;
+clearMagazineCargoGlobal _object; 
+clearWeaponCargoGlobal _object;
+clearBackpackCargoGlobal _object;
+
 private _containersData = _inventoryData select 4;
 
 private _fnc_addCargoToContainer = {

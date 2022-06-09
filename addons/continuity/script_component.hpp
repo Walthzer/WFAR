@@ -2,6 +2,9 @@
 #define COMPONENT_BEAUTIFIED Continuity
 #include "\z\wfar\addons\main\script_mod.hpp"
 
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineresincl.inc"
+
 #define DEBUG_ENABLED_CONTINUITY
 #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
@@ -18,3 +21,14 @@
 #include "\z\wfar\addons\main\script_macros.hpp"
 
 #define DUMMY_POSITION [-1000, -1000, 0]
+#define IDC_BTN_CONFIGURE 25030
+
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
+#define POS_X_LOW(N) ((N) * GUI_GRID_W + GUI_GRID_X)
+#define POS_Y_LOW(N) ((N) * GUI_GRID_H + GUI_GRID_Y)
+
+#define REGEX_STRING "{[^}]*}"

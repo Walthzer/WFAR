@@ -44,21 +44,21 @@ class Cfg3DEN
                 {
                     class Attributes
                     {
-                        class GVAR(enable)
+                        class GVAR(enabled)
                         {
-                            property = QGVAR(enable);
+                            property = QGVAR(enabled);
                             displayName = "Enable Continuity";
                             tooltip = "Let continuity automatically save/load this mission PBO";
                             control = "Checkbox";
-                            expression = QUOTE(GVAR(enable) = _value);
+                            expression = QUOTE(GVAR(enabled) = _value);
                             defaultValue = "false";
                             condition = "1";
                         };
-                        class GVAR(scenarioSaveDateUTC)
+                        class GVAR(scenarioUID)
                         {
-                            property = QGVAR(scenarioSaveDateUTC);
+                            property = QGVAR(scenarioUID);
                             control = QGVAR(empty);
-                            expression = QUOTE(GVAR(scenarioSaveDateUTC) = _value);
+                            expression = QUOTE(GVAR(scenarioUID) = _value);
                             defaultValue = "[]";
                             condition = "1";
                         };

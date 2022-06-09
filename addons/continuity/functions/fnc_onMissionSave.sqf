@@ -28,7 +28,7 @@ if (GVAR(didResave)) exitWith {GVAR(didResave) = false};
         } forEach (all3DENEntities select _x);
     } foreach [0,3,5];
 
-    QGVAR(attributes) set3DENMissionAttribute [QGVAR(scenarioSaveDateUTC), systemTimeUTC];
+    QGVAR(attributes) set3DENMissionAttribute [QGVAR(scenarioUID), systemTimeUTC];
     
     //OnMissionSave runs AFTER 3DEN saves the mission, resave to save the changes made by this script.
     GVAR(didResave) = true;

@@ -17,24 +17,41 @@
 params["_listSaveData"];
 TRACE_1("loadCSW",_listSaveData);
 
-if (true) exitWith {};
-
 private _loadedObjects = [];
 {
-    _x params ["_type", "_posASL", "_vectorDirAndUp", "_damageData", "_side", "_progress"];
+    _x params ["_cswKey", "_posASL", "_vectorDirAndUp", "_damageData", "_ammo"];
+    private _csw = if (_cswKey isEqualType 0) then {
+        //Is Eden vehicle:
+        [_cswKey] call FUNC(getObjectByID);
+    } else {
+        //Is mission vehicle: Create it.
+        _cswKey createVehicle _posASL;
+    };
+    _csw enableSimulationGlobal false;
+    _loadedObjects pushBack _csw;
 
-    private _object = _type createVehicle _posASL;
-    _object enableSimulationGlobal false;
-    _loadedObjects pushBack _object;
-
-    _object setPosASL _posASL;
-    _object setVectorDirAndUp _vectorDirAndUp;
+    _csw setPosASL _posASL;
+    _csw setVectorDirAndUp _vectorDirAndUp;
     
-    [_object] call FUNC(loadDamageData);
-    _object setVariable [QGVAR(progress),_progress];
+    if (_damageData isEqualType true && {_damageData == true}) then {
+        //CSW was wreck, make it a wreck and go to next CSW:
+        _csw setVariable ["ace_cookoff_enable", false];
+        _csw setDamage [1, false];
+        continue
+    };
 
-    //Add csw actions to object
-    ["acex_csw_objectPlaced", [EGVAR(continuity,unitDummy), _side, _object]] call CBA_fnc_globalEvent;
+    [_csw, _damageData] call FUNC(loadDamageData);
+
+    //Remove ammo in csw's turret:
+    {
+        _csw removeMagazineTurret [_x select 0, _x select 1];
+    } forEach magazinesAllTurrets _csw;
+
+    //Add ammo per saveData
+    {
+        _csw addMagazineTurret [_x select 0, _x select 1, _x select 2];
+    } forEach _ammo;
+
 
 } foreach _listSaveData;
 

@@ -13,6 +13,7 @@ class CfgPatches {
     };
 };
 
+#include "gui.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgEden.hpp"
 #include "CfgWFARContinuity.hpp"
