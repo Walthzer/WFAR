@@ -5,12 +5,12 @@ if (isServer) then {
         params ["_scenarioUID", "_selectedSaveName", ["_loadedBy", "Nil"]];
         TRACE_2("loadMissionEH",_scenarioUID,_selectedSaveName);
         private _missionSave = GVAR(missionSaves) getOrDefault [_scenarioUID, []];
-		if (_missionSave isEqualTo []) exitWith {WARNING("Tried loading non-existant missionSave...aborting")};
+        if (_missionSave isEqualTo []) exitWith {WARNING("Tried loading non-existant missionSave...aborting")};
 
-		private _saveData = _missionSave getOrDefault [_selectedSaveName, []];
-		if (_saveData isEqualTo []) exitWith {WARNING("saveData isn't hashmap...aborting")};
+        private _saveData = _missionSave getOrDefault [_selectedSaveName, []];
+        if (_saveData isEqualTo []) exitWith {WARNING("saveData isn't hashmap...aborting")};
 
-		[_saveData] call FUNC(loadMissionFromSaveData);
+        [_saveData] call FUNC(loadMissionFromSaveData);
 
         [QGVAR(notify), ["Save: '%1' loaded by %2", _selectedSaveName, _loadedBy]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
