@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Continuity
 #include "\z\wfar\addons\main\script_mod.hpp"
 
-#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "\a3\ui_f\hpp\defineresincl.inc"
 
 #define DEBUG_ENABLED_CONTINUITY
