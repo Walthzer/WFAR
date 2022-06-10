@@ -8,7 +8,7 @@ class CfgPatches
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
         requiredVersion=1.0;
-        requiredaddons[]={"A3_Data_F", "ace_trenches"};
+        requiredaddons[]={"A3_Data_F", "ace_csw"};
         units[]={};
         weapons[]={};
     };

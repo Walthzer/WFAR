@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [CONTROL] call rid_eden_fnc_ui_globalSupplyRange
+ * [CONTROL] call wfar_continuity_fnc_ui_globalSupplyRange
  *
  * Public: [No]
  */

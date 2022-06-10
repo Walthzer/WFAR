@@ -28,17 +28,11 @@ if (isServer) then {
         params ["_unit", "_side", "_object"];
         TRACE_3("objectPlaced",_unit,_side,_object);
 
-        //Load build information from registerd fortify preset
-        private _preset = missionNamespace getVariable [format["ace_fortify_objects_%1", _side], []];
-        private _presetEntry = _preset select (_preset findIf {(_x select 0) isEqualTo (typeOf _object)});
-        _presetEntry params ["_class", "_fortifyBuildTime", ["_buildTime", 0], ["_requiredBuilders", 0]];
+        //Keep track of fortify objects
+        GVAR(fortifyObjects) pushBackUnique _object;
 
-        TRACE_2("retrieved from preset",_buildTime,_requiredBuilders);
-
-        if (_buildTime > 0 || _requiredBuilders > 0) then {
-            lastFortifyObject = _object;
-            [_object, _buildTime, _requiredBuilders] call FUNC(convertToBuildSite);
-        };
+        _object setVariable [QGVAR(objectSide), _side];
+        [_object, _side] call FUNC(doBuildSiteCheck);
 
     }] call CBA_fnc_addEventHandler;
 

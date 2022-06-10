@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [CONTROL] call rid_eden_fnc_ui_toggleSupplies
+ * [CONTROL] call wfar_continuity_fnc_ui_toggleSupplies
  *
  * Public: [No]
  */

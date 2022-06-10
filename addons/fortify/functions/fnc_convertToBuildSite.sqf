@@ -122,6 +122,12 @@ if (createDecal) then {
 //_object setVariable [QGVAR(grassCutters), _grassCutters];
 //_object setVariable [QGVAR(scaffolds), _scaffolding];
 
+//Set the scaffolding if progress exists:
+private _progress = _object getVariable [QGVAR(progress), 0];
+if (_progress > 0 && {((_progress * GVAR(scaffoldTickModifier)) mod 10) == 0}) then {
+    [_object, _scaffolding, _buildTime, _progress] call FUNC(moveScaffolding);
+};
+
 //Create buildActions for player with JIP compatibility (don't add actions if object is deleted).
 private _buildActionsJIPid = [QGVAR(addBuildActions), [_actionHelpers, _object]] call CBA_fnc_globalEventJIP;
 
