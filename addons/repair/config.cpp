@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"wfar_main", "ace_repair"};
+        requiredAddons[] = {"WASHM_wfar_data", "ace_repair"};
         author = "";
         authors[] = {"Walthzer/Shark"};
         VERSION_CONFIG;
