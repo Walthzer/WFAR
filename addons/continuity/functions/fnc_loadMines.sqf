@@ -18,7 +18,7 @@ params["_listSaveData"];
 TRACE_1("loadMines",_listSaveData);
 
 {
-    _x params ["_type", "_posASL", "_vectorDirAndUp", "_damageData", "_side", "_progress"];
+    _x params ["_type", "_posASL", "_vectorDirAndUp"];
 
     private _object = _type createVehicle _posASL;
     _object setPosASL _posASL;
