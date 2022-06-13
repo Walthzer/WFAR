@@ -18,9 +18,9 @@
 #include "\z\wfar\addons\main\script_macros.hpp"
 
 #define NO_SIDE -1
-#define EAST 0			// (Russian)
-#define WEST 1			// (NATO)
-#define INDEPENDENT 2	// Guerilla 
+#define EAST 0            // (Russian)
+#define WEST 1            // (NATO)
+#define INDEPENDENT 2    // Guerilla 
 #define CIVILIAN 3
 #define NEUTRAL 4
 #define ENEMY 5
