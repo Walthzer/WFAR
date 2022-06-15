@@ -1,1 +1,4 @@
-PREP(empty);
+PREP(canInteract);
+PREP(addActions);
+PREP(removeActions);
+
