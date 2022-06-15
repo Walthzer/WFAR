@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"wfar_main"};
+        requiredAddons[] = {"WASHM_wfar_data", "rhsusf_main_loadorder"};
         author = "";
         authors[] = {"Walthzer/Shark"};
         VERSION_CONFIG;
@@ -14,3 +14,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
