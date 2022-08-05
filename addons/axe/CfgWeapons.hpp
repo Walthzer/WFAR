@@ -205,9 +205,9 @@ class CfgWeapons
 	{
 		scope = 2; /// should be visible and useable in game
 		displayName = "Axe"; /// some name
-		model = QPATHOF(); /// path to model
+		model = QPATHOF(data\axe.p3d); /// path to model
 
-		picture = QPATHOF(); /// different accessories have M, S, T instead of X
+		//picture = QPATHOF(); /// different accessories have M, S, T instead of X
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa"; /// weapon with grenade launcher should be marked such way
 
 		weaponInfoType = "RscWeaponZeroing"; /// display with zeroing is good for iron sights
