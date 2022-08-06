@@ -63,8 +63,6 @@ private _loadedVehicles = [];
 
     [_vehicle, _inventoryData] call FUNC(loadObjectInventory);
 
-    //TODO: Load _aceCargo
-
     if ((_flagTexture isEqualType "") && {_flagTexture isNotEqualTo ""}) then {
         _vehicle forceFlagTexture _flagTexture;
     };

@@ -5,8 +5,8 @@
 #include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "\a3\ui_f\hpp\defineresincl.inc"
 
-#define DEBUG_ENABLED_CONTINUITY
-#define DISABLE_COMPILE_CACHE
+// #define DEBUG_ENABLED_CONTINUITY
+// #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 

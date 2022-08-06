@@ -20,4 +20,4 @@ params["_object", "_edenID"];
 TRACE_2("registerObjectID",_object,_edenID);
 
 GVAR(idMap) set [_edenID, _object];
-SETVAR(_object,GVAR(objectID),_edenID);
+_object setVariable [QGVAR(objectID), _edenID, true];
