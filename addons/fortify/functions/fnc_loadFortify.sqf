@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_listSaveData] call wfar_continuity_fnc_loadFortify;
+ * [_listSaveData] call wfar_fortify_fnc_loadFortify;
  *
  * Public: [No]
  */
