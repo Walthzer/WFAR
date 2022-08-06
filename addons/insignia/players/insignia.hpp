@@ -37,3 +37,11 @@ class K_Still
     texture="\z\wfar\addons\insignia\players\k_still.paa";
     textureVehicle="";
 };
+
+class I_Feram
+{
+    displayName="Feram";
+    author="PFC I. Feram";
+    texture="\z\wfar\addons\insignia\players\i_feram.paa";
+    textureVehicle="";
+};

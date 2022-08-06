@@ -1,5 +1,5 @@
 #define COMPONENT fortify
-#define COMPONENT_BEAUTIFIED Blank
+#define COMPONENT_BEAUTIFIED Fortify
 #include "\z\wfar\addons\main\script_mod.hpp"
 
 //#define DEBUG_ENABLED_FORTIFY
