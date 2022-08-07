@@ -4,14 +4,14 @@ class cfgWFARArsenalAccess
     {
         //Jews
         76561198042318568[]={
-			#include "data\rhsusf\mich_covered\withStupid\weapons.hpp"
+            #include "data\rhsusf\mich_covered\withStupid\weapons.hpp"
             #define FINAL
             #include "data\rhsusf\mich_covered\jews\weapons.hpp"
             #undef FINAL
         };
         //Shark
         76561198053950415[]={
-			#include "data\rhsusf\mich_covered\withStupid\weapons.hpp"
+            #include "data\rhsusf\mich_covered\withStupid\weapons.hpp"
             #include "data\rhsusf\mich_covered\shark\weapons.hpp"
             #define FINAL
             #include "data\rhsusf\cvc\gecko\weapons.hpp"
@@ -23,7 +23,7 @@ class cfgWFARArsenalAccess
             #include "data\rhsusf\cvc\gecko\weapons.hpp"
             #undef FINAL
         };
-		//Libby
+        //Libby
         76561198453933280[]={
             #define FINAL
             #include "data\rhsusf\mich_covered\libby\weapons.hpp"
