@@ -20,7 +20,7 @@ params["_object", "_edenID"];
 TRACE_2("registerObjectID",_object,_edenID);
 
 if (_object isEqualType "") then {
-	_object = missionNamespace getVariable [_object, objNull];
+    _object = missionNamespace getVariable [_object, objNull];
 };
 if (isNull _object) exitWith {};
 
