@@ -12,9 +12,13 @@ class cfgWeapons {
     class rhsusf_mich_helmet_marpatwd_norotos_arc;
     class rhsusf_mich_helmet_marpatwd_norotos_arc_headset;
 
+    //Players
     #include "data\rhsusf\mich_covered\jews\CfgWeapons.hpp"
     #include "data\rhsusf\mich_covered\shark\CfgWeapons.hpp"
     #include "data\rhsusf\mich_covered\libby\CfgWeapons.hpp"
+
+    //General
+    #include "data\rhsusf\mich_covered\withStupid\CfgWeapons.hpp"
 
     class rhsusf_cvc_alt_helmet;
     class rhsusf_cvc_ess;
