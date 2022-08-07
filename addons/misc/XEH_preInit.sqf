@@ -8,9 +8,6 @@ if (isServer) then {
 
     private _fnc_addSpareCargo = {
         params ["_vehicle"];
-        if (ace_repair_addSpareParts && {_vehicle isKindOf "Tank"}) then {
-            [_vehicle, 1, "ACE_Track"] call ace_repair_fnc_addSpareParts;
-        };
 
         //Add fuel cans based on vehicle side
         private _config = configOf _vehicle;
@@ -26,7 +23,7 @@ if (isServer) then {
         };
     };
 
-    ["Tank", "initPost", _fnc_addSpareCargo] call CBA_fnc_addClassEventHandler;
+    //["Tank", "initPost", _fnc_addSpareCargo] call CBA_fnc_addClassEventHandler; Fuel Cans take up spare track space
     ["Car", "initPost", _fnc_addSpareCargo] call CBA_fnc_addClassEventHandler;
 };
 
