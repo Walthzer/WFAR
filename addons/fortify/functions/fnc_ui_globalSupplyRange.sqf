@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [CONTROL] call wfar_continuity_fnc_ui_globalSupplyRange
+ * [CONTROL] call wfar_fortify_fnc_ui_globalSupplyRange
  *
  * Public: [No]
  */
@@ -50,6 +50,7 @@ private _fnc_onConfirm = {
     if (isNull _module) exitWith {};
 
     GVAR(globalSupplyRange) = parseNumber (ctrlText 300002);
+    publicVariable QGVAR(globalSupplyRange);
 
     deleteVehicle _module;
 };

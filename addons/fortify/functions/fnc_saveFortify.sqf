@@ -10,7 +10,7 @@
  * 0: wfar_fortify saveList <ARRAY>
  *
  * Example:
- * call wfar_continuity_fnc_saveFortify;
+ * call wfar_fortify_fnc_saveFortify;
  *
  * Public: [No]
  */

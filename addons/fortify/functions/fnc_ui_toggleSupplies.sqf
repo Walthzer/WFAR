@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [CONTROL] call wfar_continuity_fnc_ui_toggleSupplies
+ * [CONTROL] call wfar_fortify_fnc_ui_toggleSupplies
  *
  * Public: [No]
  */
@@ -87,6 +87,8 @@ private _fnc_onConfirm = {
         } else {
             GVAR(suppliers) = GVAR(suppliers) - [_object];
         };
+
+        publicVariable QGVAR(suppliers);
     };
 
     private _supplyRange = parseNumber (ctrlText 300002);

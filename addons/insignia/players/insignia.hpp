@@ -45,3 +45,11 @@ class I_Feram
     texture="\z\wfar\addons\insignia\players\i_feram.paa";
     textureVehicle="";
 };
+
+class O_Farmers
+{
+    displayName="Farmers";
+    author="PFC O. Farmers";
+    texture="\z\wfar\addons\insignia\players\o_farmers.paa";
+    textureVehicle="";
+};
