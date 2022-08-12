@@ -51,32 +51,32 @@ class CfgWeapons
 		{
 			class MuzzleSlot: MuzzleSlot
 			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE"; 	/// this can be set, but having some common helps a bit
-				compatibleItems[] = {"test_suppressor"}; 				/// A custom made suppressor for this weapon
 				iconPosition[] = {0.0, 0.45};							/// position of the slot icon inside of the weapon icon, relative to top-left corner in {right, down} format
 				iconScale = 0.2;										/// scale of icon described in iconPicture
-				iconPicture = "\A3\Weapons_F\Data\UI\attachment_muzzle.paa"; 	/// icon for selected slot
-				iconPinpoint = "Center"; 										/// top, bottom, left, right, center alignment of the icon on snap point
+				compatibleItems[] = {};
 			};
 			class CowsSlot: CowsSlot /// default accessories for this slot
 			{
 				iconPosition[] = {0.5, 0.35};
 				iconScale = 0.2;
+				compatibleItems[] = {};
 			};
 			class PointerSlot: PointerSlot /// default accessories for this slot
 			{
 				iconPosition[] = {0.20, 0.45};
 				iconScale = 0.25;
+				compatibleItems[] = {};
 			};
 			class UnderBarrelSlot: UnderBarrelSlot /// using test bipod
 			{
 				iconPosition[] = {0.2, 0.7};
 				iconScale = 0.2;
-				compatibleItems[] = {"test_bipod_01_F"};
+				compatibleItems[] = {};
 			};
 		};
 
 /////////////////////////////////////////////////////  I R O N S I G H T S  /////////////////////////////////////////////////////
+		optics=false;
 		opticsZoomMin=0.375;
 		opticsZoomMax=1.1;
 		opticsZoomInit=0.75;
@@ -85,9 +85,9 @@ class CfgWeapons
 		distanceZoomMax = 300;
 /////////////////////////////////////////////////////  I R O N S I G H T S  /////////////////////////////////////////////////////
 
-		descriptionShort = "Testing weapon with grenade launcher"; /// displayed on mouseOver in Inventory
+		descriptionShort = "Utility Axe produced by Walthex Industries"; /// displayed on mouseOver in Inventory
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F\Rifles\MX\data\Anim\MX_gl.rtm"}; /// MX hand animation actually fits this rifle well
-		dexterity = 1.8;
+		dexterity = 3.0;
 
 //caseless ammo//
 		caseless[] = {"",1,1,1};  /// no sound of ejected brass
@@ -205,9 +205,9 @@ class CfgWeapons
 	{
 		scope = 2; /// should be visible and useable in game
 		displayName = "Axe"; /// some name
-		model = QPATHOF(data\axe.p3d); /// path to model
+		model = "z\wfar\addons\axe\data\axe.p3d"; /// path to model
 
-		//picture = QPATHOF(); /// different accessories have M, S, T instead of X
+		picture = "z\wfar\addons\axe\data\ui\picture.paa"; /// different accessories have M, S, T instead of X
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa"; /// weapon with grenade launcher should be marked such way
 
 		weaponInfoType = "RscWeaponZeroing"; /// display with zeroing is good for iron sights
