@@ -13,3 +13,6 @@ class CfgPatches
         weapons[]={};
     };
 };
+
+delete enableDebugConsole;
+enableDebugConsole[] = { "76561198053950415" }; //Shark
