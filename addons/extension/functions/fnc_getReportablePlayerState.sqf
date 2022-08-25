@@ -41,13 +41,16 @@ private _state = if ( _vehicleName isNotEqualTo "" && {player in [driver _vehicl
 
     if ([player] call ace_common_fnc_isEngineer) exitWith { "Engineer" };
 
-    private _weaponNames = toLower str (weapons player);
+    private _weaponNames = toLower (str (weapons player));
+
     private _hatWeapons = ["rhs_weap_SMAW", "rhs_weap_fgm148", "rhs_weap_fim92"];
-    if (_hatWeapons findIf {(toLower _x) in _weaponNames} > -1) exitWith { "Heavy AT" }; //is HAT?
+    if ((_hatWeapons findIf {(toLower _x) in _weaponNames} )> -1) exitWith { "Heavy AT" }; //is HAT?
+
     private _mgWeapons = ["rhs_weap_mg42", "rhs_weap_m249", "rhs_weap_fnmag", "rhs_weap_minimi", "rhs_weap_m240", "LMG", "MMG", "MG3"];
-    if (_mgWeapons findIf {(toLower _x) in _weaponNames} > -1) exitWith { "Machine Gunner" }; //is MG?
+    if ((_mgWeapons findIf {(toLower _x) in _weaponNames}) > -1) exitWith { "Machine Gunner" }; //is MG?
+
     private _marksmenWeapons = ["rhs_weap_m14", "rhs_weap_m24", "rhs_weap_m40", "rhs_weap_sr25"];
-    if (_marksmenWeapons findIf {(toLower _x) in _weaponNames} > -1) exitWith { "Marksmen" }; //is Marksmen?
+    if ((_marksmenWeapons findIf {(toLower _x) in _weaponNames}) > -1) exitWith { "Marksmen" }; //is Marksmen?
 
     "Riflemen"
 };
