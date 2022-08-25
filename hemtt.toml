@@ -5,6 +5,7 @@ check = [
     "!binarizer_link"
 ]
 files = [
+    "*.dll",
     "*.so",
     "mod.cpp",
     "README.md",
