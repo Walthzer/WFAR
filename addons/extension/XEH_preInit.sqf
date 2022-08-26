@@ -63,5 +63,4 @@ if (GVAR(wfarDllLoaded)) then {
             [_state, "White Fox Assault Regiment", _resetTime] call FUNC(setDiscordRPC);
         };
     }, 5] call CBA_fnc_addPerFrameHandler;
-
 };
