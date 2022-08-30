@@ -12,18 +12,17 @@ class UnderBarrelSlot;
 
 class CfgWeapons
 {
-	class Rifle;
-	class Rifle_Base_F: Rifle
+class Launcher;
+	class Launcher_Base_F: Launcher
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class UGL_F;
 
-	class Test_weapon_01_Base_F: Rifle_Base_F /// Just basic values common for all testing rifle variants
+	class Test_Launcher_01_Base_F: Launcher_Base_F /// Just basic values common for all testing rifle variants
 	{
-		magazines[] = {30Rnd_test_mag_Tracer, test_mag_group}; /// original custom made magazines and a group of several standardized mags
-		reloadAction = "GestureReloadMX"; /// MX hand animation actually fits this rifle well
+		magazines[] = {Titan_AP, Titan_AA}; /// original custom made magazines and a group of several standardized mags
+		//reloadAction = QGVAR(hold); /// MX hand animation actually fits this rifle well
 		magazineReloadSwitchPhase = 0.4; /// part of reload animation when new magazine ammo count should affect "revolving" animation source
 		discreteDistanceInitIndex = 0; /// Ironsight zeroing is the lowest value by default
 
@@ -86,7 +85,7 @@ class CfgWeapons
 /////////////////////////////////////////////////////  I R O N S I G H T S  /////////////////////////////////////////////////////
 
 		descriptionShort = "Utility Axe produced by Walthex Industries"; /// displayed on mouseOver in Inventory
-		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F\Rifles\MX\data\Anim\MX_gl.rtm"}; /// MX hand animation actually fits this rifle well
+		handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\anim\hold.rtm)}; /// MX hand animation actually fits this rifle well
 		dexterity = 3.0;
 
 //caseless ammo//
@@ -201,14 +200,14 @@ class CfgWeapons
 		reloadMagazineSound[]={"A3\sounds_f\weapons\reloads\new_MX",db-8,1, 30}; /// custom made sounds
 	};
 
-	class wfar_axe: Test_weapon_01_Base_F
+	class wfar_axe: Test_Launcher_01_Base_F
 	{
 		scope = 2; /// should be visible and useable in game
 		displayName = "Axe"; /// some name
 		model = "z\wfar\addons\axe\data\axe.p3d"; /// path to model
 
 		picture = "z\wfar\addons\axe\data\ui\picture.paa"; /// different accessories have M, S, T instead of X
-		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa"; /// weapon with grenade launcher should be marked such way
+		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa"; /// weapon with grenade Rifle should be marked such way
 
 		weaponInfoType = "RscWeaponZeroing"; /// display with zeroing is good for iron sights
 
