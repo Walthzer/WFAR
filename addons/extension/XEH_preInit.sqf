@@ -18,7 +18,7 @@ if (isServer && isDedicated) exitWith {
 
     [QGVAR(syncClientDiscordData), {call FUNC(handleClientDiscordData)}] call CBA_fnc_addEventhandler;
 
-    addMissionEventHandler ["ExtensionCallback", {call FUNC(handlePlayerEventCallback)}];
+    addMissionEventHandler ["ExtensionCallback", {call FUNC(handleExtensionCallback)}];
 
     addMissionEventHandler ["OnUserKicked", {call FUNC(handleUserKicked)}];
     addMissionEventHandler ["OnUserAdminStateChanged", {call FUNC(handleUserAdminStateChanged)}];

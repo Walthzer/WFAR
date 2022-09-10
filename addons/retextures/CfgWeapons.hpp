@@ -19,6 +19,9 @@ class cfgWeapons {
 
     //General
     #include "data\rhsusf\mich_covered\withStupid\CfgWeapons.hpp"
+	
+	//Public
+	#include "data\rhsusf\mich_covered\un\CfgWeapons.hpp"
 
     class rhsusf_cvc_alt_helmet;
     class rhsusf_cvc_ess;

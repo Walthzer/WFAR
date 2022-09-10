@@ -11,6 +11,7 @@ class CfgPatches
         requiredaddons[]={"WASHM_wfar_data", "rhsusf_c_troops"};
         units[]={};
         weapons[]={
+            "wfar_un_mich_helmet_marpat",
             #include "data\rhsusf\cvc\gecko\weapons.hpp"
             #include "data\rhsusf\mich_covered\jews\weapons.hpp"
             #include "data\rhsusf\mich_covered\libby\weapons.hpp"
