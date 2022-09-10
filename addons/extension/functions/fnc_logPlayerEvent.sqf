@@ -18,18 +18,18 @@ TRACE_3("logEvent",_event,_profileName,_steamID);
 
 if (_profileName == "__SERVER__") exitWith {};
 
-private _discordData = GVAR(discordIdMap) getOrDefault [_steamID, [] ]; //ID, Name, Discrimenator
+private _discordData = GVAR(discordIdMap) getOrDefault [_profileName, [] ]; //ID, Name, Discrimenator
 
 //Fix race condition between discord data send and playerConnected event
-if (_discordData isEqualTo []) exitWith {
+/* if (_discordData isEqualTo []) exitWith {
     [{
         params ["_steamID"];
-        (count GVAR(discordIdMap) getOrDefault [_steamID, [] ]) == 3;
+        (count GVAR(discordIdMap) getOrDefault [_profileName, [] ]) == 3;
     },
     {
         params ["_steamID", "_event", "_profileName"];
 
-        private _discordData = GVAR(discordIdMap) getOrDefault [_steamID, [] ]; //ID, Name, Discrimenator
+        private _discordData = GVAR(discordIdMap) getOrDefault [_profileName, [] ]; //ID, Name, Discrimenator
 
         _json = format["{ values: [ ['MS_ELAPSED_EPOCH', '%1', '%2', '%3#%4', '%5', '%6'] ] }", _event, _profileName, _discordData select 1, _discordData select 2, _steamID, _discordData select 0]; //Extension replaces MS_SINCE_EPOCH value
         "wfar" callExtension ["doHttpRequest", ["https://walthex.com", "/api/wfar/relay/appendPlayerEvent", _json, "application/json"]];
@@ -41,7 +41,7 @@ if (_discordData isEqualTo []) exitWith {
         "wfar" callExtension ["doHttpRequest", ["https://walthex.com", "/api/wfar/relay/appendPlayerEvent", _json, "application/json"]];
 
     }] call CBA_fnc_waitUntilAndExecute;
-};
+}; */
 
 private _json = "";
 if (count _discordData == 3 ) then {

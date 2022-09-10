@@ -24,7 +24,7 @@ switch (_function) do {
         private _arr = parseSimpleArray _data;
         GVAR(discordData) = _arr;
 
-        [QGVAR(syncClientDiscordData), [getPlayerUID player, _arr]] call CBA_fnc_serverEvent;
+        [QGVAR(syncClientDiscordData), [profileName, _arr]] call CBA_fnc_serverEvent;
     };
     default { };
 };
