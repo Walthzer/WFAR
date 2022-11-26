@@ -29,5 +29,6 @@ private _cargo = [
 ];
 
 GVAR(arsenalAccess) = call (uiNamespace getVariable [QGVAR(arsenalAccess), {_cargo}]);
+GVAR(conditionalArsenalAccess) = call (uiNamespace getVariable [QGVAR(conditionalArsenalAccess), {_cargo}]);
 
 ["ace_arsenal_leftPanelFilled", LINKFUNC(fillLeftPanel)] call CBA_fnc_addEventHandler;
