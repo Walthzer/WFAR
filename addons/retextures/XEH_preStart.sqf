@@ -25,17 +25,17 @@ private _conditionalArsenalAccess = [
 ];
 
 {
-	private _cache = [];
-	private _index = parseNumber (configName _x);
-	{
-		private _condition = compile ( getText ( _x >> "condition" ) );
-		private _items = getArray ( _x >> "items" );
+    private _cache = [];
+    private _index = parseNumber (configName _x);
+    {
+        private _condition = compile ( getText ( _x >> "condition" ) );
+        private _items = getArray ( _x >> "items" );
 
-		_cache pushBack [ _condition, _items];
+        _cache pushBack [ _condition, _items];
 
-	} forEach ( "true" configClasses (_x) );
+    } forEach ( "true" configClasses (_x) );
 
-	_conditionalArsenalAccess set [_index, _cache];
+    _conditionalArsenalAccess set [_index, _cache];
 
 } forEach ( "true" configClasses (configFile >> "cfgConditionalArsenalAcces") );
 

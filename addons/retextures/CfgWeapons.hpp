@@ -22,9 +22,9 @@ class cfgWeapons {
     #include "data\rhsusf\mich_covered\engineer\CfgWeapons.hpp"
     #include "data\rhsusf\mich_covered\medic\CfgWeapons.hpp"
     #include "data\rhsusf\mich_covered\withStupid\CfgWeapons.hpp"
-	
-	//Public
-	#include "data\rhsusf\mich_covered\un\CfgWeapons.hpp"
+    
+    //Public
+    #include "data\rhsusf\mich_covered\un\CfgWeapons.hpp"
 
     class rhsusf_cvc_alt_helmet;
     class rhsusf_cvc_ess;
