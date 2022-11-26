@@ -16,7 +16,7 @@ class CfgPatches
             #include "data\rhsusf\mich_covered\jews\weapons.hpp"
             #include "data\rhsusf\mich_covered\libby\weapons.hpp"
             #define FINAL
-            #include "data\rhsusf\mich_covered\shark\weapons.hpp"
+            #include "data\rhsusf\mich_covered\barker\weapons.hpp"
             #undef FINAL
         };
     };
@@ -25,3 +25,4 @@ class CfgPatches
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgWFARArsenalAccess.hpp"
+#include "CfgConditionalArsenalAccess.hpp"
