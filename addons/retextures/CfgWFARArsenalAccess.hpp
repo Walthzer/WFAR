@@ -30,7 +30,7 @@ class cfgWFARArsenalAccess
             #include "data\rhsusf\mich_covered\libby\weapons.hpp"
             #undef FINAL
         };
-		//Barker
+        //Barker
         76561198158672135[]={
             #define FINAL
             #include "data\rhsusf\mich_covered\barker\weapons.hpp"
