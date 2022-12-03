@@ -53,3 +53,19 @@ class O_Farmers
     texture="\z\wfar\addons\insignia\players\o_farmers.paa";
     textureVehicle="";
 };
+
+class L_Nord
+{
+    displayName="Nord";
+    author="LCPL L. (Fritz) Nord";
+    texture="\z\wfar\addons\insignia\players\l_nord.paa";
+    textureVehicle="";
+};
+
+class J_Gerber
+{
+    displayName="Gerber";
+    author="PFC J. Gerber";
+    texture="\z\wfar\addons\insignia\players\j_gerber.paa";
+    textureVehicle="";
+};
