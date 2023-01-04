@@ -52,7 +52,7 @@ private _state = if ( _vehicleName isNotEqualTo "" && {_unit in [driver _vehicle
 
     private _weaponNames = toLower (str (weapons _unit));
     private _roleIndex = _weaponRoles findIf {
-        ( _x select 0 ) findIf { _x in _weaponNames };
+        ( _x select 0 ) findIf { _x in _weaponNames } > -1;
     };
 
     //If no special role was found, assign rifleman
