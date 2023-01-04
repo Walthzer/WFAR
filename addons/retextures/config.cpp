@@ -8,21 +8,21 @@ class CfgPatches
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
         requiredVersion=1.6;
-        requiredaddons[]={"WASHM_wfar_data", "rhsusf_c_troops"};
+        requiredaddons[]={"WASHM_wfar_data"};
         units[]={};
         weapons[]={
-            "wfar_un_mich_helmet_marpat",
-            #include "data\rhsusf\cvc\gecko\weapons.hpp"
-            #include "data\rhsusf\mich_covered\jews\weapons.hpp"
-            #include "data\rhsusf\mich_covered\libby\weapons.hpp"
-            #define FINAL
-            #include "data\rhsusf\mich_covered\barker\weapons.hpp"
-            #undef FINAL
+            // "wfar_un_mich_helmet_marpat",
+            // #include "data\rhsusf\cvc\gecko\weapons.hpp"
+            // #include "data\rhsusf\mich_covered\jews\weapons.hpp"
+            // #include "data\rhsusf\mich_covered\libby\weapons.hpp"
+            // #define FINAL
+            // #include "data\rhsusf\mich_covered\barker\weapons.hpp"
+            // #undef FINAL
         };
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgWFARArsenalAccess.hpp"
-#include "CfgConditionalArsenalAccess.hpp"
+// #include "CfgEventHandlers.hpp"
+// #include "CfgWeapons.hpp"
+// #include "CfgWFARArsenalAccess.hpp"
+// #include "CfgConditionalArsenalAccess.hpp"
