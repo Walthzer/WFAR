@@ -54,7 +54,7 @@ private _state = if ( _vehicleName isNotEqualTo "" && {_unit in [driver _vehicle
     private _roleIndex = _weaponRoles findIf { ( ( _x select 0 ) findIf { _x in _weaponNames } ) > -1 };
 
     //If no special role was found, assign rifleman
-    if (_roleIndex == -1) exitWith { "rifleman" };
+    if (_roleIndex == -1) exitWith { "Rifleman" };
     (_weaponRoles select _roleIndex) select 1;
 };
 
