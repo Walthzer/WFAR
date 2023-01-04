@@ -51,7 +51,7 @@ private _state = if ( _vehicleName isNotEqualTo "" && {_unit in [driver _vehicle
     if ([_unit] call ace_common_fnc_isEngineer) exitWith { "Engineer" };
 
     private _weaponNames = toLower (str (weapons _unit));
-    private _roleIndex = _weaponRoles findIf { ( _x select 0 ) findIf { _x in _weaponNames } > -1 };
+    private _roleIndex = _weaponRoles findIf { ( ( _x select 0 ) findIf { _x in _weaponNames } ) > -1 };
 
     //If no special role was found, assign rifleman
     if (_roleIndex == -1) exitWith { "rifleman" };
