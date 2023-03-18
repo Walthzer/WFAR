@@ -5,7 +5,7 @@ class GVAR(htmlDialog) {
     access = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(dialog),_this select 0)]);
     movingEnable = 1;
-    enableSimulation = true;
+    enableSimulation = 1;
     class ControlsBackground
     {
         class Html: RscHTML

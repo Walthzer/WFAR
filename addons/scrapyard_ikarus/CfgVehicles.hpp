@@ -56,7 +56,7 @@ class CfgVehicles
      class WFAR_Ikarus_base: Truck_01_base_F
      {
 
-          weapons[]={TruckHorn2};
+          weapons[]={"TruckHorn2"};
           side = -1;
           scope = 0;
           //model="z\wfar\addons\scrapyard_ikarus\ikarus\WFAR_Ikarus.p3d";
@@ -80,18 +80,18 @@ class CfgVehicles
           ace_vehicle_damage_detonationDuringFireProb = 0.0;
           
           hasDriver=1;
-          driverAction = Ikarus_Driver; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
+          driverAction = "Ikarus_Driver"; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
           cargoAction[] =
           {
-               Truck_Cargo01,Truck_Cargo01,Truck_Cargo02,Truck_Cargo02,
-               Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,
-               Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,
-               Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,
-               Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,
-               Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo
+               "Truck_Cargo01","Truck_Cargo01","Truck_Cargo02","Truck_Cargo02",
+               "Truck_Cargo01","Truck_Cargo01","Truck_Cargo01","Truck_Cargo01",
+               "Truck_Cargo02","Truck_Cargo02","Truck_Cargo02","Truck_Cargo02",
+               "Truck_Cargo03","Truck_Cargo03","Truck_Cargo03","Truck_Cargo03",
+               "Truck_Cargo04","Truck_Cargo04","Truck_Cargo04",
+               "Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo"
           };
-          getInAction           = GetInLow;           /// how does driver look while getting in
-          getOutAction           = GetOutLow;           /// and out
+          getInAction           = "GetInLow";           /// how does driver look while getting in
+          getOutAction           = "GetOutLow";           /// and out
           cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
           transportSoldier = 23;
@@ -207,7 +207,7 @@ class CfgVehicles
           };
 
           hasGunner = 0;
-          #include "ikarus\Sounds.hpp"
+          //#include "ikarus\Sounds.hpp"
           #include "ikarus\Physx.hpp"
 
           selectionBrakeLights = "brakeLight";
@@ -472,7 +472,7 @@ class CfgVehicles
                     minTurn=-25;                    /// what is the right-most possible turn of the turret
                     isPersonTurret=2;                    /// enables firing from vehicle functionality
                     ejectDeadGunner=0;                    /// seatbelts included
-                    enabledByAnimationSource= "";                /// doesn't work unless the said animation source is 1
+                    enableyAnimationSource= "";                /// doesn't work unless the said animation source is 1
 
                     //allowLauncherIn=1;  //Launchers work, but rockets WILL collide with fire geometry!!
                     //allowLauncherOut=1;
@@ -537,7 +537,7 @@ class CfgVehicles
           scopeCurator=2;
           crew = "UK3CB_ADG_O_ENG_ISL";//
 
-          side=EAST;
+          side = QUOTE(EAST);
           faction="WFAR_OPFOR";
           editorSubcategory="EdSubcat_APCs";
 
@@ -553,7 +553,7 @@ class CfgVehicles
           crew = "UK3CB_ADG_O_ENG_ISL";
           ffvCrewWeighted[] = {"UK3CB_ADG_O_MG_ISL", 0.8, "UK3CB_ADG_O_GL_ISL", 0.2};
 
-          side=EAST;
+          side = QUOTE(EAST);
           faction="WFAR_OPFOR";
           editorSubcategory="EdSubcat_APCs";
 
