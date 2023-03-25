@@ -17,36 +17,22 @@
 params["_listSaveData"];
 TRACE_1("loadBoxloader",_listSaveData);
 
-[{
-    //Has fortify loaded presets yet?
-    ([ace_fortify_objects_WEST, ace_fortify_objects_EAST, ace_fortify_objects_GUER] findIf {_x isEqualType []}) > -1;
-},
+private _loadedObjects = [];
 {
-    params["_listSaveData"];
-    LOG("loadFortify - Waiting Finished");
-    private _loadedObjects = [];
-    {
-        _x params ["_type", "_posASL", "_vectorDirAndUp", "_damageData", "_side", "_progress"];
+    _x params ["_objectKey", "_posASL", "_vectorDirAndUp"];
 
-        private _object = _type createVehicle _posASL;
-        _object enableSimulationGlobal false;
-        _loadedObjects pushBack _object;
+    private _object = if (_objectKey isEqualType 0) then {
+        //Is Eden vehicle:
+        [_objectKey] call FUNC(getObjectByID);
+    } else {
+        //Is mission vehicle: Create it.
+        createVehicle [_objectKey, [0,0,0], [], 0];
+    };
+    _loadedObjects pushBack _object;
 
-        _object setPosASL _posASL;
-        _object setVectorDirAndUp _vectorDirAndUp;
-        
-        [_object] call FUNC(loadDamageData);
-        _object setVariable [QGVAR(progress),_progress];
+    _object setPosASL _posASL;
+    _object setVectorDirAndUp _vectorDirAndUp;
 
-        //Add fortify actions to object
-        ["acex_fortify_objectPlaced", [EGVAR(continuity,unitDummy), _side, _object]] call CBA_fnc_globalEvent;
+} foreach _listSaveData;
 
-    } foreach _listSaveData;
 
-    //Give arma a little time before allowing simulation to be enabled
-    [{
-        {
-            _x enableDynamicSimulation true;
-        } forEach _this;
-    }, _loadedObjects, 1] call CBA_fnc_waitAndExecute;
-}, _this] call CBA_fnc_waitUntilAndExecute;

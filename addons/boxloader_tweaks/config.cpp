@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"WASHM_wfar_data", "boxloader"};
+        requiredAddons[] = {"wfar_continuity", "boxloader"};
         author = "";
         authors[] = {"Walthzer/Shark"};
         VERSION_CONFIG;

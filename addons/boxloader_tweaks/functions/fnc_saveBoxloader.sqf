@@ -18,20 +18,16 @@ TRACE_0("saveBoxloader");
 
 /*
 *   `fort` base class "Land_Boxloader_Fort_Base"
-*   
+*   `tools` "boxloader_tool_cart"
 */
 
 private _boxLoaderSaveList = [];
 {
-    if (isNull _x) then {continue};
-    private _damageData = [_x] call EFUNC(continuity,getDamageData);
-    private _side = _x getVariable [QGVAR(objectSide), sideEmpty];
-    private _progress = -1;
-    if (_x getVariable [QGVAR(requiredBuilders), 0] > 0) then {
-        _progress = _x getVariable [QGVAR(progress), 0];
-    };
+    if (!isNull attachedTo _x || !isNull isVehicleCargo _x) then {continue};
+    private _vehicleEdenID = _x getVariable [QGVAR(objectID), -1];
+    private _objectKey = if (_vehicleEdenID > -1) then {_vehicleEdenID} else {typeOf _x};
 
-    _boxLoaderSaveList pushBack [typeOf _x, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _side, _progress];
-} foreach GVAR(fortifyObjects);
+    _boxLoaderSaveList pushBack [_objectKey, getPosASL _x, [vectorDir _x, vectorUp _x]];
+} foreach entities[GVAR(saveTypes)];
 
 _boxLoaderSaveList
