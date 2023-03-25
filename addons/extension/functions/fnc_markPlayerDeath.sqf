@@ -16,7 +16,7 @@
  * Public: [No]
  */
 params ["_unit", "_corpse"];
-TRACE_2("markDeath"._unit,_corpse);
+TRACE_2("markDeath",_unit,_corpse);
 
 if !(_unit == player) exitWith {};
 

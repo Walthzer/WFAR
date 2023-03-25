@@ -15,7 +15,7 @@
  * Public: [No]
  */
 params ["_unit"];
-TRACE_1("reportableState"._unit);
+TRACE_1("reportableState",_unit);
 private _vehicleName = "";
 
 /*--Roles--

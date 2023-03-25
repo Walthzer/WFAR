@@ -139,16 +139,16 @@ class GVAR(buildersWaiting_dialog) {
     movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(waitDialogOpen)),true)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrWaitToolBox)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlWaitPicture)),(_this select 0) displayCtrl 2)];);
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(waitDialogOpen)),false)]);
-    enableSimulation = true;
+    enableSimulation = 1;
     class ControlsBackground
     {
         class Background: RscText
         {
             colorBackground[] = {0, 0, 0, 0.9};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 7.1 * GUI_GRID_CENTER_H;
-            w = 19.9 * GUI_GRID_CENTER_W;
-            h = 10 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 7.1 * GUI_GRID_CENTER_H);
+            w = QUOTE(19.9 * GUI_GRID_CENTER_W);
+            h = QUOTE(10 * GUI_GRID_CENTER_H);
         };
         class top_strip: RscText
         {
@@ -157,10 +157,10 @@ class GVAR(buildersWaiting_dialog) {
             text = "Building Statistics";
             colorText[] = {IGUI_TEXT_RGB, 0.8};
             colorBackground[] = {GUI_BCG_DARK_RGB, 0.8};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 6 * GUI_GRID_CENTER_H;
-            w = 20 * GUI_GRID_CENTER_W;
-            h = 1 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 6 * GUI_GRID_CENTER_H);
+            w = QUOTE(20 * GUI_GRID_CENTER_W);
+            h = QUOTE(1 * GUI_GRID_CENTER_H);
         };
         class buildingStats: RscToolbox
         {
@@ -175,10 +175,10 @@ class GVAR(buildersWaiting_dialog) {
             colorDisable[] = {0,0,0,0};
             colorSelectedBg[] = {0,0,0,0};
             strings[] = {"", "", ""};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 7.2 * GUI_GRID_CENTER_H;
-            w = 20 * GUI_GRID_CENTER_W;
-            h = 1 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 7.2 * GUI_GRID_CENTER_H);
+            w = QUOTE(20 * GUI_GRID_CENTER_W);
+            h = QUOTE(1 * GUI_GRID_CENTER_H);
         };
         class buildingImage: RscPicture
         {
@@ -186,10 +186,10 @@ class GVAR(buildersWaiting_dialog) {
             shadow = 0;
             style = 48;
             text = "";
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 8.3 * GUI_GRID_CENTER_H;
-            w = 19.9 * GUI_GRID_CENTER_W;
-            h = 9 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 8.3 * GUI_GRID_CENTER_H);
+            w = QUOTE(19.9 * GUI_GRID_CENTER_W);
+            h = QUOTE(9 * GUI_GRID_CENTER_H);
         };
     };
 /*     class objects
@@ -200,8 +200,8 @@ class GVAR(buildersWaiting_dialog) {
             idc = WAITING_DIALOG_OBJECT_IDC;
             type = 80;
             model = "ca\misc3\wf\wf_depot.p3d";
-            x = GUI_GRID_CENTER_X + 20 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 12 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 20 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 12 * GUI_GRID_CENTER_H);
             z = 9 * GUI_GRID_CENTER_H;
             direction[] = {4,1,4};
             up[] = {1,10,0};

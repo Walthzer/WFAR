@@ -16,6 +16,6 @@
  */
 disableSerialization;
 params ["_parentDisplay"];
-TRACE_0("openLoadMenu",_parentDisplay);
+TRACE_1("openLoadMenu",_parentDisplay);
 
 _display = _parentDisplay createDisplay "wfar_DisplayContinuityLoad";

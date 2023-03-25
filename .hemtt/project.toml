@@ -1,9 +1,9 @@
 name = "WFAR"
 prefix = "wfar"
 author = "Walthzer/Shark"
-check = [
-    "!binarizer_link"
-]
+# check = [
+#     "!binarizer_link"
+# ]
 [files]
 include = [
     "*.dll",

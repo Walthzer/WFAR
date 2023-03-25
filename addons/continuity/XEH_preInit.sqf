@@ -11,6 +11,8 @@ ADDON = true;
 GVAR(idMap) = createHashMap;
 GVAR(enabled) = false;
 
+GVAR(boxSaveTypes) = call ( uiNamespace getVariable [QGVAR(boxSaveTypes), {}] );
+
 GVAR(dateFormatString) = localize "STR_3DEN_Display3DENSave_textDate";
 {
     GVAR(dateFormatString) = GVAR(dateFormatString) regexReplace [_x, "%" + (str (_forEachIndex + 1))];

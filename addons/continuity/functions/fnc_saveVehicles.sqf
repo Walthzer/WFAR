@@ -14,7 +14,7 @@
  *
  * Public: [No]
  */
-TRACE_0("FunctionStart");
+TRACE_0("saveVehicles");
 
 //Save Vehicles: Eden and Mission
 /*
@@ -28,8 +28,9 @@ _savedVehicle = [
     _fuel, ARRAY [_vehicleFuel, _fuelCargo]
     _vehicleStatus, [Lights, Engine, Lock]
     _inventory,
-    _cargo,
-    _flag
+    _vivCargo,
+    _flag,
+    _aceCargo
 
 ]
 
@@ -38,33 +39,9 @@ _savedVehicle = [
 private _vehicleSaveList = [];
 {
     if (!isNull attachedTo _x || !isNull isVehicleCargo _x) then {continue}; //Vehicles in cargo
-    //Save vehicle under it edenID or classname:
-    private _vehicleEdenID = _x getVariable [QGVAR(objectID), -1];
-    private _vehicleKey = if (_vehicleEdenID > -1) then {_vehicleEdenID} else {typeOf _x};
-    
-    if !(alive _x) then {
-        //Vehicle is wreck no need to save any other data
-        _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], true];
-        continue
-    };
 
-    private _damageData = [_x] call FUNC(getDamageData);
+    _vehicleSaveList pushBack [_x] call FUNC(serializeVehicle);
 
-    //Save ammo discarding magazine ID and creator to save data
-    private _turretAmmo = [];
-    {
-        _turretAmmo pushBack (_x select [0, 3]);
-    } forEach magazinesAllTurrets _x;
-
-    
-    private _fuelCargo = [_x] call ACE_refuel_fnc_getFuel; //Is object using ace refuel?
-    private _fuelArray = [fuel _x, _fuelCargo];
-    private _inventoryData = [_x] call FUNC(getObjectInventory);
-
-    //ACE Cargo
-    private _aceCargoData = [_x] call FUNC(getCargoACE);
-
-    _vehicleSaveList pushBack [_vehicleKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _turretAmmo, _fuelArray, [isLightOn _x, isEngineOn _x, locked _x], _inventoryData, [], getForcedFlagTexture _x, _aceCargoData];
 } foreach entities [["AllVehicles"], ["ParachuteBase", "Man", "StaticWeapon"]];
 
 _vehicleSaveList

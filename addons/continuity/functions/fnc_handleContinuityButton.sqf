@@ -16,7 +16,7 @@
  */
 disableSerialization;
 params ["_control"];
-TRACE_0("handleContinuityButton",_control);
+TRACE_1("handleContinuityButton",_control);
 
 if (call BIS_fnc_admin > 0) exitWith {};
 if ((toLower (vehicleVarName player)) in ["overseer", "zeus"]) exitWith {};
