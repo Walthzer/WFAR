@@ -16,6 +16,6 @@
  */
 disableSerialization;
 params ["_parentDisplay"];
-TRACE_0("openSaveMenu",_parentDisplay);
+TRACE_1("openSaveMenu",_parentDisplay);
 
 _display = _parentDisplay createDisplay "wfar_DisplayContinuitySave";

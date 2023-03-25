@@ -18,8 +18,14 @@ PREP(handleLoadMenu);
 PREP(loadSavesFromProfile);
 
 //vehiclesSaveList
+PREP(serializeVehicle);
+PREP(deserializeVehicle);
 PREP(saveVehicles);
 PREP(loadVehicles);
+
+//boxesSaveList
+PREP(saveBoxes);
+PREP(loadBoxes);
 
 //cswSaveList
 PREP(saveCSW);
