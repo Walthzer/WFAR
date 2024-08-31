@@ -22,7 +22,7 @@ private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
 private _module = missionNamespace getVariable [QUOTE(BIS_fnc_initCuratorAttributes_target), objNull];
 TRACE_1("Module",_module);
 
-_controlGroup ctrlRemoveAllEventHandlers "setFocus";
+_controlGroup ctrlRemoveAllEventHandlers "SetFocus";
 
 (_display displayCtrl 300002) ctrlSetText (str GVAR(globalSupplyRange));
 

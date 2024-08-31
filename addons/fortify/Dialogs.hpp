@@ -25,8 +25,8 @@ class RscDisplayAttributes {
 
 class GVAR(RscToggleSupplies): RscDisplayAttributes {
 
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscToggleSupplies))] call ace_zeus_fnc_zeusAttributes);
 
     class Controls: Controls {
         class Background: Background {};
@@ -88,8 +88,8 @@ class GVAR(RscToggleSupplies): RscDisplayAttributes {
 
 class GVAR(RscGlobalSupplyRange): RscDisplayAttributes {
 
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscGlobalSupplyRange))] call ace_zeus_fnc_zeusAttributes);
 
     class Controls: Controls {
         class Background: Background {};
@@ -134,21 +134,21 @@ class GVAR(RscGlobalSupplyRange): RscDisplayAttributes {
     };
 };
 class GVAR(buildersWaiting_dialog) {
-    idd = WAITING_DIALOG_IDD;
+    idd = QUOTE(WAITING_DIALOG_IDD);
     access = 0;
     movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(waitDialogOpen)),true)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrWaitToolBox)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlWaitPicture)),(_this select 0) displayCtrl 2)];);
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(waitDialogOpen)),false)]);
-    enableSimulation = true;
+    enableSimulation = 1;
     class ControlsBackground
     {
         class Background: RscText
         {
             colorBackground[] = {0, 0, 0, 0.9};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 7.1 * GUI_GRID_CENTER_H;
-            w = 19.9 * GUI_GRID_CENTER_W;
-            h = 10 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 7.1 * GUI_GRID_CENTER_H);
+            w = QUOTE(GUI_GRID_CENTER_W * 19.9);
+            h = QUOTE(GUI_GRID_CENTER_H * 10);
         };
         class top_strip: RscText
         {
@@ -157,10 +157,10 @@ class GVAR(buildersWaiting_dialog) {
             text = "Building Statistics";
             colorText[] = {IGUI_TEXT_RGB, 0.8};
             colorBackground[] = {GUI_BCG_DARK_RGB, 0.8};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 6 * GUI_GRID_CENTER_H;
-            w = 20 * GUI_GRID_CENTER_W;
-            h = 1 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 6 * GUI_GRID_CENTER_H);
+            w = QUOTE(GUI_GRID_CENTER_W * 20);
+            h = QUOTE(GUI_GRID_CENTER_H);
         };
         class buildingStats: RscToolbox
         {
@@ -175,10 +175,10 @@ class GVAR(buildersWaiting_dialog) {
             colorDisable[] = {0,0,0,0};
             colorSelectedBg[] = {0,0,0,0};
             strings[] = {"", "", ""};
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 7.2 * GUI_GRID_CENTER_H;
-            w = 20 * GUI_GRID_CENTER_W;
-            h = 1 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 7.2 * GUI_GRID_CENTER_H);
+            w = QUOTE(GUI_GRID_CENTER_W * 20);
+            h = QUOTE(GUI_GRID_CENTER_H);
         };
         class buildingImage: RscPicture
         {
@@ -186,10 +186,10 @@ class GVAR(buildersWaiting_dialog) {
             shadow = 0;
             style = 48;
             text = "";
-            x = GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 8.3 * GUI_GRID_CENTER_H;
-            w = 19.9 * GUI_GRID_CENTER_W;
-            h = 9 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 9 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 8.3 * GUI_GRID_CENTER_H);
+            w = QUOTE(GUI_GRID_CENTER_W * 19.9);
+            h = QUOTE(GUI_GRID_CENTER_H * 9);
         };
     };
 /*     class objects

@@ -3,7 +3,9 @@ releases/*
 keys/*
 z/*
 a3/*
-.hemtt/local
+a3
+.hemtt/loal
+.hemttout
 *.cache
 *.pbo
 texHeaders.bin

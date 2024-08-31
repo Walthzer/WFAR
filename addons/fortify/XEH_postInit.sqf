@@ -110,11 +110,11 @@ if (!hasInterface) exitWith {};
         if (_supplierIndex > -1) then {
             true
         } else {
-            WFAR_NOTIFY_1(WFAR_WARNING, "Too Far From Supplies!");
+            WFAR_NOTIFY_1(WFAR_WARNING,"Too Far From Supplies!");
             false
         };
     } else {
-        WFAR_NOTIFY_2(WFAR_ERROR, "You are not worthy", "to wield the power of Thor!");
+        WFAR_NOTIFY_2(WFAR_ERROR,"You are not worthy","to wield the power of Thor!");
         false
     }
 }] call ACE_fortify_fnc_addDeployHandler;

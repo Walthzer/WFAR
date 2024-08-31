@@ -1,5 +1,5 @@
-#define COMPONENT fixes
-#define COMPONENT_BEAUTIFIED Ground_Type_Fixes
+#define COMPONENT misc_config
+#define COMPONENT_BEAUTIFIED Misc_Config
 #include "\z\wfar\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

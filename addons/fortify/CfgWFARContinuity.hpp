@@ -5,5 +5,5 @@ class CfgWFARContinuity {
             load=QUOTE(FUNC(loadFortify));
             save=QUOTE(FUNC(saveFortify));
         };
-    }
+    };
 };
