@@ -24,7 +24,7 @@ private _preset = missionNamespace getVariable [format["ace_fortify_objects_%1",
 private _index = _preset findIf {(_x select 0) isEqualTo (typeOf _object)};
 private _presetKey = format["ace_fortify_objects_%1", _side];
 if (_index > -1) then {
-    (_preset select _index) params ["_class", "_fortifyBuildTime", ["_buildTime", 0], ["_requiredBuilders", 0]];
+    (_preset select _index) params ["_class", "_fortifyBuildTime", ["_category", ""], ["_buildTime", 0], ["_requiredBuilders", 0]];
 
     TRACE_2("retrieved from preset",_buildTime,_requiredBuilders);
 

@@ -15,7 +15,7 @@
  * Public: No
  */
 params ["_object"];
-TRACE_1("getObjectBoundingRectangle", _object);
+TRACE_1("getObjectBoundingRectangle",_object);
 
 (3 boundingBoxReal _object) params ["_pBottom", "_pTop"];
 

@@ -37,12 +37,15 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
-    - name: Build using HEMTT
+
+    - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
-      with:
-        command: build
+
+    - name: Run HEMTT build
+      run: hemtt release
+
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2-preview
+      uses: actions/upload-artifact@v3
       with:
-        name: wfar-${{ github.sha }}-nobin
-        path: releases/wfar_*.zip
+        name: WFAR
+        path: releases/

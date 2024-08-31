@@ -18,4 +18,3 @@ class CfgPatches
 #include "CfgUnitInsignia.hpp"
 #include "CfgCommands.hpp"
 #include "scripted\restrictedInsignia.hpp"
-#include "Dialogs.hpp"
