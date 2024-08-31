@@ -4,11 +4,11 @@
 #define QMPRESET(year, version) QPRESET(MAIN,year,version)
 
 #define ADDClASS(classname, buildTime) {classname, buildTime}
-#define MADDCLASS(classname, buildTime, people) {classname, 10, buildTime, people}
+#define MADDCLASS(classname, buildTime, people) {classname, 10, "Multi", buildTime, people}
 
 class ACEX_Fortify_Presets {
-    class MPRESET(2021,A) {
-        displayName = QMPRESET(2021,A);
+    class MPRESET(2024,A) {
+        displayName = QMPRESET(2024,A);
         objects[] = {
             //Normal Fortify behaviour
             ADDClASS("Land_BagFence_Short_F",5),
