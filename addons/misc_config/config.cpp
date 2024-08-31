@@ -2,13 +2,13 @@
 
 class CfgPatches
 {
-    class WASHM_wfar_groundTypeConfigFixes
+    class wfar_misc_config
     {
         name="WHITE FOX ASSAULT REGIMENT data";
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
         requiredVersion=1.0;
-        requiredaddons[]={"A3_Data_F", "ace_csw"};
+        requiredaddons[]={"A3_Data_F"};
         units[]={};
         weapons[]={};
     };

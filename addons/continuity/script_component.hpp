@@ -23,12 +23,12 @@
 #define DUMMY_POSITION [-1000, -1000, 0]
 #define IDC_BTN_CONFIGURE 25030
 
-#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
-#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
-#define POS_W(N) ((N) * GUI_GRID_W)
-#define POS_H(N) ((N) * GUI_GRID_H)
+#define POS_X(N) QUOTE(((N) * GUI_GRID_W + GUI_GRID_CENTER_X))
+#define POS_Y(N) QUOTE(((N) * GUI_GRID_H + GUI_GRID_CENTER_Y))
+#define POS_W(N) QUOTE(((N) * GUI_GRID_W))
+#define POS_H(N) QUOTE(((N) * GUI_GRID_H))
 
-#define POS_X_LOW(N) N * GUI_GRID_W + GUI_GRID_X
-#define POS_Y_LOW(N) N * GUI_GRID_H + GUI_GRID_Y
+#define POS_X_LOW(N) QUOTE(((N) * GUI_GRID_W + GUI_GRID_X))
+#define POS_Y_LOW(N) QUOTE(((N) * GUI_GRID_H + GUI_GRID_Y))
 
 #define REGEX_STRING "{[^}]*}"
