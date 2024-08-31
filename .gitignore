@@ -4,7 +4,7 @@ keys/*
 z/*
 a3/*
 a3
-.hemtt/loal
+.hemtt/local
 .hemttout
 *.cache
 *.pbo
@@ -13,3 +13,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
+.hemttout

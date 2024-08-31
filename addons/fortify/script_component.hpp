@@ -27,6 +27,8 @@
 #define SCAFFOLD_LENGHT 3.64
 #define SCAFFOLD_GROUNDLEVEL 1.6
 
+#define WAITING_DIALOG_IDD -1
+
 // UI grid -> From ACE Zeus 
 #define SIZEX ((safeZoneW / safeZoneH) min 1.2)
 #define SIZEY (SIZEX / 1.2)

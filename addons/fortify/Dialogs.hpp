@@ -200,8 +200,8 @@ class GVAR(buildersWaiting_dialog) {
             idc = WAITING_DIALOG_OBJECT_IDC;
             type = 80;
             model = "ca\misc3\wf\wf_depot.p3d";
-            x = GUI_GRID_CENTER_X + 20 * GUI_GRID_CENTER_W;
-            y = GUI_GRID_CENTER_Y + 12 * GUI_GRID_CENTER_H;
+            x = QUOTE(GUI_GRID_CENTER_X + 20 * GUI_GRID_CENTER_W);
+            y = QUOTE(GUI_GRID_CENTER_Y + 12 * GUI_GRID_CENTER_H);
             z = 9 * GUI_GRID_CENTER_H;
             direction[] = {4,1,4};
             up[] = {1,10,0};

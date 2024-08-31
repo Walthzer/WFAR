@@ -1,7 +1,7 @@
 #define NO_SIDE -1
-#define EAST 0            // (Russian)
-#define WEST 1            // (NATO)
-#define RESISTANCE 2    // Guerilla 
+#define EAST 0
+#define WEST 1
+#define RESISTANCE 2
 #define CIVILIAN 3
 #define NEUTRAL 4
 #define ENEMY 5
@@ -90,9 +90,9 @@ class CfgVehicles
                "Truck_Cargo04","Truck_Cargo04","Truck_Cargo04",
                "Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo"
           };
-          getInAction = "GetInLow";           /// how does driver look while getting in
-          getOutAction = "GetOutLow";           /// and out
-          cargoGetInAction[] = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
+          getInAction           = "GetInLow";           /// how does driver look while getting in
+          getOutAction           = "GetOutLow";           /// and out
+          cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
           transportSoldier = 23;
 
@@ -207,7 +207,7 @@ class CfgVehicles
           };
 
           hasGunner = 0;
-          #include "ikarus\Sounds.hpp"
+          //#include "ikarus\Sounds.hpp"
           #include "ikarus\Physx.hpp"
 
           selectionBrakeLights = "brakeLight";
@@ -472,7 +472,7 @@ class CfgVehicles
                     minTurn=-25;                    /// what is the right-most possible turn of the turret
                     isPersonTurret=2;                    /// enables firing from vehicle functionality
                     ejectDeadGunner=0;                    /// seatbelts included
-                    enabledByAnimationSource= "";                /// doesn't work unless the said animation source is 1
+                    enableyAnimationSource= "";                /// doesn't work unless the said animation source is 1
 
                     //allowLauncherIn=1;  //Launchers work, but rockets WILL collide with fire geometry!!
                     //allowLauncherOut=1;
@@ -537,7 +537,7 @@ class CfgVehicles
           scopeCurator=2;
           crew = "cfp_o_is_crewman";//
 
-          side=EAST;
+          side = QUOTE(EAST);
           faction="WFAR_OPFOR";
           editorSubcategory="EdSubcat_APCs";
 
@@ -553,7 +553,7 @@ class CfgVehicles
           crew = "cfp_o_is_crewman";
           ffvCrewWeighted[] = {"cfp_o_is_machinegunner", 0.75, "cfp_o_is_grenadier", 0.15};
 
-          side=EAST;
+          side = QUOTE(EAST);
           faction="WFAR_OPFOR";
           editorSubcategory="EdSubcat_APCs";
 

@@ -1,4 +1,4 @@
-          
+
           insideSoundCoef = 0.9;
           soundGear[]={"","db-85",1};
           soundGetIn[]={"z\wfar\addons\scrapyard_ikarus\ikarus\sounds\ext-bus-getout-1","db-0",1};
