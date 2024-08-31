@@ -1,5 +1,5 @@
 #define COMPONENT scrapyard_people
-#define COMPONENT_BEAUTIFIED Blank
+#define COMPONENT_BEAUTIFIED Scrapyard_People
 #include "\z\wfar\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

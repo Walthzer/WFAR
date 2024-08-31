@@ -56,7 +56,7 @@ class CfgVehicles
      class WFAR_Ikarus_base: Truck_01_base_F
      {
 
-          weapons[]={TruckHorn2};
+          weapons[]={"TruckHorn2"};
           side = -1;
           scope = 0;
           //model="z\wfar\addons\scrapyard_ikarus\ikarus\WFAR_Ikarus.p3d";
@@ -80,19 +80,19 @@ class CfgVehicles
           ace_vehicle_damage_detonationDuringFireProb = 0.0;
           
           hasDriver=1;
-          driverAction = Ikarus_Driver; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
+          driverAction = "Ikarus_Driver"; /// what action is going the driver take inside the vehicle. Non-existent action makes the vehicle inaccessible
           cargoAction[] =
           {
-               Truck_Cargo01,Truck_Cargo01,Truck_Cargo02,Truck_Cargo02,
-               Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,Truck_Cargo01,
-               Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,Truck_Cargo02,
-               Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,Truck_Cargo03,
-               Truck_Cargo04,Truck_Cargo04,Truck_Cargo04,
-               Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo,Ikarus_Cargo
+               "Truck_Cargo01","Truck_Cargo01","Truck_Cargo02","Truck_Cargo02",
+               "Truck_Cargo01","Truck_Cargo01","Truck_Cargo01","Truck_Cargo01",
+               "Truck_Cargo02","Truck_Cargo02","Truck_Cargo02","Truck_Cargo02",
+               "Truck_Cargo03","Truck_Cargo03","Truck_Cargo03","Truck_Cargo03",
+               "Truck_Cargo04","Truck_Cargo04","Truck_Cargo04",
+               "Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo"
           };
-          getInAction           = GetInLow;           /// how does driver look while getting in
-          getOutAction           = GetOutLow;           /// and out
-          cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
+          getInAction = "GetInLow";           /// how does driver look while getting in
+          getOutAction = "GetOutLow";           /// and out
+          cargoGetInAction[] = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
           transportSoldier = 23;
 
@@ -482,11 +482,11 @@ class CfgVehicles
                     LODOpticsIn= 1;
                     LODOpticsOut= 1;
                };
-               ADDTURRET(KneelingTurret_, 02, "Right Second Gunner", 102)
-               ADDTURRET(KneelingTurret_, 03, "Right Third Gunner", 103)
-               ADDTURRET(KneelingTurret_, 04, "Right Fourth Gunner", 104)
-               ADDTURRET(KneelingTurret_, 05, "Right Fifth Gunner", 105)
-               ADDTURRET(KneelingTurret_, 06, "Right Fifth Gunner", 106)
+               ADDTURRET(KneelingTurret_,02,"Right Second Gunner",102)
+               ADDTURRET(KneelingTurret_,03,"Right Third Gunner",103)
+               ADDTURRET(KneelingTurret_,04,"Right Fourth Gunner",104)
+               ADDTURRET(KneelingTurret_,05,"Right Fifth Gunner",105)
+               ADDTURRET(KneelingTurret_,06,"Right Fifth Gunner",106)
 
                class RearStandingTurret_01: KneelingTurret_01
                {
@@ -510,11 +510,11 @@ class CfgVehicles
                     maxTurn=25;
                     minTurn=-25;
                };
-               ADDTURRET(StandingTurret_, 02, "Left Second Gunner", 206)
-               ADDTURRET(StandingTurret_, 03, "Left Third Gunner", 205)
-               ADDTURRET(StandingTurret_, 04, "Left Fourth Gunner", 204)
-               ADDTURRET(StandingTurret_, 05, "Left Fifth Gunner", 203)
-               ADDTURRET(StandingTurret_, 06, "Left Sixth Gunner", 202)
+               ADDTURRET(StandingTurret_,02,"Left Second Gunner",206)
+               ADDTURRET(StandingTurret_,03,"Left Third Gunner",205)
+               ADDTURRET(StandingTurret_,04,"Left Fourth Gunner",204)
+               ADDTURRET(StandingTurret_,05,"Left Fifth Gunner",203)
+               ADDTURRET(StandingTurret_,06,"Left Sixth Gunner",202)
           };
 
           class PlateInfos
@@ -535,14 +535,14 @@ class CfgVehicles
      {
           scope=2;
           scopeCurator=2;
-          crew = "UK3CB_ADG_O_ENG_ISL";//
+          crew = "cfp_o_is_crewman";//
 
           side=EAST;
           faction="WFAR_OPFOR";
           editorSubcategory="EdSubcat_APCs";
 
           displayName="Armoured Bus";
-        class Library {libTextDesc = "ISIS APC";};
+        class Library {libTextDesc = "Islamic State APC";};
 
      };
 
@@ -550,8 +550,8 @@ class CfgVehicles
      {
           scope=2;
           scopeCurator=2;
-          crew = "UK3CB_ADG_O_ENG_ISL";
-          ffvCrewWeighted[] = {"UK3CB_ADG_O_MG_ISL", 0.8, "UK3CB_ADG_O_GL_ISL", 0.2};
+          crew = "cfp_o_is_crewman";
+          ffvCrewWeighted[] = {"cfp_o_is_machinegunner", 0.75, "cfp_o_is_grenadier", 0.15};
 
           side=EAST;
           faction="WFAR_OPFOR";
