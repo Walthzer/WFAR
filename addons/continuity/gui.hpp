@@ -4,10 +4,10 @@ class GVAR(ButtonConfigure_base): RscButtonMenu {
     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(openLoadMenu));
     idc = IDC_BTN_CONFIGURE;
     text = "Continuity Menu";
-    x = QUOTE(POS_X_LOW(21.2));
-    y = QUOTE(POS_Y_LOW(23));
-    w = QUOTE(POS_W(10));
-    h = QUOTE(POS_H(1));
+    x = POS_X_LOW(21.2);
+    y = POS_Y_LOW(23);
+    w = POS_W(10);
+    h = POS_H(1);
 };
 
 class RscDisplayMainMap;

@@ -18,7 +18,7 @@ params["_object"];
 TRACE_1("getViVCargo",_object);
 
 
-private _cargo = getVehicleCargo _object 
+private _cargo = getVehicleCargo _object;
 private _cargoData = [];
 {
 

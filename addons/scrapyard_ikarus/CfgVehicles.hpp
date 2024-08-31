@@ -1,7 +1,7 @@
 #define NO_SIDE -1
-#define EAST 0            // (Russian)
-#define WEST 1            // (NATO)
-#define RESISTANCE 2    // Guerilla 
+#define EAST 0
+#define WEST 1
+#define RESISTANCE 2
 #define CIVILIAN 3
 #define NEUTRAL 4
 #define ENEMY 5
@@ -90,8 +90,8 @@ class CfgVehicles
                "Truck_Cargo04","Truck_Cargo04","Truck_Cargo04",
                "Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo","Ikarus_Cargo"
           };
-          getInAction           = GetInLow;           /// how does driver look while getting in
-          getOutAction           = GetOutLow;           /// and out
+          getInAction           = "GetInLow";           /// how does driver look while getting in
+          getOutAction           = "GetOutLow";           /// and out
           cargoGetInAction[]      = {"GetInLow"};      /// and the same for the rest, if the array has fewer members than the count of crew, the last one is used for the rest
           cargoGetOutAction[] = {"GetOutLow"};      /// that means all use the same in this case
           transportSoldier = 23;
