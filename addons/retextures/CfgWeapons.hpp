@@ -1,33 +1,20 @@
 class cfgWeapons {
-    //class rhsusf_mich_helmet_marpatwd;
-    //class rhsusf_mich_helmet_marpatwd_headset;
-
-    //class rhsusf_mich_helmet_marpatwd_alt;
-    //class rhsusf_mich_helmet_marpatwd_alt_headset;
-
-
-    //class rhsusf_mich_helmet_marpatwd_norotos;
-    //class rhsusf_mich_helmet_marpatwd_norotos_headset;
-
-    //class rhsusf_mich_helmet_marpatwd_norotos_arc;
-    //class rhsusf_mich_helmet_marpatwd_norotos_arc_headset;
+    class CUP_H_USArmy_ECH_MARPAT;
+    class CUP_H_USArmy_ECH_MARPAT_des;
 
     //Players
-    //#include "data\rhsusf\mich_covered\shark\CfgWeapons.hpp"
-    //#include "data\rhsusf\mich_covered\jews\CfgWeapons.hpp"
-    //#include "data\rhsusf\mich_covered\barker\CfgWeapons.hpp"
-    //#include "data\rhsusf\mich_covered\libby\CfgWeapons.hpp"
+    #include "data\cup\ech\shark\CfgWeapons.hpp"
+    #include "data\cup\ech\libby\CfgWeapons.hpp"
+    #include "data\cup\ech\barker\CfgWeapons.hpp"
 
     //General
     //#include "data\rhsusf\mich_covered\engineer\CfgWeapons.hpp"
-    //#include "data\rhsusf\mich_covered\medic\CfgWeapons.hpp"
-    //#include "data\rhsusf\mich_covered\withStupid\CfgWeapons.hpp"
+    #include "data\cup\ech\medic\CfgWeapons.hpp"
+    #include "data\cup\ech\withStupid\CfgWeapons.hpp"
     
     //Public
     //#include "data\rhsusf\mich_covered\un\CfgWeapons.hpp"
 
-    //class rhsusf_cvc_alt_helmet;
-    //class rhsusf_cvc_ess;
-
-    //#include "data\rhsusf\cvc\gecko\CfgWeapons.hpp"
+    class SP_CVCHelmet_Black;
+    #include "data\cfp\cvc\shark\CfgWeapons.hpp"
 };
