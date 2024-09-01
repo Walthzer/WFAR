@@ -11,11 +11,12 @@ class cfgWFARArsenalAccess
         };
         //Shark
         76561198053950415[]={
-            //#include "data\rhsusf\mich_covered\withStupid\weapons.hpp"
-            //#include "data\rhsusf\mich_covered\barker\weapons.hpp"
-            //#include "data\rhsusf\mich_covered\shark\weapons.hpp"
+            #include "data\cup\ech\withStupid\weapons.hpp"
+            #include "data\cup\ech\barker\weapons.hpp"
+            #include "data\cup\ech\libby\weapons.hpp"
+            #include "data\cup\ech\shark\weapons.hpp"
             #define FINAL
-            //#include "data\rhsusf\cvc\gecko\weapons.hpp"
+            #include "data\cfp\cvc\shark\weapons.hpp"
             #undef FINAL
         };
         //Brenn
@@ -27,13 +28,13 @@ class cfgWFARArsenalAccess
         //Libby
         76561198453933280[]={
             #define FINAL
-            //#include "data\rhsusf\mich_covered\libby\weapons.hpp"
+            #include "data\cup\ech\libby\weapons.hpp"
             #undef FINAL
         };
         //Barker
         76561198158672135[]={
             #define FINAL
-            //#include "data\rhsusf\mich_covered\barker\weapons.hpp"
+            #include "data\cup\ech\barker\weapons.hpp"
             #undef FINAL
         };
     };

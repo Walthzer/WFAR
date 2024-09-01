@@ -4,14 +4,14 @@ class cfgConditionalArsenalAcces
     {
         class medic
         {
-            condition = QUOTE( [player] call ace_medical_treatment_fnc_isMedic );  
+            condition = QUOTE([player] call ace_medical_treatment_fnc_isMedic);  
             items[]={
                 #define FINAL
-                #include "data\rhsusf\mich_covered\medic\weapons.hpp"
+                #include "data\cup\ech\medic\weapons.hpp"
                 #undef FINAL
             };
         };
-        class engineer
+/*         class engineer
         {
             condition = QUOTE( [player] call ace_common_fnc_isEngineer ); 
             items[]={
@@ -19,6 +19,6 @@ class cfgConditionalArsenalAcces
                 #include "data\rhsusf\mich_covered\engineer\weapons.hpp"
                 #undef FINAL
             };
-        };
+        }; */
     };
 };
