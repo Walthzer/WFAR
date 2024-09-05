@@ -57,7 +57,7 @@ private _containers = flatten (everyContainer _object);
     _x params["_type", "_containerInventoryData"];
     private _index = _containers find _type;
     if (_index == -1 || {_index == count _containers}) then {
-        WARNING_2("Invalid Containers Array! Skipping...",_object,_containers);
+        WARNING_2("Invalid Containers Array! Skipping... _object->%1 _container->%2",_object,_containers);
     };
     private _containerObject = _containers select (_index + 1);
     [_containerObject, _containerInventoryData] call _fnc_addCargoToContainer;

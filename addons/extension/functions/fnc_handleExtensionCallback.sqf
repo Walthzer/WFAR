@@ -18,5 +18,5 @@ TRACE_3("callback",_name,_function,_data);
 if !(_name == "WFAR") exitWith {};
 
 if ("error" in ( toLower _data )) then {
-    ERROR_1("Server Extension Error - Callback",_data);
+    ERROR_1("Server Extension Error - Callback -> %1",_data);
 };

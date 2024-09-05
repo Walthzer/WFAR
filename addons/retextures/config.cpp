@@ -11,19 +11,15 @@ class CfgPatches
         requiredaddons[]={"WASHM_wfar_data", "cfp_headgear", "CUP_Creatures_Military_USArmy"};
         units[]={};
         weapons[]={
-            #include "data\cup\ech\medic\weapons.hpp"
-            #include "data\cup\ech\withStupid\weapons.hpp"
-            #include "data\cup\ech\barker\weapons.hpp"
-            #include "data\cup\ech\libby\weapons.hpp"
-            #include "data\cup\ech\shark\weapons.hpp"
             #define FINAL
-            #include "data\cfp\cvc\shark\weapons.hpp"
+            #include "data\cup\ech\weapons.hpp"
             #undef FINAL
         };
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "ui/square.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgWFARUITextures.hpp"
 #include "CfgWFARArsenalAccess.hpp"
-#include "CfgConditionalArsenalAccess.hpp"

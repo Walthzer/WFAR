@@ -1,4 +1,5 @@
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_debug.hpp"
 
 #define TRACE_0(MESSAGE) TRACE_1(MESSAGE,"")
 

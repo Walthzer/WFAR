@@ -1,1 +1,2 @@
-PREP(fillLeftPanel);
+PREP(onLoadUITexture);
+PREP(onUnloadUITexture);
