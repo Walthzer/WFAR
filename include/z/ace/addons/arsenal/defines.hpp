@@ -231,7 +231,7 @@
     _x ctrlShow true;\
     _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground,\
     IDC_rightTabContent,\
@@ -258,7 +258,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_loadIndicator,\
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
@@ -274,7 +274,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         safezoneH - 28 * GRID_H\
     ];\
     _x ctrlCommit 0;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -286,7 +286,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow true;\
     _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame, \
     IDC_blockRighttBackground,\
     IDC_loadIndicator,\
@@ -304,7 +304,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_buttonCurrentMag,\
     IDC_buttonCurrentMag2,\
     IDC_iconBackgroundCurrentMag,\
@@ -319,7 +319,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         safezoneH - 34 * GRID_H\
     ];\
     _x ctrlCommit 0;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];\
@@ -367,7 +367,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground,\
     IDC_loadIndicator,\

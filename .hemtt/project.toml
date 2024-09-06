@@ -56,7 +56,7 @@ workshop = [
     "450814997", # CBA's ID
 ]
 
-# Launched with `hemtt launch ace
+# Launched with `hemtt launch wfar
 [hemtt.launch.wfar]
 presets = [
     "WFAR9", # .html presets from .hemtt/presets/
