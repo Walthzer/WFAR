@@ -3,9 +3,9 @@
 class RscPictureKeepAspect;
 class GVAR(ui)
 {
-	idd = -1;
-	class ControlsBackground
-	{
+    idd = -1;
+    class ControlsBackground
+    {
         class base: RscPictureKeepAspect 
         {
             onLoad=QUOTE({_this call FUNC(onLoadUITexture)});
@@ -48,7 +48,7 @@ class GVAR(ui)
             text = "";
         };
         
-	};
+    };
 };
 
 #include "cup/ui.hpp"

@@ -22,7 +22,7 @@ class GEN_TEX_CLASSNAME(names,player): parent { \
 #define GEN_TEX_UI(camo,primary) \
 class TEX_UI(DOUBLES(primary,camo)): GVAR(ui) { \
     class ControlsBackground: ControlsBackground \
-	{ \
+    { \
         class base: base \
         { \
             text=BASE_PAA; \
