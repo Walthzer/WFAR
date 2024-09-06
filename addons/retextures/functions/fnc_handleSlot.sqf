@@ -18,5 +18,5 @@ systemChat "initUITextureObject";
 
 
 this addEventHandler ["SlotItemChanged", {
-	params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
+    params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
 }];
