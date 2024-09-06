@@ -41,7 +41,7 @@ TRACE_1("loadFortify",_listSaveData);
         //Add fortify actions to object
         ["acex_fortify_objectPlaced", [EGVAR(continuity,unitDummy), _side, _object]] call CBA_fnc_globalEvent;
 
-    } foreach _listSaveData;
+    } forEach _listSaveData;
 
     //Give arma a little time before allowing simulation to be enabled
     [{

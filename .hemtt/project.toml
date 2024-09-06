@@ -40,6 +40,9 @@ releasebuild = [
 [header_exts]
 version= "{{git \"id 8\"}}"
 
+[hemtt.build]
+pdrive = "require"
+
 # Binarizer file search compatibility
 [scripts.binarizer_link]
 steps_windows = [

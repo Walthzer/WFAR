@@ -7,7 +7,7 @@ class CfgPatches
         name="WHITE FOX ASSAULT REGIMENT data";
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
-        requiredVersion=1.6;
+        requiredVersion=REQUIRED_VERSION;
         requiredaddons[]={ "CBA_main", "A3_Data_F_Enoch_Loadorder" };
         units[]={};
         weapons[]={};

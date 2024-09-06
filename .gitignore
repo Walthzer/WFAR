@@ -4,7 +4,7 @@ keys/*
 z/*
 a3/*
 a3
-.hemtt
+.hemtt/presets
 .hemttout
 *.cache
 *.pbo
@@ -13,4 +13,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
-.hemttout
+*\project.toml

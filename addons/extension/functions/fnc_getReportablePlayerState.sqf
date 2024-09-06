@@ -34,7 +34,7 @@ private _weaponRoles = [
 
 //In vehicle CREW
 private _vehicle = vehicle _unit;
-if (_vehicle isnotEqualTo _unit) then {
+if (_vehicle isNotEqualTo _unit) then {
     _vehicleName = getText((configOf _vehicle) >> "displayName");
 };
 

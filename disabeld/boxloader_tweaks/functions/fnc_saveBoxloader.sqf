@@ -28,6 +28,6 @@ private _boxLoaderSaveList = [];
     private _objectKey = if (_vehicleEdenID > -1) then {_vehicleEdenID} else {typeOf _x};
 
     _boxLoaderSaveList pushBack [_objectKey, getPosASL _x, [vectorDir _x, vectorUp _x]];
-} foreach entities[GVAR(saveTypes)];
+} forEach entities[GVAR(saveTypes)];
 
 _boxLoaderSaveList

@@ -24,4 +24,4 @@ TRACE_1("loadMines",_listSaveData);
     _object setPosASL _posASL;
     _object setVectorDirAndUp _vectorDirAndUp;
 
-} foreach _listSaveData;
+} forEach _listSaveData;

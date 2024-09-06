@@ -7,7 +7,7 @@ class CfgPatches
         name="WHITE FOX ASSAULT REGIMENT SQUAD FLAGS";
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
-        requiredVersion=1.6;
+        requiredVersion=REQUIRED_VERSION;
         requiredaddons[]={"WASHM_wfar_data"};
         units[]={"WFAR_Flag_WfarWhite","WFAR_Flag_WfarBlack","WFAR_Flag_ISIS"};
         weapons[]={};

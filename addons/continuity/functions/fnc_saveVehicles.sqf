@@ -42,6 +42,6 @@ private _vehicleSaveList = [];
 
     _vehicleSaveList pushBack [_x] call FUNC(serializeVehicle);
 
-} foreach entities [["AllVehicles"], ["ParachuteBase", "Man", "StaticWeapon"]];
+} forEach entities [["AllVehicles"], ["ParachuteBase", "Man", "StaticWeapon"]];
 
 _vehicleSaveList

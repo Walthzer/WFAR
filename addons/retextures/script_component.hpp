@@ -15,10 +15,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_CORE
 #endif
 
-#define DATA(class,name) QUOTE(class)##,##QUOTE(name)
-#define DIMENSION(x,y) (rgb,##x##,##y##,1)
-#define UITEXTURE(class,name) QUOTE(#DIMENSION(2048,2048)ui(DATA(class,name))
-#define TEXTURE(file) QUOTE(PATHTOF_SYS(PREFIX,COMPONENT,data\ADDON_NAME\BASE_NAME\var1.paa))
+#define MAX_TEXTURE_LAYERS 6
 
 #include "\z\wfar\addons\main\script_macros.hpp"
 #include "\z\ace\addons\arsenal\defines.hpp"

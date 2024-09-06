@@ -19,6 +19,6 @@ TRACE_0("saveMines");
 private _minesSaveList = [];
 {
     _minesSaveList pushBack [typeOf _x, getPosASL _x, [vectorDir _x, vectorUp _x]];
-} foreach allMines;
+} forEach allMines;
 
 _minesSaveList

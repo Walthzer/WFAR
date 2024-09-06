@@ -7,7 +7,7 @@ class CfgPatches
         name="WHITE FOX ASSAULT REGIMENT SQUAD INSIGNIA";
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
-        requiredVersion=1.6;
+        requiredVersion=REQUIRED_VERSION;
         requiredaddons[]={"WASHM_wfar_data"};
         units[]={};
         weapons[]={};

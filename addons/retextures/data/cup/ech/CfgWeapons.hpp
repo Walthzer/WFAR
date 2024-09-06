@@ -1,105 +1,57 @@
-#undef DISPLAY_CLASS
-#define DISPLAY_CLASS ui_marpat_wd
-class wfar_retexture_helmet_ech_marpat_wd: CUP_H_USArmy_ECH_MARPAT
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Woodland));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_ess_marpat_wd: CUP_H_USArmy_ECH_ESS_MARPAT
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Woodland/Goggles));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_headset_marpat_wd: CUP_H_USArmy_ECH_Headset_MARPAT
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Woodland/Headset));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_ess_headset_marpat_wd: CUP_H_USArmy_ECH_ESS_Headset_MARPAT
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Woodland/Headset/Goggles));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
+#define BASE_TYPE helmet
 
+
+//-----------parents--------------
+class CUP_H_USArmy_ECH_MARPAT;
+class CUP_H_USArmy_ECH_ESS_MARPAT;
+class CUP_H_USArmy_ECH_Headset_MARPAT;
+class CUP_H_USArmy_ECH_ESS_Headset_MARPAT;
+
+class CUP_H_USArmy_ECH_MARPAT_des;
+class CUP_H_USArmy_ECH_ESS_MARPAT_des;
+class CUP_H_USArmy_ECH_Headset_MARPAT_des;
+class CUP_H_USArmy_ECH_ESS_Headset_MARPAT_des;
 //---------------------------------
-//-----------Desert---------------
-#undef DISPLAY_CLASS
-#define DISPLAY_CLASS ui_marpat_des
+
+#define GEN_ITEMS(name) \
+    GEN_TEX_CLASS(ech,CUP_H_USArmy_ECH_MARPAT,"ECH MARPAT (Woodland)",name); \
+    GEN_TEX_CLASS(ech_ess,CUP_H_USArmy_ECH_ESS_MARPAT,"ECH MARPAT (Woodland/Goggles)",name); \
+    GEN_TEX_CLASS(ech_headset,CUP_H_USArmy_ECH_Headset_MARPAT,"ECH MARPAT (Woodland/Headset)",name); \
+    GEN_TEX_CLASS(ech_ess_headset,CUP_H_USArmy_ECH_ESS_Headset_MARPAT,"ECH MARPAT (Woodland/Headset/Goggles)",name); \
+
+
+//-----------Woodland--------------
+#define TEX_CAMO marpat_wd
 //---------------------------------
-class wfar_retexture_helmet_ech_marpat_des: CUP_H_USArmy_ECH_MARPAT_des
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Desert));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_ess_marpat_des: CUP_H_USArmy_ECH_ESS_MARPAT_des
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Desert/Goggles));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_headset_marpat_des: CUP_H_USArmy_ECH_Headset_MARPAT_des
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Desert/Headset));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-class wfar_retexture_helmet_ech_ess_headset_marpat_des: CUP_H_USArmy_ECH_ESS_Headset_MARPAT_des
-{
-    author="Walthzer/Shark";
-    dlc="";
-    displayName=QUOTE(ECH (Desert/Headset/Goggles));
-    picture = QUOTE(z\wfar\addons\insignia\scripted\dev_team.paa);
-    hiddenSelectionsTextures[]=
-    {
-        UITEXTURE(QGVAR(DISPLAY_CLASS),QGVAR(ui_uniqueName)),
-        "\CUP\Creatures\People\Military\CUP_Creatures_People_Military_USArmy\data\h_gear_01_cb_co.paa"
-    };
-};
-#undef DISPLAY_CLASS
+GEN_ITEMS(shark)
+GEN_ITEMS(libby)
+GEN_ITEMS(barker)
+GEN_ITEMS(medic)
+GEN_ITEMS(genius)
+#undef GEN_ITEMS
+//---------------------------------
+#undef TEX_CAMO
+//---------------------------------
+
+#define GEN_ITEMS(name) \
+    GEN_TEX_CLASS(ech,CUP_H_USArmy_ECH_MARPAT_des,"ECH MARPAT (Desert)",name); \
+    GEN_TEX_CLASS(ech_ess,CUP_H_USArmy_ECH_ESS_MARPAT_des,"ECH MARPAT (Desert/Goggles)",name); \
+    GEN_TEX_CLASS(ech_headset,CUP_H_USArmy_ECH_Headset_MARPAT_des,"ECH MARPAT (Desert/Headset)",name); \
+    GEN_TEX_CLASS(ech_ess_headset,CUP_H_USArmy_ECH_ESS_Headset_MARPAT_des,"ECH MARPAT (Desert/Headset/Goggles)",name); \
+
+
+//-----------Desert----------------
+#define TEX_CAMO marpat_des
+//---------------------------------
+GEN_ITEMS(shark)
+GEN_ITEMS(libby)
+GEN_ITEMS(barker)
+GEN_ITEMS(medic)
+GEN_ITEMS(genius)
+#undef GEN_ITEMS
+//---------------------------------
+#undef TEX_CAMO
+//---------------------------------
+
+
+#undef BASE_TYPE

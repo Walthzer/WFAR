@@ -79,7 +79,7 @@ private _actionHelpers = [];
         _grassCutters pushBack ([_surfacePositionASL] call FUNC(cutGrass));
 
         //Create the helpers for ACE actions
-        private _actionHelper = createVehicle [ACTION_HELPER, ASLtoATL _surfacePositionASL, [], 0, "CAN_COLLIDE"];
+        private _actionHelper = createVehicle [ACTION_HELPER, ASLToATL _surfacePositionASL, [], 0, "CAN_COLLIDE"];
         //_actionHelpers pushBack (createSimpleObject [ACTION_HELPER, _position]);
         _actionHelper setVectorUp _surfaceNormal;
 
@@ -88,7 +88,7 @@ private _actionHelpers = [];
         _actionHelpers pushBack _actionHelper;
 
         private _sunkenPostion = _surfacePositionASL vectorAdd [0, 0, - SCAFFOLD_GROUNDLEVEL];
-        private _scaffold = createVehicle ["Land_MobileScafolding_01_F", ASLtoATL _sunkenPostion , [], 0, "CAN_COLLIDE"];
+        private _scaffold = createVehicle ["Land_MobileScafolding_01_F", ASLToATL _sunkenPostion , [], 0, "CAN_COLLIDE"];
         _scaffold enableSimulation false;
         //private _scaffold = createSimpleObject ["Land_MobileScafolding_01_F", _sunkenPostion];
 

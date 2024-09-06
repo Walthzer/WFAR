@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "config_macro.hpp"
 
 class CfgPatches
 {
@@ -7,19 +8,16 @@ class CfgPatches
         name="WHITE FOX ASSAULT REGIMENT SQUAD RETEXTURES";
         author="Walthzer/Shark";
         url="https://whitefoxassaultreg.wixsite.com/wfar";
-        requiredVersion=1.6;
+        requiredVersion=REQUIRED_VERSION;
         requiredaddons[]={"WASHM_wfar_data", "cfp_headgear", "CUP_Creatures_Military_USArmy"};
         units[]={};
         weapons[]={
-            #define FINAL
-            #include "data\cup\ech\weapons.hpp"
-            #undef FINAL
+            #include "data\weapons.hpp"
         };
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "ui/square.hpp"
+#include "data/ui.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgWFARUITextures.hpp"
 #include "CfgWFARArsenalAccess.hpp"

@@ -44,7 +44,7 @@ if (GVAR(currentInsignia) isNotEqualTo "") then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
-        if ((_currentData isNotEqualTo "") && {tolower _currentData == GVAR(currentInsignia)}) exitWith {
+        if ((_currentData isNotEqualTo "") && {toLower _currentData == GVAR(currentInsignia)}) exitWith {
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };

@@ -33,6 +33,6 @@ private _cswSaveList = [];
     } forEach magazinesAllTurrets _x;
 
     _cswSaveList pushBack [_cswKey, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _ammo];
-} foreach (entities "StaticWeapon");
+} forEach (entities "StaticWeapon");
 
 _cswSaveList
