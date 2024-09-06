@@ -81,7 +81,7 @@ if (!hasInterface) exitWith {};
         !(isHidden _object);
     };
 
-    private _removeAction = [format ["removeAction", _forEachIndex], "Remove", ["\a3\ui_f\data\igui\cfg\simpletasks\types\danger_ca.paa", "#c80000"], _removeStatement, _mainCondition, {}, _object, {[0,0,0.5]}, 7] call ace_interact_menu_fnc_createAction;
+    private _removeAction = [format ["removeAction_%1", _forEachIndex], "Remove", ["\a3\ui_f\data\igui\cfg\simpletasks\types\danger_ca.paa", "#c80000"], _removeStatement, _mainCondition, {}, _object, {[0,0,0.5]}, 7] call ace_interact_menu_fnc_createAction;
     [_object, 0, [], _removeAction] call ACE_interact_menu_fnc_addActionToObject;
 
 /*     //Create scaled floor decal.

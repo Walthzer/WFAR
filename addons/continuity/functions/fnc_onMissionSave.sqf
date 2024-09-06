@@ -26,7 +26,7 @@ if (GVAR(didResave)) exitWith {GVAR(didResave) = false};
         {
             _x set3DENAttribute [QGVAR(objectID), get3DENEntityID _x];
         } forEach (all3DENEntities select _x);
-    } foreach [0,3,5];
+    } forEach [0,3,5];
 
     QGVAR(attributes) set3DENMissionAttribute [QGVAR(scenarioUID), systemTimeUTC];
     

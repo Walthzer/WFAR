@@ -53,7 +53,7 @@ private _loadedObjects = [];
     } forEach _ammo;
 
 
-} foreach _listSaveData;
+} forEach _listSaveData;
 
 //Give arma a little time before allowing simulation to be enabled
 [{

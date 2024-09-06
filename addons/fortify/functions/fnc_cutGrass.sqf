@@ -17,7 +17,7 @@
 params ["_position"];
 TRACE_1("cutGrass",_position);
 
-private _cutter = createVehicle ["Land_ClutterCutter_medium_F", ASLtoATL _position, [], 0, ""];
+private _cutter = createVehicle ["Land_ClutterCutter_medium_F", ASLToATL _position, [], 0, ""];
 //deleteVehicle _cutter;
 
 _cutter

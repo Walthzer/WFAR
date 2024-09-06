@@ -13,4 +13,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
-.hemttout
+*\project.toml

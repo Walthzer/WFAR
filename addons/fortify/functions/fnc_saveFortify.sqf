@@ -27,6 +27,6 @@ private _fortifySaveList = [];
     };
 
     _fortifySaveList pushBack [typeOf _x, getPosASL _x, [vectorDir _x, vectorUp _x], _damageData, _side, _progress];
-} foreach GVAR(fortifyObjects);
+} forEach GVAR(fortifyObjects);
 
 _fortifySaveList

@@ -59,7 +59,7 @@ private _positions = [];
         reverse _halfPositions;
 
         _halfPositions append _mirrorHalfPositions;
-        _positions pushback _halfPositions;
+        _positions pushBack _halfPositions;
 
     } else {
         //Whole side only fits one scaffold, use side center for position.

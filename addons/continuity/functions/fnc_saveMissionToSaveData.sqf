@@ -38,7 +38,7 @@ _saveData set ["savedBy", _savedBy];
     private _listName = configName _x;
     private _saveFunction = getText (_x >> "save");
 
-    private _listSaveData = call (missionNamespace getVariable[_saveFunction, {WARNING_1("No Save function for saveList: ",_listName)}]);
+    private _listSaveData = call (missionNamespace getVariable[_saveFunction, {WARNING_1("No Save function for saveList: %1",_listName)}]);
     _saveData set [_listName, _listSaveData];
 
 } forEach (call _fnc_getSaveListsConfigs);

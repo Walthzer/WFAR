@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Retextures
 #include "\z\wfar\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -14,6 +14,8 @@
 #ifdef DEBUG_SETTINGS_CORE
     #define DEBUG_SETTINGS DEBUG_SETTINGS_CORE
 #endif
+
+#define MAX_TEXTURE_LAYERS 6
 
 #include "\z\wfar\addons\main\script_macros.hpp"
 #include "\z\ace\addons\arsenal\defines.hpp"
