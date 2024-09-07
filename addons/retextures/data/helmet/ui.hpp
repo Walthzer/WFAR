@@ -50,5 +50,3 @@ class GVAR(ui)
         
     };
 };
-
-#include "cup/ui.hpp"
