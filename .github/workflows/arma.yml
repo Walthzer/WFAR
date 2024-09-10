@@ -41,6 +41,9 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
 
+    - name: Run HEMTT Compile Textures
+      run: hemtt script compile_retextures
+
     - name: Run HEMTT build
       run: hemtt release
 
