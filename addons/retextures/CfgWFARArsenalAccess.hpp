@@ -2,10 +2,6 @@ class cfgWFARArsenalAccess
 {
     class IDX_VIRT_HEADGEAR
     {
-        //Jews
-        76561198042318568[]={
-
-        };
         //Shark
         76561198053950415[]={
             
