@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Walthzer/Shark
- * Initialise a UI Texture on an object
+ * Initialise a UI Texture on a player slot item
  *
  * Arguments:
  * 0: object <OBJECT>
@@ -15,8 +15,3 @@ params ["__", "_name", "_slot", "_assigned"];
 TRACE_3("handleSlot",_name,_slot,_assigned);
 
 systemChat "initUITextureObject";
-
-
-this addEventHandler ["SlotItemChanged", {
-    params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
-}];

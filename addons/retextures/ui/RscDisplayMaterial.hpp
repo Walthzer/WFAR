@@ -1,54 +1,52 @@
 #include "defines.hpp"
 
 class RscPictureKeepAspect;
-class GVAR(ui)
+class GVAR(RscDisplayMaterial)
 {
     idd = -1;
     class ControlsBackground
     {
-        class base: RscPictureKeepAspect 
+        class layer0: RscPictureKeepAspect 
         {
             onLoad=QUOTE({_this call FUNC(onLoadUITexture)});
             onUnLoad=QUOTE(LINKFUNC(onLoadUITexture));
-            idc = IDCSquareBase;
+            idc = IDCMateriallayer0;
             text = "";
             x=0;
             y=0;
             w=1;
             h=1;
         };
-        class layer1: base 
+        class layer1: layer0 
         {
-            idc = IDCSquareLayer1;
+            idc = IDCMaterialLayer1;
             text = "";
         };
-        class layer2: base 
+        class layer2: layer0 
         {
-            idc = IDCSquareLayer2;
+            idc = IDCMaterialLayer2;
             text = "";
         };
-        class layer3: base 
+        class layer3: layer0 
         {
-            idc = IDCSquareLayer3;
+            idc = IDCMaterialLayer3;
             text = "";
         };
-        class layer4: base 
+        class layer4: layer0 
         {
-            idc = IDCSquareLayer4;
+            idc = IDCMaterialLayer4;
             text = "";
         };
-        class layer5: base 
+        class layer5: layer0 
         {
-            idc = IDCSquareLayer5;
+            idc = IDCMaterialLayer5;
             text = "";
         };
-        class layer6: base 
+        class layer6: layer0 
         {
-            idc = IDCSquareLayer6;
+            idc = IDCMaterialLayer6;
             text = "";
         };
         
     };
 };
-
-#include "cup/ui.hpp"

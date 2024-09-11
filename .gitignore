@@ -2,8 +2,6 @@ release/*
 releases/*
 keys/*
 z/*
-a3/*
-a3
 .hemtt/presets
 .hemttout
 *.cache
@@ -13,4 +11,5 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
-*\project.toml
+
+a3
