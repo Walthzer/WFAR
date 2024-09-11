@@ -106,23 +106,23 @@ fn folder_compile_classes(path, tree, folders, templates) {
         for (template, index) in templates {
             if index > 0 { template.fill_with(templates[0]) }; //mixin
 
-            for class in template.classes {
-                //Material Class
-                const suffix = if class[0] == "" { `${template.camo}`} else { `${class[0]}_${template.camo}` };
-                const material = #{
-                    name: `${global::class_prefix}_material_${file_properties.name}_${tree_folders}_${suffix}`,
-                    layers: template.material_layers.map(|value| { if value == "#TEXTURE_SLOT" { texture_arma_path } else { to_arma_path(value, "") } })
-                };
+            //Material Class
+            const material = #{
+                name: `${global::class_prefix}_material_${file_properties.name}_${tree_folders}_${template.camo}`,
+                layers: template.material_layers.map(|value| { if value == "#TEXTURE_SLOT" { texture_arma_path } else { to_arma_path(value, "") } })
+            };
+            let material_class = global::material_class_template.header;
+            material_class.replace("#CLASS_NAME", material.name);
+            for (texture_path, index) in material.layers {
+                material_class += global::material_class_template.layer;
+                material_class.replace("#LAYER_ID", `${index}`);
+                material_class.replace("#PATH_SLOT", texture_path);
+            };
+            material_class+=global::material_class_template.footer;
+            material_out.write(material_class);
 
-                let material_class = global::material_class_template.header;
-                material_class.replace("#CLASS_NAME", material.name);
-                for (texture_path, index) in material.layers {
-                    material_class += global::material_class_template.layer;
-                    material_class.replace("#LAYER_ID", `${index}`);
-                    material_class.replace("#PATH_SLOT", texture_path);
-                };
-                material_class+=global::material_class_template.footer;
-                material_out.write(material_class);
+            for class in template.classes {
+                const suffix = if class[0] == "" { `${template.camo}`} else { `${class[0]}_${template.camo}` };
 
                 //CfgWeapon class
                 let cfgWeapon = #{

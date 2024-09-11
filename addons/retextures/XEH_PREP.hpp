@@ -1,3 +1,1 @@
-PREP(onLoadUITexture);
-PREP(onUnloadUITexture);
-PREP(handleObject);
+PREP(handleSlot);

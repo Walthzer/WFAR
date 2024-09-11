@@ -35,3 +35,5 @@ if (GVAR(arsenalAccess) isEqualTo _cargo && isMultiplayer) then {
 
     uiNamespace setVariable [QGVAR(arsenalAccess), compileFinal (str GVAR(arsenalAccess))];
 };
+
+player addEventHandler ["SlotItemChanged", LINKFUNC(handleSlot)];
