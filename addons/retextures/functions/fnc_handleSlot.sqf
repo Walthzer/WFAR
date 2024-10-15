@@ -14,4 +14,3 @@
 params ["__", "_name", "_slot", "_assigned"];
 TRACE_3("handleSlot",_name,_slot,_assigned);
 
-systemChat "initUITextureObject";
