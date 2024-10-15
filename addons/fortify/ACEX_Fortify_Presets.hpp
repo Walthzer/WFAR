@@ -25,4 +25,22 @@ class ACEX_Fortify_Presets {
             MADDCLASS("WarfareBDepot",180,3)
         };
     };
+    class MPRESET(2021,A) {
+        displayName = QMPRESET(2021,A);
+        objects[] = {
+            //Normal Fortify behaviour
+            ADDClASS("Land_BagFence_Short_F",5),
+            ADDClASS("Land_Plank_01_4m_F",5),
+            ADDClASS("Land_BagFence_Long_F",10),
+            ADDClASS("Land_BagFence_Round_F",10),
+            ADDClASS("Land_Plank_01_8m_F",10),
+            ADDClASS("Land_BagBunker_Small_F",20),
+            ADDClASS("Land_fort_bagfence_round",20),
+
+            //Multiple People Construction
+            MADDCLASS("Land_BagBunker_Large_F",60,2),
+            MADDCLASS("WarfareBCamp",60,2),
+            MADDCLASS("WarfareBDepot",180,3)
+        };
+    };
 };
