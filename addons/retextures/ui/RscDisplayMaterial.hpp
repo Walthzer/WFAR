@@ -8,8 +8,6 @@ class GVAR(RscDisplayMaterial)
     {
         class layer0: RscPictureKeepAspect 
         {
-            onLoad=QUOTE({_this call FUNC(onLoadUITexture)});
-            onUnLoad=QUOTE(LINKFUNC(onLoadUITexture));
             idc = IDCMateriallayer0;
             text = "";
             x=0;
@@ -45,6 +43,36 @@ class GVAR(RscDisplayMaterial)
         class layer6: layer0 
         {
             idc = IDCMaterialLayer6;
+            text = "";
+        };
+        class layer7: layer0 
+        {
+            idc = IDCMaterialLayer7;
+            text = "";
+        };
+        class layer8: layer0 
+        {
+            idc = IDCMaterialLayer8;
+            text = "";
+        };
+        class layer9: layer0 
+        {
+            idc = IDCMaterialLayer9;
+            text = "";
+        };
+        class layer10: layer0 
+        {
+            idc = IDCMaterialLayer10;
+            text = "";
+        };
+        class layer11: layer0 
+        {
+            idc = IDCMaterialLayer11;
+            text = "";
+        };
+        class layer12: layer0 
+        {
+            idc = IDCMaterialLayer12;
             text = "";
         };
         

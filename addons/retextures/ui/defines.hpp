@@ -5,3 +5,9 @@
 #define IDCMaterialLayer4 14
 #define IDCMaterialLayer5 15
 #define IDCMaterialLayer6 16
+#define IDCMateriallayer7 17
+#define IDCMaterialLayer8 19
+#define IDCMaterialLayer9 20
+#define IDCMaterialLayer10 21
+#define IDCMaterialLayer11 22
+#define IDCMaterialLayer12 23
