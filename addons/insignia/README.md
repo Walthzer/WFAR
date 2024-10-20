@@ -13,6 +13,6 @@
 
 ------------
 #### Examples of valid insignia are provided as a guideline.
-[![nord](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/players/l_nord.png?raw=true "nord")](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/players/l_nord.png?raw=true "nord")
-[![javelin](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/respect/st_javelin.png?raw=true "javelin")](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/respect/st_javelin.png?raw=true "javelin")
-[![dev_team](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/scripted/dev_team.png?raw=true "dev_team")](https://github.com/Walthzer/WFAR/blob/main/addons/insignia/scripted/dev_team.png?raw=true "dev_team")
+<img src="(https://github.com/Walthzer/WFAR/blob/main/addons/insignia/players/l_nord.png?raw=true" alt="javelin" width="512"/>
+<img src="(https://github.com/Walthzer/WFAR/blob/main/addons/insignia/respect/st_javelin.png?raw=truee" alt="devteam" width="512"/>
+<img src="(https://github.com/Walthzer/WFAR/blob/main/addons/insignia/scripted/dev_team.png?raw=true" alt="nord" width="512"/>
