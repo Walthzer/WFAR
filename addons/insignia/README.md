@@ -11,6 +11,8 @@
   - 256x256
   - 512x512
 
+- [x] Twitch ToS applies.
+    - Staff will take this into account during review.
 ------------
 ## Examples of valid insignia are provided as a guideline.
 [<img src="https://github.com/Walthzer/WFAR/blob/main/addons/insignia/players/s_antella.png?raw=true" alt="nord" width="256"/>](antella.png)
