@@ -4,7 +4,7 @@
 - [x] Should visually approximate an insignia.
 - [x] Production of the patch should be reasonably.
      - [x] Colour count.
-     - [x] Details.
+   - [x] Details.
 - [x] `png` filetype.
 - [x] Use a valid image dimensions in `pixels`:
   - 128x128
