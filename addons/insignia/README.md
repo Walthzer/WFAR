@@ -10,7 +10,7 @@
   - 128x128
   - 256x256
   - 512x512
-
+- [x] Intellectual Property must be respected
 - [x] Twitch ToS applies.
     - Staff will take this into account during review.
 ------------
