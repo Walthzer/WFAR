@@ -15,3 +15,11 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_SlotItemChanged_EventHandlers {
+    class CAManBase {
+        class GVAR(SlotItemChanged) {
+            slotitemchanged = QUOTE(_this call FUNC(handleEquipment));
+        };
+    };
+};
