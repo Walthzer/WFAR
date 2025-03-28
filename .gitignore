@@ -10,6 +10,7 @@ texHeaders.bin
 *.swp
 *.swo
 *.biprivatekey
+*/build/*
 Thumbs.db
 
 a3
