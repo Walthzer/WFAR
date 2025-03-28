@@ -134,7 +134,7 @@ class GVAR(RscGlobalSupplyRange): RscDisplayAttributes {
     };
 };
 class GVAR(buildersWaiting_dialog) {
-    idd = QUOTE(WAITING_DIALOG_IDD);
+    idd = WAITING_DIALOG_IDD;
     access = 0;
     movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(waitDialogOpen)),true)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrWaitToolBox)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlWaitPicture)),(_this select 0) displayCtrl 2)];);

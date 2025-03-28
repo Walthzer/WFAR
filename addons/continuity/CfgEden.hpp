@@ -96,7 +96,7 @@ class Cfg3DEN
 
                         expression = QUOTE(if (is3DEN || {_value < 0}) exitWith {}; [ARR_2(_this,_value)] call FUNC(registerObjectID));
 
-                        defaultValue = "-1";
+                        defaultValue = -1;
 
                         unique = 0;
                         validate = "none";
@@ -128,7 +128,7 @@ class Cfg3DEN
 
                         expression = QUOTE(if (is3DEN || {_value < 0}) exitWith {}; [ARR_2(_this,_value)] call FUNC(registerObjectID));
 
-                        defaultValue = "-1";
+                        defaultValue = -1;
 
                         unique = 0;
                         validate = "none";
@@ -160,7 +160,7 @@ class Cfg3DEN
 
                         expression = QUOTE(if (is3DEN || {_value < 0}) exitWith {}; [ARR_2(_this,_value)] call FUNC(registerObjectID));
 
-                        defaultValue = "-1";
+                        defaultValue = -1;
 
                         unique = 0;
                         validate = "none";

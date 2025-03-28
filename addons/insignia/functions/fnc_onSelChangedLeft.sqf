@@ -17,7 +17,7 @@ params ["_control", "_curSel"];
 TRACE_2("onSelChangedLeft",_control,_curSel);
 
 //If the current panel isn't insignia's, exit:
-if !(ace_arsenal_currentLeftPanel == IDC_buttonInsignia) exitWith {false};
+if (ace_arsenal_currentLeftPanel isNotEqualTo IDC_buttonInsignia) exitWith {false};
 
 private _display = ctrlParent _control;
 private _item = _control lbData _curSel;
