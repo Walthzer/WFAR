@@ -11,15 +11,14 @@ class CfgPatches
         requiredaddons[]={"WASHM_wfar_data", "cfp_headgear", "CUP_Creatures_Military_USArmy"};
         units[]={};
         weapons[]={
-            #include "build\weapons.hpp"
+            #include "build/equipment.hpp"
         };
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgWFARArsenalAccess.hpp"
 #include "ui/RscDisplayMaterial.hpp"
 
 //Build by rhai
-#include "build/ui.hpp"
+#include "build/materials.hpp"
 #include "build/CfgWeapons.hpp"

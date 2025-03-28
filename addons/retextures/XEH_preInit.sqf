@@ -6,29 +6,23 @@ ADDON = false;
 
 ADDON = true;
 
-//ACE Arsenal item cache format
-private _cargo = [
-    [[], [], []], // Weapons 0, primary, secondary, handgun
-    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
-    [ ], // Magazines 2
-    [ ], // Headgear 3
-    [ ], // Uniform 4
-    [ ], // Vest 5
-    [ ], // Backpacks 6
-    [ ], // Goggles 7
-    [ ], // NVGs 8
-    [ ], // Binoculars 9
-    [ ], // Map 10
-    [ ], // Compass 11
-    [ ], // Radio slot 12
-    [ ], // Watch slot  13
-    [ ], // Comms slot 14
-    [ ], // WeaponThrow 15
-    [ ], // WeaponPut 16
-    [ ] // InventoryItems 17
+GVAR(slotMap) = createHashMapFromArray [
+    [605, 6],
+    [801, 3],
+    [701, 4],
+    [901, 5],
+    [603, 7]
 ];
 
-GVAR(arsenalAccess) = call (uiNamespace getVariable [QGVAR(arsenalAccess), {_cargo}]);
-GVAR(conditionalArsenalAccess) = call (uiNamespace getVariable [QGVAR(conditionalArsenalAccess), {_cargo}]);
+GVAR(arsenalActions) = createHashMap;
+GVAR(dynamics) = uiNamespace getVariable [QGVAR(dynamics), createHashMap];
 
-["ace_arsenal_leftPanelFilled", LINKFUNC(fillLeftPanel)] call CBA_fnc_addEventHandler;
+if (isServer) exitWith {
+    GVAR(slots) = [];
+    for "_i" from 0 to ((GVAR(dynamics) get "slotCount") - 1) do {
+        GVAR(slots) pushBack "";
+    };
+
+    addMissionEventHandler ["PlayerConnected", {call FUNC(handlePlayerConnected)}];
+    addMissionEventHandler ["PlayerDisconnected", {call FUNC(handlePlayerDisconnected)}];
+};

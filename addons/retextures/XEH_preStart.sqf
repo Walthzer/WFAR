@@ -2,41 +2,23 @@
 
 #include "XEH_PREP.hpp"
 
-//ACE Arsenal item cache format
-private _conditionalArsenalAccess = [
-    [[], [], []], // Weapons 0, primary, secondary, handgun
-    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
-    [ ], // Magazines 2
-    [ ], // Headgear 3
-    [ ], // Uniform 4
-    [ ], // Vest 5
-    [ ], // Backpacks 6
-    [ ], // Goggles 7
-    [ ], // NVGs 8
-    [ ], // Binoculars 9
-    [ ], // Map 10
-    [ ], // Compass 11
-    [ ], // Radio slot 12
-    [ ], // Watch slot  13
-    [ ], // Comms slot 14
-    [ ], // WeaponThrow 15
-    [ ], // WeaponPut 16
-    [ ] // InventoryItems 17
-];
+wfar_retextures_hashmap = createHashMap;
 
-{
-    private _cache = [];
-    private _index = parseNumber (configName _x);
+wfar_retextures_hashmap set ["slotCount", getNumber (configFile >> "wfar_retextures" >> "slots")];
+
+wfar_retextures_fnc_crawler = {
+    params ["_config", ["_path", ""]];
+
+    if (isClass (_config >> "bases")) exitWith { 
+        //Found inner class
+        private _baseClass = "wfar_retextures" + _path;
+        wfar_retextures_hashmap set [_baseClass, _config];
+    };
     {
-        private _condition = compile ( getText ( _x >> "condition" ) );
-        private _items = getArray ( _x >> "items" );
+        [_x, _path + "_" + (configName _x)] call wfar_retextures_fnc_crawler;
+    } forEach ("true" configClasses (_config));
+};
+[configFile >> "wfar_retextures"] call wfar_retextures_fnc_crawler;
 
-        _cache pushBack [ _condition, _items];
-
-    } forEach ( "true" configClasses (_x) );
-
-    _conditionalArsenalAccess set [_index, _cache];
-
-} forEach ( "true" configClasses (configFile >> "cfgConditionalArsenalAcces") );
-
-uiNamespace setVariable [QGVAR(conditionalArsenalAccess), compileFinal ( str _conditionalArsenalAccess )];
+//store readonly hashmap
+uiNamespace setVariable [QGVAR(dynamics), compileFinal wfar_retextures_hashmap];
