@@ -42,7 +42,7 @@ jobs:
       uses: arma-actions/hemtt@v1
 
     - name: Run HEMTT Compile Textures
-      run: hemtt script compile_retextures
+      run: hemtt script compile_dynamic
 
     - name: Run HEMTT build
       run: hemtt release
