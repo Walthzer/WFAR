@@ -1,71 +1,26 @@
+/*
 class G_Mask
 {
     displayName="Gas Mask";
-    author="PFC G. Mask";
+    author="G. Mask";
     texture="\z\wfar\addons\insignia\players\g_mask.paa";
-    textureVehicle="";
-};
-
-class T_Becraft
-{
-    displayName="Becraft";
-    author="PFC T. Becraft";
-    texture="\z\wfar\addons\insignia\players\t_becraft.paa";
     textureVehicle="";
 };
 
 class T_Robertson
 {
     displayName="Robertson";
-    author="LCPL T. Robertson";
+    author="T. Robertson";
     texture="\z\wfar\addons\insignia\players\t_robertson.paa";
     textureVehicle="";
 };
 
-class S_Antella
-{
-    displayName="Antella";
-    author="PFC S. Antella";
-    texture="\z\wfar\addons\insignia\players\s_antella.paa";
-    textureVehicle="";
-};
+*/
 
-class K_Still
+class M_Stryfe
 {
-    displayName="Still";
-    author="LCPL K. Still";
-    texture="\z\wfar\addons\insignia\players\k_still.paa";
-    textureVehicle="";
-};
-
-class I_Feram
-{
-    displayName="Feram";
-    author="PFC I. Feram";
-    texture="\z\wfar\addons\insignia\players\i_feram.paa";
-    textureVehicle="";
-};
-
-class O_Farmers
-{
-    displayName="Farmers";
-    author="PFC O. Farmers";
-    texture="\z\wfar\addons\insignia\players\o_farmers.paa";
-    textureVehicle="";
-};
-
-class L_Nord
-{
-    displayName="Nord";
-    author="LCPL L. (Fritz) Nord";
-    texture="\z\wfar\addons\insignia\players\l_nord.paa";
-    textureVehicle="";
-};
-
-class J_Gerber
-{
-    displayName="Gerber";
-    author="PFC J. Gerber";
-    texture="\z\wfar\addons\insignia\players\j_gerber.paa";
+    displayName="Stryfe";
+    author="M. Stryfe";
+    texture="\z\wfar\addons\insignia\players\m_stryfe.paa";
     textureVehicle="";
 };

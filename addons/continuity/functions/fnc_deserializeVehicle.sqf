@@ -35,7 +35,7 @@ _vehicle enableSimulationGlobal false;
 _vehicle setPosASL _posASL;
 _vehicle setVectorDirAndUp _vectorDirAndUp;
     
-if (_damageData isEqualType true && {_damageData == true}) then {
+if (_damageData isEqualType true && {_damageData}) then {
     //Vehicle was wreck, make it a wreck and go to next vehicle:
     _vehicle setVariable ["ace_cookoff_enable", false];
     _vehicle setDamage [1, false];
