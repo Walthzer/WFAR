@@ -15,7 +15,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_CORE
 #endif
 
-#define MAX_TEXTURE_LAYERS 6
+#define QQUOTE(var) QUOTE(QUOTE(var))
 
 #include "\z\wfar\addons\main\script_macros.hpp"
 #include "\z\ace\addons\arsenal\defines.hpp"

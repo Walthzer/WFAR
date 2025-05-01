@@ -26,10 +26,3 @@ class TitanCharlie
     texture="\z\wfar\addons\insignia\squad\titancharlie.paa";
     textureVehicle="";
 };
-class WierdWolf
-{
-    displayName="Alpha 1-1";
-    author="Barker";
-    texture="\z\wfar\addons\insignia\squad\wierdwolf.paa";
-    textureVehicle="";
-};

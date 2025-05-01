@@ -16,7 +16,7 @@
 params ["_name", "_function", "_data"];
 TRACE_3("clientCallback",_name,_function,_data);
 
-if !(_name == "WFAR") exitWith {};
+if (_name isNotEqualTo "WFAR") exitWith {};
 
 switch (_function) do {
     case "discordReady";

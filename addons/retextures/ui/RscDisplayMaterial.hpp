@@ -1,5 +1,3 @@
-#include "defines.hpp"
-
 class RscPictureKeepAspect;
 class GVAR(RscDisplayMaterial)
 {
@@ -8,45 +6,23 @@ class GVAR(RscDisplayMaterial)
     {
         class layer0: RscPictureKeepAspect 
         {
-            onLoad=QUOTE({_this call FUNC(onLoadUITexture)});
-            onUnLoad=QUOTE(LINKFUNC(onLoadUITexture));
-            idc = IDCMateriallayer0;
-            text = "";
+            idc = 0;
+            deletable=1;
+            text = "#(rgb,8,8,3)color(1,0,0,1)";
             x=0;
             y=0;
             w=1;
             h=1;
         };
-        class layer1: layer0 
+        class layer1: layer0
         {
-            idc = IDCMaterialLayer1;
+            idc = 0;
             text = "";
         };
-        class layer2: layer0 
+        class layer2: layer0
         {
-            idc = IDCMaterialLayer2;
+            idc = 0;
             text = "";
         };
-        class layer3: layer0 
-        {
-            idc = IDCMaterialLayer3;
-            text = "";
-        };
-        class layer4: layer0 
-        {
-            idc = IDCMaterialLayer4;
-            text = "";
-        };
-        class layer5: layer0 
-        {
-            idc = IDCMaterialLayer5;
-            text = "";
-        };
-        class layer6: layer0 
-        {
-            idc = IDCMaterialLayer6;
-            text = "";
-        };
-        
     };
 };

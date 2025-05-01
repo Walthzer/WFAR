@@ -20,7 +20,7 @@ class Cfg3DEN
 
                         expression = QUOTE(if (is3DEN || {_value < 0}) exitWith {}; [ARR_3(_this,_value,true)] call FUNC(registerSupplier));
 
-                        defaultValue = "-1";
+                        defaultValue = -1;
 
                         unique = 0;
                         validate = "number";
