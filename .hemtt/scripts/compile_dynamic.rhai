@@ -23,6 +23,13 @@ const pbo_prefix = "z/wfar/addons/retextures";
 
 const EQUIP_SLOTS = 40;
 
+//is addon enabled?
+if !root.exists() {
+    info("Disabled: exiting");
+    exit(1);
+};
+
+
 fn create(value, parent) {
     this.create(`${value}: ${parent}`);
 };
@@ -48,13 +55,6 @@ fn addEquipment(value) {
     }
     this.hasData = true;
 }
-
-//is addon enabled?
-if not root.exists() {
-    info("Disabled: exiting");
-    exit(1);
-};
-
 
 //Initialise build files
 let cfgWeapons = #{
