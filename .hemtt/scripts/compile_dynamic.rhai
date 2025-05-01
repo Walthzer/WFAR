@@ -49,6 +49,13 @@ fn addEquipment(value) {
     this.hasData = true;
 }
 
+//is addon enabled?
+if not root.exists() {
+    info("Disabled: exiting");
+    exit(1);
+};
+
+
 //Initialise build files
 let cfgWeapons = #{
     file: root.join("build").join("CfgWeapons.hpp").create_file(),
