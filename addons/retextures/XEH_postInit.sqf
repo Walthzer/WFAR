@@ -7,3 +7,6 @@ if (isMultiplayer) then {
 } else {
     wfar_steamID = profileNamespace getVariable ["wfar_steamID", ""];
 };
+
+private _tmpDisplay = findDisplay 46 createDisplay QGVAR(RscDisplayMaterial);
+_tmpDisplay closeDisplay 1;

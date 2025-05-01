@@ -1,7 +1,8 @@
 class RscPictureKeepAspect;
 class GVAR(RscDisplayMaterial)
 {
-    idd = -1;
+    onLoad=QUOTE(call FUNC(onLoadDisplay));
+    idd = 43343;
     class ControlsBackground
     {
         class layer0: RscPictureKeepAspect 
@@ -13,16 +14,6 @@ class GVAR(RscDisplayMaterial)
             y=0;
             w=1;
             h=1;
-        };
-        class layer1: layer0
-        {
-            idc = 0;
-            text = "";
-        };
-        class layer2: layer0
-        {
-            idc = 0;
-            text = "";
         };
     };
 };

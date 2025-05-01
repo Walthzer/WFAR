@@ -3,6 +3,7 @@ PREP(getDynamicsSlot);
 PREP(getClassSlot);
 PREP(setMaterial);
 PREP(ActionArgsFunction);
+PREP(onLoadDisplay);
 
 //Server
 PREP(handlePlayerConnected);

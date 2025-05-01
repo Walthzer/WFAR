@@ -23,16 +23,6 @@ private _config = configFile >> "CfgWeapons" >> _equipClass;
 if !(isText (_config >> QGVAR(materialClass))) exitWith {};
 private _dynamicConfig = GVAR(dynamics) getOrDefault [getText (_config >> QGVAR(materialClass)), configNull];
 
-//Cleanup old actions
-if !(isPlayer _unit) exitWith {
-    //base
-    private _config = ("true" configClasses (_dynamicConfig >> "bases")) select 1;
-    [_equipClass, _config, _unit] call FUNC(setMaterial);
-
-    _config = (_dynamicConfig >> "materials" >> "named");
-    [_equipClass, _config, _unit] call FUNC(setMaterial);
-};
-
 
 //Ensure equipment matches our dynamics slot
 private _classSlot = [_config] call FUNC(getClassSlot);
@@ -48,7 +38,7 @@ private _fnc_addAction = {
     if !(_allowed) then { continue };
 
     if (_setbase) then {
-        [_equipClass, _config, player] call FUNC(setMaterial);
+        //[_equipClass, _config] call FUNC(setMaterial);
     };
     //Add bases actions, with lookups for passing args
     private _actionClass = QGVAR(actions) + "_" + (configName _config);
@@ -60,12 +50,12 @@ private _fnc_addAction = {
     GVAR(arsenalActions) set [_actionClass, [
         _actionID,
         FUNC(setMaterial),
-        [_equipClass, _config, player]
+        [_equipClass, _config]
     ]];
 };
 
 //Arsenal Actions
-private _setbase = true;
+private _setbase = false;
 {
     [_equipClass, _equipmentSlot, _x, "Bases", _setbase] call _fnc_addAction;
     if (_setbase) then {
