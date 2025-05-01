@@ -1,5 +1,5 @@
 class wfar_retextures {
-    slots = 400;
+    slots = 40;
     class helmet {
         class cup {
             class ech {

@@ -48,6 +48,7 @@ steps_windows = [
     "if not exist a3 mklink /j a3 N:\\Arma3Pdrive\\a3"
 ]
 
+
 # Launched with `hemtt launch ace
 [hemtt.launch.wfar_slim]
 workshop = [
@@ -58,6 +59,7 @@ workshop = [
 
 # Launched with `hemtt launch wfar
 [hemtt.launch.wfar]
+mission = "isigniaTest.VR"
 presets = [
     "WFAR9", # .html presets from .hemtt/presets/
 ]

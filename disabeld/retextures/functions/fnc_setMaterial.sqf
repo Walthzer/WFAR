@@ -5,15 +5,31 @@
  *
  * Arguments:
  * 0: _displayUniqueName <STRING>
- * 1: _material <CONFIG>
+ * 1: _material <ARRAY>
  *
  * Return Value:
  * None
  *
  * Public: No
 */
-params["_displayUniqueName", "_material", "_unit"];
-TRACE_3("setMaterial",_displayUniqueName,_material,_unit);
+params["_displayUniqueName", "_dynamics"];
+TRACE_2("setMaterial",_displayUniqueName,_material);
+
+/*
+	Dynamics Material:
+	[
+		layers:
+		[
+			[
+				data,
+				angle,
+				position
+			]
+		]
+	]
+
+*/
+_material params ["_layers"];
 
 private _display = findDisplay _displayUniqueName;
 

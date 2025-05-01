@@ -2,7 +2,7 @@
 
 //don't rely on C preprocessor
 
-// 20 slots per equipment piece
+// 40 slots per equipment piece
 //      -> in CfgWeapons.hpp
 //      -> in weapons.hpp
 
@@ -21,7 +21,14 @@ const root = HEMTT_RFS.join("addons").join("retextures");
 const class_prefix = "wfar_retextures";
 const pbo_prefix = "z/wfar/addons/retextures";
 
-const EQUIP_SLOTS = 400;
+const EQUIP_SLOTS = 40;
+
+//is addon enabled?
+if !root.exists() {
+    info("Disabled: exiting");
+    exit(1);
+};
+
 
 fn create(value, parent) {
     this.create(`${value}: ${parent}`);

@@ -11,5 +11,5 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
-
+.hemtt/missions/
 a3
