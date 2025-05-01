@@ -16,5 +16,4 @@ class CfgPatches
 
 #include "CfgEventHandlers.hpp"
 #include "CfgUnitInsignia.hpp"
-#include "CfgCommands.hpp"
 #include "scripted\restrictedInsignia.hpp"

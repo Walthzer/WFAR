@@ -61,4 +61,19 @@ if ((count _allowedRestrictedInsignia) > 0) then {
         };
 
     }] call CBA_fnc_addEventHandler;
+
+    ["CBA_loadoutGet", {
+        params ["_unit", "_loadoutArray", "_extendedInfo"];
+        private _class = _unit getVariable [QGVAR(restrictedClass), ""];
+        if(_class isEqualTo "") exitWith {};
+        _extendedInfo set [QGVAR(restrictedClass), _class];
+    }] call CBA_fnc_addEventHandler;
+
+    ["CBA_loadoutSet", {
+        params ["_unit", "_loadoutArray", "_extendedInfo"];
+        private _class = _extendedInfo getOrDefault [QGVAR(restrictedClass), ""];
+        if(_class isEqualTo "") exitWith {};
+        private _config = GVAR(restrictedInsigniaConfigs) select (GVAR(restrictedInsigniaClassnames) find _class);
+        [_config, _unit] call FUNC(setRestrictedInsignia);
+    }] call CBA_fnc_addEventHandler;
 };

@@ -16,3 +16,11 @@ class T_Robertson
 };
 
 */
+
+class M_Stryfe
+{
+    displayName="Stryfe";
+    author="M. Stryfe";
+    texture="\z\wfar\addons\insignia\players\m_stryfe.paa";
+    textureVehicle="";
+};

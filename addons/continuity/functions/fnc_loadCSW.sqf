@@ -33,7 +33,7 @@ private _loadedObjects = [];
     _csw setPosASL _posASL;
     _csw setVectorDirAndUp _vectorDirAndUp;
     
-    if (_damageData isEqualType true && {_damageData == true}) then {
+    if (_damageData isEqualType true && {_damageData}) then {
         //CSW was wreck, make it a wreck and go to next CSW:
         _csw setVariable ["ace_cookoff_enable", false];
         _csw setDamage [1, false];
